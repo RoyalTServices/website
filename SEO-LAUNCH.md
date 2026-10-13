@@ -4,7 +4,7 @@ Configured domain: **https://royaltservices.in**. Confirmed priority customer ma
 
 The domain is configured for production canonicals, sitemap and robots generation. This does not deploy the site or submit it to Google. After publishing the updated server on that domain, submit **https://royaltservices.in/sitemap.xml** through Search Console. The physical office address remains unconfirmed, so the schema identifies an Organization serving the stated markets rather than inventing a LocalBusiness address or map coordinates.
 
-The website now delivers real page text, links, headings and metadata in the server's initial HTML. Browser JavaScript adds interactive quotes, tracking, forms and chat to that same content. Both renderers use `pages.js`, so the server is not showing a keyword-only page to crawlers or maintaining a separate hidden SEO copy.
+The website delivers real page text, links, headings and metadata in its initial HTML. The Vercel build pre-renders each public route; the local Node preview renders the same pages on request. Browser JavaScript adds interactive quotes, tracking, forms and chat to that content. Both use `pages.js`, with no separate hidden SEO copy. See [VERCEL.md](VERCEL.md) for deployment settings. Vercel Preview builds automatically remain unindexed.
 
 ## Required before indexing the public site
 
@@ -14,7 +14,7 @@ The website now delivers real page text, links, headings and metadata in the ser
 4. Set `localBusinessVerified: true` only after the location details are confirmed. The website will then show the city in home copy/title, show the address on Contact, and produce LocalBusiness structured data. Until then it emits honest Organization data rather than invented coordinates or an incomplete local address. Populate `openingHoursSpecification` with actual days/times, and keep the visible `config.hours` consistent.
 5. Complete and approve the policy details separately. Draft policies are accessible through the footer but remain `noindex,follow` and absent from the sitemap until `legal.status` changes from `draft` to `published`.
 
-Deploy the updated Node server behind your production HTTPS hosting/proxy, or use a hosting implementation that calls the shared server renderer. **A static index.html fallback alone no longer provides server-rendered SEO HTML.** Test a direct request to a service URL after deployment; its HTML must already contain the service H1 and content before JavaScript runs.
+Deploy using the checked-in Vercel configuration, or run the Node server behind another production HTTPS host. The Vercel build generates individual complete HTML pages rather than a static index.html fallback. Test a direct request to a service URL after deployment; its HTML must contain the service H1 and content before JavaScript runs.
 
 ## Google Business Profile and Search Console
 

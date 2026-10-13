@@ -1,6 +1,10 @@
 # Royal T Courier frontend
 
-Custom native JavaScript, CSS and SVG. No UI kit, framework or build dependency. Node 18+ runs the development preview.
+Custom native JavaScript, CSS and SVG. No UI kit or frontend framework. Use Node 22 and run `npm ci` before the development preview.
+
+## Vercel
+
+Deployment configuration is included. Follow [VERCEL.md](VERCEL.md) to import the repository, connect PostgreSQL and set the staff setup key. `npm run build` renders the public pages into `dist`; the Vercel Node function handles requests and staff APIs. Public pages can deploy independently, but saved requests and staff access require the database environment variables.
 
 Visual direction revised to a traditional business website: white backgrounds, plain service headings, regular sans-serif typography and direct descriptions. The homepage shipping illustration includes a labelled carton, domestic delivery van, cargo aircraft and globe routes. Only route markers gently highlight; the parcel does not float. Reduced-motion preferences disable the highlights.
 
@@ -10,7 +14,7 @@ The supplied client logo appears in the header, footer and delivery van. Home an
 
 Run `npm run dev`, then open http://localhost:4173. All page URLs support direct navigation and initial HTML rendering with the included server.
 
-The updated server renders public pages and SEO metadata directly into their initial HTML using `pages.js`, `seo.js` and `site-server.mjs`. Deploy that rendering path; a static index.html fallback by itself is insufficient for the server-rendered version. Set the actual public HTTPS domain in `config.seo.siteUrl` or the `SITE_URL` server environment variable to enable production canonicals, indexing and sitemap generation. Previews without a configured domain deliberately remain unindexed. See `SEO-LAUNCH.md` for Google Business Profile, location/schema and Search Console setup.
+The local server renders public pages and SEO metadata directly into their initial HTML using `pages.js`, `seo.js` and `site-server.mjs`. The Vercel build uses the same renderer to generate complete HTML for each route. Set the public HTTPS domain in `config.seo.siteUrl` or `SITE_URL` for production canonicals and sitemap generation. Vercel preview builds deliberately remain unindexed. See `SEO-LAUNCH.md` for Google Business Profile, location/schema and Search Console setup.
 
 ## Pages
 

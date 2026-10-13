@@ -58,3 +58,8 @@ Live API integrations, approved current selling prices and final client policies
 - Set the canonical public origin to `https://royaltservices.in` and the target customer markets to Hyderabad/Telangana. Actual office address remains unset; no street address, geographic coordinates or verified LocalBusiness location was invented.
 - Added regional titles/descriptions, affordable courier home wording, low-cost quote guidance, abroad-shipping context for service pages and practical shipment-efficiency questions. No guaranteed-lowest-price, fastest-delivery or fabricated rating claim was added.
 - Added SEO regression checks for the real configured canonical/sitemap URLs and regional content/schema distinction. Production domain configuration is ready; public deployment and Google submission are separate actions.
+# Vercel setup
+
+The Vercel build renders 21 public pages and a custom 404 into an explicit public output directory. Production canonical URLs use royaltservices.in; preview HTML, client configuration and robots rules prevent preview indexing. Database storage is required on Vercel, with no ephemeral JSON fallback. Staff setup requires a private key, sessions and login limits persist in storage, and cookies are Secure on Vercel.
+
+Six new checks cover public output/private-file exclusion, preview noindex, missing-database failures, staff setup/session/logout across separate handlers, the Vercel rewrite and parsed body adapter, and transaction rollback/error sanitization. Database transaction checks use a test double; no live hosted database or Vercel deployment has been exercised. Complete the live checks in VERCEL.md after configuring credentials.

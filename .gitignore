@@ -11,3 +11,5 @@ preview/
 *.xlsx
 __pycache__/
 *.pyc
+dist/
+.vercel/

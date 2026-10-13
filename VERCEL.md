@@ -1,0 +1,19 @@
+# Vercel deployment
+
+1. Import `RoyalTServices/website` in Vercel. Use `main` as the production branch, the repository root as Root Directory, and **Other** as Framework Preset. The checked-in `vercel.json` supplies `npm ci`, `npm run build`, `dist`, Node 22 and the Mumbai function region.
+2. Connect a PostgreSQL database through Vercel Marketplace (for example, Neon). Prefer a database region close to Mumbai. Set its **pooled** connection string as `DATABASE_URL`, including the provider's recommended TLS settings. `POSTGRES_URL` is also accepted. Keep this value in Vercel environment variables.
+3. Set `SITE_URL=https://royaltservices.in` and a random `STAFF_SETUP_KEY` of at least 32 characters in the Production environment. Generate a key with `node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"` and keep it private. Add these values before deployment, then redeploy after environment changes.
+4. Add `royaltservices.in` under Project Settings → Domains. Follow the DNS records Vercel shows. Add `www.royaltservices.in` only if wanted, and configure it to redirect to the primary domain.
+5. Visit `/internal`, enter the setup key, and create your staff username and password. The setup key prevents the first public visitor from claiming the staff account. Setup closes automatically after the account exists.
+
+Public HTML is generated at build time, including service content, canonical URLs, metadata, structured data, robots.txt, sitemap.xml and a custom 404 page. JavaScript enables the calculator, assistant and navigation. No blanket SPA rewrite is used, so missing pages keep a real 404. Only browser modules, assets and public rate data enter `dist`; local customer records, server source, workbooks and test files do not.
+
+The Node function handles `/api/requests` and `/api/internal/*`. PostgreSQL stores requests, staff credentials, hashed session tokens and rate-limit counters. Transactions lock the shared store row to prevent concurrent function instances overwriting each other's changes. The table is created automatically on first use; the database user needs permission to create `royalt_store`. Enable provider backups. This small staff tool uses one JSON document in a locked row; a larger operation should migrate records into separate tables.
+
+On Vercel, an absent/unreachable database produces an explicit failure; no success response is returned for an unsaved request. Local JSON storage remains available only when running the local Node server. Local records are not automatically uploaded or migrated. An existing local staff account is not copied to a fresh production database. The assistant's support mailbox and carrier tracking integration still require their own endpoints.
+
+Preview builds always use `noindex` and `Disallow: /`, including after client navigation. Use a **separate preview database** and setup key if testing forms or staff access in Preview; do not share production customer data with preview branches. Without a preview database, public pages still work and request/staff APIs report storage unavailable. Vercel Deployment Protection can restrict preview access.
+
+After deployment, verify `/quote`, a direct service URL, `/sitemap.xml`, an unknown URL, a submitted test enquiry, staff login and logout. Confirm the test record survives a redeployment. No hosted database credentials or Vercel account were available for the local verification, so these live checks remain necessary. Then submit `https://royaltservices.in/sitemap.xml` in Google Search Console.
+
+References: [Vercel configuration](https://vercel.com/docs/project-configuration/vercel-json), [Node functions](https://vercel.com/docs/functions/runtimes/node-js), [Postgres integrations](https://vercel.com/docs/postgres), [Postgres transactions](https://node-postgres.com/features/transactions).

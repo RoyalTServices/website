@@ -1,35 +1,32 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import {randomBytes, scryptSync, timingSafeEqual, randomUUID} from 'node:crypto';
+import {randomBytes, scryptSync, timingSafeEqual, randomUUID, createHash} from 'node:crypto';
+import {requestStore} from './request-store.mjs';
 
 const statuses = ['new','pending_pickup','in_progress','completed'];
 const labels = {new:'New request',pending_pickup:'Pending pickup',in_progress:'In progress',completed:'Completed'};
 const failure=(message,status=400)=>Object.assign(new Error(message),{status});
 const validDate=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value))&&new Date(value).toISOString().slice(0,10)===value;
-export function internalApi(root) {
-  const storePath = process.env.INTERNAL_STORE_PATH || path.join(root,'data','internal-store.json');
-  const sessions = new Map(), attempts = new Map();
-  let queue = Promise.resolve();
-  const read = async () => { try {const store=JSON.parse(await fs.readFile(storePath,'utf8'));if(!store||!Array.isArray(store.records)||(store.admin&&(!/^[a-f0-9]{128}$/.test(store.admin.hash)||!/^[a-f0-9]{32}$/.test(store.admin.salt))))throw Error();return store;} catch(error) { if(error.code==='ENOENT') return {admin:null,records:[]}; throw failure('Shipment storage is unavailable. Please try again or contact the administrator.',500); } };
-  const mutate = operation => {
-    const task = queue.then(async () => {
-      const store = await read(), result = await operation(store);
-      await fs.mkdir(path.dirname(storePath),{recursive:true});
-      await fs.writeFile(storePath+'.tmp',JSON.stringify(store,null,2),{mode:0o600});
-      await fs.rename(storePath+'.tmp',storePath); return result;
-    }); queue = task.catch(()=>{}); return task;
-  };
+export function internalApi(root,{storage=requestStore(root),setupKey=process.env.STAFF_SETUP_KEY || '',vercel=Boolean(process.env.VERCEL),secureCookie=process.env.COOKIE_SECURE==='true' || vercel}={}) {
+  const {read,mutate}=storage;
+  const digest=value=>createHash('sha256').update(value).digest('hex');
+  const prune=store=>{for(const [key,value] of Object.entries(store.sessions))if(value.expires<Date.now())delete store.sessions[key];for(const [key,value] of Object.entries(store.attempts))if(value.until<Date.now())delete store.attempts[key];};
   const send = (res,code,data) => { res.writeHead(code,{'Content-Type':'application/json','Cache-Control':'no-store'}); res.end(JSON.stringify(data)); };
-  const body = async req => { let value=''; for await(const chunk of req) { value+=chunk; if(Buffer.byteLength(value)>32000) throw failure('The request is too large. Shorten the description and try again.',413); } let parsed;try {parsed=JSON.parse(value);}catch{throw failure('The request could not be read. Please try again.');}if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw failure('Enter valid request details.');return parsed; };
-  const clean = (value,max=3000) => typeof value==='string'?value.trim().slice(0,max):'';
-  const authenticated = req => {
-    const token=(req.headers.cookie||'').split(';').map(v=>v.trim()).find(v=>v.startsWith('royalt_session='))?.slice(15);
-    const session=sessions.get(token); if(!session||session.expires<Date.now()) { sessions.delete(token); return null; } return {token,...session};
+  const body = async req => {
+    let parsed,value='';
+    try {
+      if(req.body!==undefined) {parsed=typeof req.body==='string'?JSON.parse(req.body):req.body;value=JSON.stringify(parsed);}
+      else {for await(const chunk of req){value+=chunk;if(Buffer.byteLength(value)>32000)throw failure('The request is too large. Shorten the description and try again.',413);}parsed=JSON.parse(value);}
+    } catch(error) {if(error.status)throw error;throw failure('The request could not be read. Please try again.');}
+    if(Buffer.byteLength(value)>32000)throw failure('The request is too large. Shorten the description and try again.',413);
+    if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw failure('Enter valid request details.');return parsed;
   };
-  const openSession = (res,username) => {
-    for(const [token,entry] of sessions) if(entry.expires<Date.now()) sessions.delete(token);
-    const token=randomBytes(32).toString('hex'); sessions.set(token,{username,expires:Date.now()+8*3600000});
-    res.setHeader('Set-Cookie',`royalt_session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800${process.env.COOKIE_SECURE==='true'?'; Secure':''}`);
+  const clean = (value,max=3000) => typeof value==='string'?value.trim().slice(0,max):'';
+  const authenticated = async req => {
+    const token=(req.headers.cookie||'').split(';').map(v=>v.trim()).find(v=>v.startsWith('royalt_session='))?.slice(15);
+    if(!token || !/^[a-f0-9]{64}$/.test(token))return null;
+    const session=(await read()).sessions[digest(token)];if(!session||session.expires<Date.now())return null;return {token,...session};
+  };
+  const openSession = (res,token) => {
+    res.setHeader('Set-Cookie',`royalt_session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800${secureCookie?'; Secure':''}`);
   };
   const record = (values,internal=false) => {
     const type=internal?'shipment':values.type;
@@ -56,34 +53,45 @@ export function internalApi(root) {
         if(!req.headers['content-type']?.startsWith('application/json')) { send(res,415,{error:'Use JSON for this request.'}); return true; }
       }
       if(pathname==='/api/internal/session'&&req.method==='GET') {
-        const store=await read(),auth=authenticated(req); send(res,200,{setupRequired:!store.admin,user:auth?{username:auth.username}:null}); return true;
+        const store=await read(),auth=await authenticated(req); send(res,200,{setupRequired:!store.admin,setupKeyRequired:!store.admin&&(vercel||Boolean(setupKey)),user:auth?{username:auth.username}:null}); return true;
       }
       if(['/api/internal/setup','/api/internal/login'].includes(pathname)&&req.method==='POST') {
-        const key=req.socket.remoteAddress,previous=attempts.get(key)||{count:0,until:0};
-        if(previous.until>Date.now()&&previous.count>=8) { send(res,429,{error:'Too many login attempts. Try again in 15 minutes.'}); return true; }
+        // Vercel supplies this trusted client IP header; ignore it on a local server.
+        const ip=vercel?String(req.headers['x-vercel-forwarded-for']||req.socket.remoteAddress).split(',')[0].trim():req.socket.remoteAddress;
+        const key=digest('login:'+ip);
         const values=await body(req),username=clean(values.username,80),password=typeof values.password==='string'?values.password:'';
-        if(pathname.endsWith('setup')) {
-          if(!/^[a-zA-Z0-9@._-]{3,80}$/.test(username)||password.length<8||password.length>200) throw Error('Use a username of at least 3 characters and a password of 8–200 characters.');
-          await mutate(store=>{if(store.admin) throw failure('Staff login already exists. Please sign in.',409); const salt=randomBytes(16).toString('hex'); store.admin={username,salt,hash:scryptSync(password,salt,64).toString('hex')};});
-        } else {
-          const store=await read(),admin=store.admin;
+        const result=await mutate(store=>{
+          prune(store);const previous=store.attempts[key]||{count:0,until:Date.now()+15*60000};
+          if(previous.count>=8)return {status:429,error:'Too many login attempts. Try again in 15 minutes.'};
+          store.attempts[key]={...previous,count:previous.count+1};
+          if(pathname.endsWith('setup')) {
+            if(store.admin)throw failure('Staff login already exists. Please sign in.',409);
+            if(vercel&&setupKey.length<32)return {status:503,error:'Staff setup is not configured. Contact the administrator.'};
+            if((vercel||setupKey)&&!timingSafeEqual(Buffer.from(digest(String(values.setupKey||''))),Buffer.from(digest(setupKey))))return {status:403,error:'Enter the correct staff setup key.'};
+            if(!/^[a-zA-Z0-9@._-]{3,80}$/.test(username)||password.length<8||password.length>200)throw Error('Use a username of at least 3 characters and a password of 8–200 characters.');
+            const salt=randomBytes(16).toString('hex');store.admin={username,salt,hash:scryptSync(password,salt,64).toString('hex')};
+          } else {
+          const admin=store.admin;
           const salt=admin?.salt||'invalid-login';
           const hash=scryptSync(password.slice(0,200),salt,64);
           if(!admin||username!==admin.username||!timingSafeEqual(hash,Buffer.from(admin.hash,'hex'))) {
-            attempts.set(key,{count:previous.until>Date.now()?previous.count+1:1,until:Date.now()+15*60000}); send(res,401,{error:'Username or password is incorrect.'}); return true;
+            return {status:401,error:'Username or password is incorrect.'};
           }
-        }
-        attempts.delete(key); openSession(res,username); send(res,200,{user:{username}}); return true;
+          }
+          delete store.attempts[key];const token=randomBytes(32).toString('hex');store.sessions[digest(token)]={username,expires:Date.now()+8*3600000};return {token};
+        });
+        if(result.error){send(res,result.status,{error:result.error});return true;}
+        openSession(res,result.token); send(res,200,{user:{username}}); return true;
       }
       if(pathname==='/api/internal/logout'&&req.method==='POST') {
-        const auth=authenticated(req); if(auth) sessions.delete(auth.token);
-        res.setHeader('Set-Cookie','royalt_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0'); send(res,200,{ok:true}); return true;
+        const auth=await authenticated(req);if(auth)await mutate(store=>{delete store.sessions[digest(auth.token)];});
+        res.setHeader('Set-Cookie',`royalt_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0${secureCookie?'; Secure':''}`); send(res,200,{ok:true}); return true;
       }
       if(pathname==='/api/requests'&&req.method==='POST') {
         const values=await body(req),entry=record(values);
-        await mutate(store=>store.records.push(entry)); send(res,201,{reference:entry.reference}); return true;
+        await mutate(store=>{prune(store);const ip=vercel?String(req.headers['x-vercel-forwarded-for']||req.socket.remoteAddress).split(',')[0].trim():req.socket.remoteAddress,key=digest('request:'+ip),previous=store.attempts[key]||{count:0,until:Date.now()+15*60000};if(previous.count>=30)throw failure('Too many requests. Please try again later or call us.',429);store.attempts[key]={...previous,count:previous.count+1};store.records.push(entry);}); send(res,201,{reference:entry.reference}); return true;
       }
-      const auth=authenticated(req); if(!auth) {send(res,401,{error:'Please sign in to continue.'});return true;}
+      const auth=await authenticated(req); if(!auth) {send(res,401,{error:'Please sign in to continue.'});return true;}
       if(pathname==='/api/internal/records'&&req.method==='GET') { const store=await read();send(res,200,{records:store.records});return true; }
       if(pathname==='/api/internal/records'&&req.method==='POST') { const entry=record(await body(req),true);await mutate(store=>store.records.push(entry));send(res,201,{record:entry});return true; }
       const match=pathname.match(/^\/api\/internal\/records\/([a-f0-9-]+)$/);

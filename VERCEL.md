@@ -1,6 +1,6 @@
 # Vercel deployment
 
-1. Import `RoyalTServices/website` in Vercel. Use `main` as the production branch, the repository root as Root Directory, and **Other** as Framework Preset. The checked-in `vercel.json` supplies `npm ci`, `npm run build`, `dist`, Node 22 and the Mumbai function region.
+1. Import `RoyalTServices/website` in Vercel as a **standalone project**, not a multi-service project. If Vercel lists detected applications, select the root Node application (`app`, directory `/`). Do not import `scripts` as an application. Use `main` as the production branch, `/` as Root Directory, and **Other** as Framework Preset. The checked-in `vercel.json` supplies `npm ci`, `npm run build`, `dist`, Node 22 and the Mumbai function region.
 2. Connect a PostgreSQL database through Vercel Marketplace (for example, Neon). Prefer a database region close to Mumbai. Set its **pooled** connection string as `DATABASE_URL`, including the provider's recommended TLS settings. `POSTGRES_URL` is also accepted. Keep this value in Vercel environment variables.
 3. Set `SITE_URL=https://royaltservices.in` and a random `STAFF_SETUP_KEY` of at least 32 characters in the Production environment. Generate a key with `node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"` and keep it private. Add these values before deployment, then redeploy after environment changes.
 4. Add `royaltservices.in` under Project Settings → Domains. Follow the DNS records Vercel shows. Add `www.royaltservices.in` only if wanted, and configure it to redirect to the primary domain.
@@ -17,3 +17,9 @@ Preview builds always use `noindex` and `Disallow: /`, including after client na
 After deployment, verify `/quote`, a direct service URL, `/sitemap.xml`, an unknown URL, a submitted test enquiry, staff login and logout. Confirm the test record survives a redeployment. No hosted database credentials or Vercel account were available for the local verification, so these live checks remain necessary. Then submit `https://royaltservices.in/sitemap.xml` in Google Search Console.
 
 References: [Vercel configuration](https://vercel.com/docs/project-configuration/vercel-json), [Node functions](https://vercel.com/docs/functions/runtimes/node-js), [Postgres integrations](https://vercel.com/docs/postgres), [Postgres transactions](https://node-postgres.com/features/transactions).
+
+## If the import screen says “Import multi-service project”
+
+Return to the application selection and choose the standalone root application. Set Framework Preset to **Other**, not **Services**. A Services project requires a `services` block; this repository intentionally uses a standalone configuration with one website and its `/api` function. Do not create a separate project for the Python maintenance scripts. If a project already exists in Services mode, change its framework to Other in Build and Deployment settings and confirm the Root Directory is the repository root before redeploying.
+
+The Python dependencies are in `scripts/python-requirements.txt`, rather than the auto-detected application filename `requirements.txt`. These are offline rate/map maintenance tools, excluded from Vercel uploads. Install them locally only when needed with `python -m pip install -r scripts/python-requirements.txt`.

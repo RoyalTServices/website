@@ -13,3 +13,5 @@ data/internal-store.json.tmp
 *.log
 __pycache__/
 *.pyc
+scripts/*.py
+scripts/python-requirements.txt

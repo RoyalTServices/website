@@ -143,6 +143,11 @@ export function mountAssistant() {
     });
   }
   function toggle(open, returnFocus = true) { panel.hidden = !open; launch.setAttribute('aria-expanded', String(open)); if (open) (find('#assistant-query') || find('#assistant-name') || find('.assistant-restart')).focus(); else { saveConversation(); if (returnFocus) launch.focus(); } }
+  // Close before the document's navigation handler opens the linked page.
+  // Question choices and feedback keep the conversation open.
+  panel.addEventListener('click', event => {
+    if (event.target.closest('a[data-link]') && event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) toggle(false, false);
+  }, {capture:true});
   launch.addEventListener('click', () => toggle(true));
   find('.assistant-restart').addEventListener('click', () => {
     if (find('.assistant-submit')?.disabled && session.stage !== 'submitted') return;

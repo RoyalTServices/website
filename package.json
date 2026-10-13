@@ -13,7 +13,8 @@
     "check": "node --check app.js && node --check server.mjs && node --check assistant.js && node --check assistant-knowledge.js && node --check assistant-nlu.js && node --check assistant-model.js && node --check legal-content.js && node --check legal-pages.js && node --check pages.js && node --check seo.js && node --check seo-content.js && node --check site-server.mjs && node --check internal-api.mjs && node --check request-store.mjs && node --check internal.js && node --check api/handler.mjs && node --check scripts/build.mjs && node --check application-api.mjs && node --check business-validation.mjs && node --check courier-adapters.mjs && node --check supabase-client.mjs && node --check supabase-api.mjs && node --check scripts/import-legacy.mjs",
     "train:assistant": "node scripts/train-assistant.mjs",
     "evaluate:assistant": "node scripts/evaluate-assistant.mjs",
-    "test": "node --test scripts/*.test.mjs"
+    "test": "node --test scripts/*.test.mjs",
+    "prepare:edge": "node scripts/prepare-edge.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

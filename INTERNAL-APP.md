@@ -1,6 +1,6 @@
 # Royal T staff workspace
 
-Open `/internal` in the existing website. Staff sign in with invited email/password accounts using Supabase Auth. Public registration and the former first-visitor setup flow are disabled. Administrators can invite staff or admins; the first administrator is created privately through the Supabase dashboard and added to `royalt_staff_profiles`. See [SUPABASE.md](SUPABASE.md).
+Open `/internal` in the existing website. Staff sign in with invited email/password accounts using Supabase Auth. Public registration and the former first-visitor setup flow are disabled. Administrators can invite staff or admins; the first administrator, royaltservices360@gmail.com, is provisioned and can set a password using its private activation link. See [SUPABASE.md](SUPABASE.md).
 
 The dashboard shows total shipments, pending bookings, in-transit shipments, delivered shipments, exceptions and recent enquiries. Shipments and customers use server-side search/pagination; enquiries can be filtered by status. Staff can create requests, turn a quote into a shipment, edit package/sender/receiver information, set a courier and tracking number, add confirmed public tracking events and keep private notes/activity history.
 
@@ -10,4 +10,4 @@ Contact forms, quote/booking requests, pickups and assistant support issues are 
 
 Supabase is the only production database. The old `data/internal-store.json` model is retained as a migration source, excluded from Git and public output. Its staff passwords and sessions are not imported to Auth. Explicit `LEGACY_BACKEND=true` is available only on the local server for legacy development; Vercel ignores it. No source records have been deleted or migrated remotely during the current implementation.
 
-Local PostgreSQL and DOM tests cover access policies, request/event deduplication, staff authorization and the main dashboard workflows. Hosted Auth/Storage, migrations, email invitation delivery, scheduler execution and carrier tracking remain subject to the live verification steps in SUPABASE.md.
+Local PostgreSQL and DOM tests cover access policies, request/event deduplication, staff authorization and the main dashboard workflows. Hosted Auth, data operations and PDF Storage passed 32 live API assertions. Invitations use private activation links rather than automated email. Courier credentials and the external hourly job still require configuration; see SUPABASE.md.

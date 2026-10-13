@@ -15,7 +15,7 @@ async function database() {
     create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);
     create table storage.objects(id uuid primary key default gen_random_uuid(),bucket_id text,name text);alter table storage.objects enable row level security;
     grant usage on schema storage to authenticated, service_role;grant select on storage.objects to authenticated;grant all on all tables in schema storage to service_role;`);
-  await db.exec(migration);return db;
+  await db.exec(migration);await db.exec(await fs.readFile(new URL('../supabase/migrations/20261013203918_backend_security.sql',import.meta.url),'utf8'));return db;
 }
 test('migration executes in PostgreSQL; public intake is atomic and retries keep one reference',async()=>{
   const db=await database();try {

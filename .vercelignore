@@ -5,6 +5,7 @@ preview/
 .internal-test/
 data/internal-store.json
 data/internal-store.json.tmp
+data/admin-invite.txt
 .env
 .env.*
 !.env.example

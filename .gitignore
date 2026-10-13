@@ -15,3 +15,5 @@ dist/
 .vercel/
 supabase/.temp/
 supabase/.branches/
+supabase/functions/royalt-api/*.mjs
+data/admin-invite.txt

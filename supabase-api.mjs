@@ -113,8 +113,12 @@ export function supabaseApi({env=process.env,clients=supabaseClients,adapters=co
         if(profile.role!=='admin')throw failure('Administrator access required.',403);
         const values=await jsonBody(req),email=customer({name:'Staff',email:values.email}).email,role=values.role==='admin'?'admin':'staff';
         const origin=env.APP_URL||env.SITE_URL;if(!origin?.startsWith('https://'))throw failure('Configure APP_URL before inviting staff.',503);
-        const {data,error}=await service.auth.admin.inviteUserByEmail(email,{redirectTo:origin+'/internal'});if(error)throw failure('The invitation could not be sent. Check Auth email configuration.',503);
-        await result(service.from('royalt_staff_profiles').upsert({id:data.user.id,email,display_name:clean(values.name,100),role,active:true}));send(res,201,{ok:true});return true;
+        const {data,error}=await service.auth.admin.generateLink({type:'invite',email,options:{redirectTo:origin+'/internal'}});if(error)throw failure('The invitation could not be created. Check whether this account already exists.',503);
+        await result(service.from('royalt_staff_profiles').upsert({id:data.user.id,email,display_name:clean(values.name,100),role,active:true}));send(res,201,{ok:true,inviteUrl:origin+'/internal?token_hash='+encodeURIComponent(data.properties.hashed_token)+'&type=invite'});return true;
+      }
+      if(pathname==='/api/internal/tracking-settings'&&req.method==='GET') {
+        if(profile.role!=='admin')throw failure('Administrator access required.',403);
+        send(res,200,{url:(env.APP_URL||env.SITE_URL)+'/api/cron/tracking',authorization:env.CRON_SECRET?'Bearer '+env.CRON_SECRET:'',configured:Boolean(env.CRON_SECRET)});return true;
       }
       if(pathname==='/api/internal/summary'&&req.method==='GET') {
         const counts={};for(const [key,column,value] of [['shipments',null,null],['pending','booking_status','new'],['inTransit','tracking_status','in_transit'],['delivered','tracking_status','delivered'],['exceptions','tracking_status','exception']]){let query=staff.from(shipments).select('id',{count:'exact',head:true});if(key==='pending')query=query.in('booking_status',['new','pending_pickup']);else if(column)query=query.eq(column,value);const {count,error}=await query;if(error)throw failure('Dashboard totals could not be read.',503);counts[key]=count;}

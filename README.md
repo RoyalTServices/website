@@ -4,7 +4,7 @@ Custom native JavaScript, CSS and SVG. No UI kit or frontend framework. Use Node
 
 ## Vercel
 
-Deployment configuration is included. Supabase is the primary production backend. Follow [SUPABASE.md](SUPABASE.md) for the migration, server variables, invite-only Auth, private PDF storage and tracking scheduler; [VERCEL.md](VERCEL.md) covers the standalone import. `npm run build` renders the public pages into `dist`; the Vercel Node function handles requests and staff APIs. Public pages can deploy independently, but saved requests and staff access require the database environment variables.
+Deployment configuration is included. Supabase is the primary production backend. Follow [SUPABASE.md](SUPABASE.md) for the migration, server variables, invite-only Auth, private PDF storage and tracking scheduler; [VERCEL.md](VERCEL.md) covers the standalone import. `npm run build` renders the public pages into `dist`; the Vercel Node function handles requests and staff APIs. Public pages can deploy independently, but saved requests and staff access use the deployed Supabase Edge backend.
 
 Visual direction revised to a traditional business website: white backgrounds, plain service headings, regular sans-serif typography and direct descriptions. The homepage shipping illustration includes a labelled carton, domestic delivery van, cargo aircraft and globe routes. Only route markers gently highlight; the parcel does not float. Reduced-motion preferences disable the highlights.
 
@@ -26,7 +26,7 @@ About Us covers the business, its customers and shipment support process without
 
 Edit `site-config.js` to supply phone, WhatsApp (international digits), email, address and business hours before launch.
 
-Enquiries, quotation/booking requests, pickups and assistant support issues use `/api/requests`. Cached public tracking uses `/api/tracking`. These require the Supabase migration and server environment variables. Staff use Supabase Auth through HttpOnly cookies; there is no public registration. See SUPABASE.md for setup and live verification.
+Enquiries, quotation/booking requests, pickups and assistant support issues use `/api/requests`. Cached public tracking uses `/api/tracking`. Production uses the deployed Supabase Edge backend with the existing Vercel API relay. Staff use Supabase Auth through HttpOnly cookies; there is no public registration. See SUPABASE.md for setup and live verification.
 
 ### Tracking endpoint
 

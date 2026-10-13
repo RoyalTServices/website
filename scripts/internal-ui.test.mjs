@@ -9,6 +9,7 @@ async function mount(role) {
   window.document.body.innerHTML='<div id="internal-app"></div>';Object.assign(globalThis,{document:window.document,window,history:window.history,FormData:window.FormData});const calls=[];
   globalThis.fetch=async(url,options={})=>{const path=new URL(url,'https://royalt.test').pathname;calls.push({path,options});let data={};
     if(path.endsWith('/session'))data={user:{id,email:'staff@example.com',role}};
+    else if(path.endsWith('/invite'))data={inviteUrl:'https://royalt.test/internal?token_hash=private-example&type=invite'};
     else if(path.endsWith('/summary'))data={counts:{shipments:1,pending:1,inTransit:0,delivered:0,exceptions:0},recent:[]};
     else if(path.endsWith('/records'))data=options.method==='POST'?{record}:{records:[record],total:1};
     else if(path.endsWith('/records/'+id))data={record};
@@ -37,6 +38,6 @@ test('staff UI creates bookings, edits package details and opens payment/documen
 });
 test('admin UI includes the invitation workflow without offering public registration',async()=>{
   const {window,calls,close}=await mount('admin');const d=window.document;
-  try {d.querySelector('[data-tab=staff]').click();await waitFor(()=>d.querySelector('#staff-content [name=email]'));const f=d.querySelector('#staff-content form');f.elements.email.value='invited@example.com';f.dispatchEvent(new window.Event('submit',{bubbles:true,cancelable:true}));await waitFor(()=>calls.some(c=>c.path.endsWith('/invite')));assert.ok(!calls.some(c=>c.path.endsWith('/setup')));}
+  try {d.querySelector('[data-tab=staff]').click();await waitFor(()=>d.querySelector('#staff-content [name=email]'));const f=d.querySelector('#staff-content form');f.elements.email.value='invited@example.com';f.dispatchEvent(new window.Event('submit',{bubbles:true,cancelable:true}));await waitFor(()=>calls.some(c=>c.path.endsWith('/invite')));await waitFor(()=>d.querySelector('#staff-invitation'));assert.match(d.querySelector('#staff-invitation').href,/token_hash=private-example/);assert.ok(!calls.some(c=>c.path.endsWith('/setup')));}
   finally {close();}
 });

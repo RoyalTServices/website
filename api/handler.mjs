@@ -1,9 +1,9 @@
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {internalApi} from '../internal-api.mjs';
+import {applicationApi} from '../application-api.mjs';
 
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const api=internalApi(root);
+const api=applicationApi(root);
 export default async function handler(req,res) {
   res.setHeader('X-Robots-Tag','noindex, nofollow');
   res.setHeader('Cache-Control','no-store');

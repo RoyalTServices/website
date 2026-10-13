@@ -3,14 +3,14 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {gzip} from 'node:zlib';
 import {promisify} from 'node:util';
-import {internalApi} from './internal-api.mjs';
+import {applicationApi} from './application-api.mjs';
 import {renderSite,publicRoutes,esc} from './pages.js';
 import {metadata,seoHead,sitemap,robots} from './seo.js';
 import {config} from './site-config.js';
 const compress = promisify(gzip);
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.jpeg':'image/jpeg','.png':'image/png','.ico':'image/x-icon','.webmanifest':'application/manifest+json'};
 export function createSiteServer(root,{siteUrl = process.env.SITE_URL || config.seo?.siteUrl} = {}) {
-  const api = internalApi(root);
+  const api = applicationApi(root);
   async function send(req,res,status,content,type,headers = {}) {
     let bytes = Buffer.isBuffer(content) ? content : Buffer.from(content);
     const acceptsGzip = (req.headers['accept-encoding'] || '').split(',').some(item => /^\s*gzip(?:\s*;|\s*$)/.test(item) && !/;\s*q=0(?:\.0*)?(?:\s*;|\s*$)/.test(item));

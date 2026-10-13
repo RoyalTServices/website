@@ -7,7 +7,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "regions": ["bom1"],
-  "functions": {"api/handler.mjs": {"maxDuration": 30}},
+  "functions": {"api/handler.mjs": {"maxDuration": 60}},
   "rewrites": [{"source": "/api/:route*", "destination": "/api/handler?route=:route*"}],
   "headers": [
     {"source": "/(.*)", "headers": [

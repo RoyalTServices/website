@@ -4,7 +4,7 @@ Custom native JavaScript, CSS and SVG. No UI kit or frontend framework. Use Node
 
 ## Vercel
 
-Deployment configuration is included. Follow [VERCEL.md](VERCEL.md) to import the repository, connect PostgreSQL and set the staff setup key. `npm run build` renders the public pages into `dist`; the Vercel Node function handles requests and staff APIs. Public pages can deploy independently, but saved requests and staff access require the database environment variables.
+Deployment configuration is included. Supabase is the primary production backend. Follow [SUPABASE.md](SUPABASE.md) for the migration, server variables, invite-only Auth, private PDF storage and tracking scheduler; [VERCEL.md](VERCEL.md) covers the standalone import. `npm run build` renders the public pages into `dist`; the Vercel Node function handles requests and staff APIs. Public pages can deploy independently, but saved requests and staff access require the database environment variables.
 
 Visual direction revised to a traditional business website: white backgrounds, plain service headings, regular sans-serif typography and direct descriptions. The homepage shipping illustration includes a labelled carton, domestic delivery van, cargo aircraft and globe routes. Only route markers gently highlight; the parcel does not float. Reduced-motion preferences disable the highlights.
 
@@ -26,7 +26,7 @@ About Us covers the business, its customers and shipment support process without
 
 Edit `site-config.js` to supply phone, WhatsApp (international digits), email, address and business hours before launch.
 
-Tracking and enquiry submission are intentionally disconnected until endpoints are supplied. Requests can be prepared and downloaded locally, with clear messaging that nothing was sent. Personal details are not stored in local storage.
+Enquiries, quotation/booking requests, pickups and assistant support issues use `/api/requests`. Cached public tracking uses `/api/tracking`. These require the Supabase migration and server environment variables. Staff use Supabase Auth through HttpOnly cookies; there is no public registration. See SUPABASE.md for setup and live verification.
 
 ### Tracking endpoint
 
@@ -69,7 +69,7 @@ The floating **Ask Royal T** assistant works on every page. `assistant-knowledge
 
 The assistant remembers the most confident customer topic or a selected question for short follow-ups. For example, after discussing pickup, “it is still not done” suggests a missed pickup, and “cancel it” suggests changing/cancelling the pickup. Explicit new topics override previous context; successful feedback and New chat clear it. An ambiguous first message asks for a topic rather than guessing. Choosing a browse topic provides context for the next message. The answer view also accepts typed follow-ups. Answers use approved site guidance and do not invent prices, shipment events or claim approvals.
 
-Rejecting a suggestion list or answer counts as one unsuccessful attempt. An unmatched query counts once automatically, except a clarification prompt: answering that clarification is not a failure. Ordinary follow-ups and topic changes do not count as rejections. Positive feedback resets the count. After three unsuccessful attempts the issue form collects name, reply email, optional tracking ID and a description, with consent to include the transcript. Conversation state stays in memory across site navigation; refreshing clears it. Personal details are not saved to browser storage.
+Rejecting a suggestion list or answer counts as one unsuccessful attempt. An unmatched query counts once automatically, except a clarification prompt: answering that clarification is not a failure. Ordinary follow-ups and topic changes do not count as rejections. Positive feedback resets the count. After three unsuccessful attempts the issue form collects name, reply email, optional tracking ID and a description, with consent to include the transcript. Conversation state and unsent form fields use sessionStorage in the current browser tab so navigation and refresh retain the conversation. New chat clears the conversation; closing the tab ends browser session storage.
 
 Set `assistantIssueEndpoint` in `site-config.js` to connect the last-step mailbox submission. It receives a JSON POST:
 
@@ -86,7 +86,7 @@ Set `assistantIssueEndpoint` in `site-config.js` to connect the last-step mailbo
 }
 ```
 
-The backend must validate and limit fields, check consent, escape customer text in emails, apply spam/rate limits, and deliver or durably queue the issue for the configured support mailbox before returning 2xx. Keep mail credentials on the backend. The bundled server is a static preview, not a mail service. When this endpoint is empty, the assistant only prepares a text download and explicitly says nothing was sent. Submission failures preserve the form for retry. Review the drafted answers and connect this endpoint before offering mailbox delivery publicly.
+The backend must validate and limit fields, check consent, escape customer text in emails, apply spam/rate limits, and deliver or durably queue the issue for the configured support mailbox before returning 2xx. Keep mail credentials on the backend. The configured `/api/requests` endpoint stores support issues in the internal Enquiries queue. It does not send an email; connect a separate reviewed mail-delivery service if required. When this endpoint is empty, the assistant only prepares a text download and explicitly says nothing was sent. Submission failures preserve the form for retry. Review the drafted answers and connect this endpoint before offering mailbox delivery publicly.
 
 To improve training, add reviewed, anonymous customer sentences under their intent IDs in `assistant-training-data.js`, then run `npm run train:assistant`. This reproducibly rebuilds the model. Do not train on evaluation fixtures or silently add customer personal details. Changes to feature extraction also require retraining.
 
@@ -98,6 +98,6 @@ Run `npm test` for rate, classifier, spelling, context, unknown-query and escala
 
 Website policies are drafted in `legal-content.js` and displayed through `legal-pages.js`, with footer links and form privacy notices. The operator is Royal T Services Private Limited. Complete the registered address, CIN, applicable GSTIN, support email and designated grievance/privacy contacts in `site-config.js`; review actual retention, carrier/claim and refund procedures before changing `legal.status` from `draft` to `published`. See `POLICY-REVIEW.md` for current implementation facts, regulatory references and remaining launch details. Adding policy pages does not by itself establish legal compliance.
 
-The new [internal staff workspace](INTERNAL-APP.md) is available at `/internal`. The bundled Node server now includes staff authentication, saved shipment records and contact/pickup intake at `/api/requests`. This replaces the previous download-only request workflow when running this server. The chat mailbox is still unconnected. See the internal app guide for setup, persistence and deployment requirements.
+The new [internal staff workspace](INTERNAL-APP.md) is available at `/internal`. The Supabase routes provide invite-only staff authentication, shipment management, customer records, enquiry intake, documents, payment bookkeeping and cached tracking. Assistant issues enter the internal enquiry queue. See the internal app guide for setup, persistence and deployment requirements.
 
 Supply contact details and approved business content; approve current public tariffs, DHL mappings and weight rules; connect APIs; publish privacy, liability, service and cancellation terms. Do not deploy the development server as the public production server. Assets are local except optional Google Fonts; system fallbacks work without them.

@@ -112,16 +112,17 @@ export function mountAssistant() {
   function showIssue() {
     view = {type:'issue'};
     const connected = Boolean(config.assistantIssueEndpoint);
-    work.innerHTML = `<form class="assistant-issue"><p class="assistant-label">Tell the support team what happened</p><label for="assistant-name">Name</label><input id="assistant-name" name="name" required maxlength="100" autocomplete="name"><label for="assistant-email">Email for a reply</label><input id="assistant-email" name="email" type="email" required maxlength="150" autocomplete="email"><label for="assistant-tracking">Tracking ID (optional)</label><input id="assistant-tracking" name="trackingId" maxlength="80"><label for="assistant-details">Issue description</label><textarea id="assistant-details" name="message" required maxlength="3000" rows="4"></textarea><label class="assistant-consent"><input type="checkbox" name="consent" required> I agree to share these details and this conversation with support as described in the <a href="/privacy-policy" data-link>Privacy Policy</a>.</label><p class="assistant-privacy">${connected ? 'Your issue and conversation will be submitted to the support mailbox service.' : 'The mailbox is not connected yet. Download your issue to share with support; nothing will be sent.'}</p><button type="submit" class="assistant-submit">${connected ? 'Send issue to support' : 'Prepare issue for download'}</button><div class="assistant-result" role="status"></div></form>`;
+    work.innerHTML = `<form class="assistant-issue"><p class="assistant-label">Tell the support team what happened</p><label for="assistant-name">Name</label><input id="assistant-name" name="name" required maxlength="100" autocomplete="name"><label for="assistant-email">Email for a reply</label><input id="assistant-email" name="email" type="email" required maxlength="150" autocomplete="email"><label for="assistant-tracking">Tracking ID (optional)</label><input id="assistant-tracking" name="trackingId" maxlength="80"><label for="assistant-details">Issue description</label><textarea id="assistant-details" name="message" required maxlength="3000" rows="4"></textarea><label class="assistant-consent"><input type="checkbox" name="consent" required> I agree to share these details and this conversation with support as described in the <a href="/privacy-policy" data-link>Privacy Policy</a>.</label><p class="assistant-privacy">${connected ? 'Your issue and conversation will be submitted to the Royal T support team.' : 'The support service is not connected yet. Download your issue to share with support; nothing will be sent.'}</p><button type="submit" class="assistant-submit">${connected ? 'Send issue to support' : 'Prepare issue for download'}</button><div class="assistant-result" role="status"></div></form>`;
     find('#assistant-details').value = lastQuestion;
     if (!restoring) find('#assistant-name').focus();
+    const issueRequestKey=crypto.randomUUID();
     find('.assistant-issue').addEventListener('submit', async event => {
       event.preventDefault();
       const form = event.target, submit = form.querySelector('[type="submit"]'), result = find('.assistant-result');
       if (submit.disabled) return;
       const values = Object.fromEntries(new FormData(form));
       if (!values.message.trim() || !values.name.trim()) { result.textContent = 'Enter your name and a description of the issue.'; return; }
-      const payload = {type:'assistant_issue', ...values, consent:true, unsuccessfulAttempts:session.failures, transcript:session.transcript.map(item => ({...item}))};
+      const payload = {type:'assistant_issue',requestKey:issueRequestKey, ...values, consent:true, unsuccessfulAttempts:session.failures, transcript:session.transcript.map(item => ({...item}))};
       submit.disabled = true; result.textContent = connected ? 'Sending your issue…' : '';
       try {
         if (connected) {

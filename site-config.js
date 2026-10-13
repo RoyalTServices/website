@@ -20,9 +20,9 @@ export const config = {
     privacyEmail: '',
   },
   // Supply a same-origin endpoint or a CORS-enabled public endpoint. Never put secret API keys here.
-  trackingEndpoint: '',
+  trackingEndpoint: '/api/tracking',
   requestEndpoint: '/api/requests',
-  // POST assistant_issue JSON to a backend that validates and delivers to the support mailbox.
-  // Keep mail provider credentials on the backend. Empty means download only, never sent.
-  assistantIssueEndpoint: '',
+  // Support issues are saved to the internal enquiry queue; email delivery is separate.
+  // No Supabase secret or mail credential belongs in this public configuration.
+  assistantIssueEndpoint: '/api/requests',
 };

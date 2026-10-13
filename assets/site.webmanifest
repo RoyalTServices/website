@@ -1,0 +1,23 @@
+{
+  "name": "Royal T Courier Services",
+  "short_name": "Royal T Courier",
+  "icons": [
+    {
+      "src": "/assets/web-app-manifest-192x192.png?v=482a6ecc2f",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/web-app-manifest-512x512.png?v=482a6ecc2f",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#102f48",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

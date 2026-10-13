@@ -1,0 +1,12058 @@
+{
+  "DHL / Sheet2 (2)": [
+    [
+      "Countries & Territories",
+      "Zone"
+    ],
+    [
+      "Afghanistan (AF)",
+      20
+    ],
+    [
+      "Albania (AL)",
+      21
+    ],
+    [
+      "Algeria (DZ)",
+      20
+    ],
+    [
+      "American Samoa (AS)",
+      9
+    ],
+    [
+      "Andorra (AD)",
+      18
+    ],
+    [
+      "Angola (AO)",
+      20
+    ],
+    [
+      "Anguilla (AI)",
+      10
+    ],
+    [
+      "Antigua (AG)",
+      10
+    ],
+    [
+      "Argentina (AR)",
+      19
+    ],
+    [
+      "Armenia (AM)",
+      20
+    ],
+    [
+      "Aruba (AW)",
+      10
+    ],
+    [
+      "Australia (AU)",
+      14
+    ],
+    [
+      "Austria (AT)",
+      7
+    ],
+    [
+      "Azerbaijan (AZ)",
+      20
+    ],
+    [
+      "Bahamas (BS)",
+      10
+    ],
+    [
+      "Bahrain (BH)",
+      17
+    ],
+    [
+      "Bangladesh (BD)",
+      16
+    ],
+    [
+      "Barbados (BB)",
+      10
+    ],
+    [
+      "Belarus (BY)",
+      8
+    ],
+    [
+      "Belgium (BE)",
+      7
+    ],
+    [
+      "Belize (BZ)",
+      19
+    ],
+    [
+      "Benin (BJ)",
+      20
+    ],
+    [
+      "Bermuda (BM)",
+      10
+    ],
+    [
+      "Bhutan (BT)",
+      16
+    ],
+    [
+      "Bolivia (BO)",
+      19
+    ],
+    [
+      "Bonaire (XB)",
+      10
+    ],
+    [
+      "Bosnia & Herzegovina(BA)",
+      21
+    ],
+    [
+      "Botswana (BW)",
+      20
+    ],
+    [
+      "Brazil (BR)",
+      19
+    ],
+    [
+      "Brunei (BN)",
+      5
+    ],
+    [
+      "Bulgaria (BG)",
+      18
+    ],
+    [
+      "Burkina Faso (BF)",
+      20
+    ],
+    [
+      "Burundi (BI)",
+      20
+    ],
+    [
+      "Cambodia (KH)",
+      5
+    ],
+    [
+      "Cameroon (CM)",
+      20
+    ],
+    [
+      "Canada (CA)",
+      15
+    ],
+    [
+      "Canary Islands, The (IC)",
+      18
+    ],
+    [
+      "Cape Verde (CV)",
+      20
+    ],
+    [
+      "Cayman Islands (KY)",
+      10
+    ],
+    [
+      "Central African Rep(CF)",
+      20
+    ],
+    [
+      "Chad (TD)",
+      20
+    ],
+    [
+      "Chile (CL)",
+      19
+    ],
+    [
+      "China (CN)",
+      3
+    ],
+    [
+      "Colombia (CO)",
+      19
+    ],
+    [
+      "Comoros (KM)",
+      20
+    ],
+    [
+      "Congo (CG)",
+      20
+    ],
+    [
+      "Congo, DPR (CD)",
+      20
+    ],
+    [
+      "Cook Islands (CK)",
+      11
+    ],
+    [
+      "Costa Rica (CR)",
+      19
+    ],
+    [
+      "Cote D Ivoire (CI)",
+      20
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      "Croatia (HR)",
+      21
+    ],
+    [
+      "Cuba (CU)",
+      10
+    ],
+    [
+      "Curacao (XC)",
+      10
+    ],
+    [
+      "Cyprus (CY)",
+      18
+    ],
+    [
+      "Czech Rep., The (CZ)",
+      7
+    ],
+    [
+      "Denmark (DK)",
+      7
+    ],
+    [
+      "Djibouti (DJ)",
+      20
+    ],
+    [
+      "Dominica (DM)",
+      10
+    ],
+    [
+      "Dominican Rep. (DO)",
+      10
+    ],
+    [
+      "Ecuador (EC)",
+      19
+    ],
+    [
+      "Egypt (EG)",
+      13
+    ],
+    [
+      "El Salvador (SV)",
+      19
+    ],
+    [
+      "Eritrea (ER)",
+      20
+    ],
+    [
+      "Estonia (EE)",
+      18
+    ],
+    [
+      "Eswatini (SZ)",
+      20
+    ],
+    [
+      "Ethiopia (ET)",
+      20
+    ],
+    [
+      "Falkland Islands (FK)",
+      8
+    ],
+    [
+      "Faroe Islands (FO)",
+      8
+    ],
+    [
+      "Fiji (FJ)",
+      11
+    ],
+    [
+      "Finland (FI)",
+      18
+    ],
+    [
+      "France (FR)",
+      7
+    ],
+    [
+      "French Guyana (GF)",
+      19
+    ],
+    [
+      "Gabon (GA)",
+      20
+    ],
+    [
+      "Gambia (GM)",
+      20
+    ],
+    [
+      "Georgia (GE)",
+      20
+    ],
+    [
+      "Germany (DE)",
+      7
+    ],
+    [
+      "Ghana (GH)",
+      13
+    ],
+    [
+      "Gibraltar (GI)",
+      18
+    ],
+    [
+      "Greece (GR)",
+      18
+    ],
+    [
+      "Greenland (GL)",
+      8
+    ],
+    [
+      "Grenada (GD)",
+      10
+    ],
+    [
+      "Guadeloupe (GP)",
+      10
+    ],
+    [
+      "Guam (GU)",
+      9
+    ],
+    [
+      "Guatemala (GT)",
+      19
+    ],
+    [
+      "Guernsey (GG)",
+      18
+    ],
+    [
+      "Guinea Rep. (GN)",
+      20
+    ],
+    [
+      "Guinea-Bissau (GW)",
+      20
+    ],
+    [
+      "Guinea-Equatorial (GQ)",
+      20
+    ],
+    [
+      "Guyana (British) (GY)",
+      19
+    ],
+    [
+      "Haiti (HT)",
+      10
+    ],
+    [
+      "Honduras (HN)",
+      19
+    ],
+    [
+      "Hong Kong SAR China (HK)",
+      2
+    ],
+    [
+      "Hungary (HU)",
+      7
+    ],
+    [
+      "Iceland (IS)",
+      18
+    ],
+    [
+      "Indonesia (ID)",
+      5
+    ],
+    [
+      "Iran (IR)",
+      20
+    ],
+    [
+      "Iraq (IQ)",
+      20
+    ],
+    [
+      "Ireland, Rep. Of (IE)",
+      7
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      "Israel (IL)",
+      18
+    ],
+    [
+      "Italy (IT)",
+      7
+    ],
+    [
+      "Jamaica (JM)",
+      10
+    ],
+    [
+      "Japan (JP)",
+      5
+    ],
+    [
+      "Jersey (JE)",
+      18
+    ],
+    [
+      "Jordan (JO)",
+      17
+    ],
+    [
+      "Kazakhstan (KZ)",
+      20
+    ],
+    [
+      "Kenya (KE)",
+      13
+    ],
+    [
+      "Kiribati (KI)",
+      11
+    ],
+    [
+      "Korea, Rep. Of (KR)",
+      5
+    ],
+    [
+      "Korea, \u00a0D.P.R Of (KP)",
+      20
+    ],
+    [
+      "Kosovo (KV)",
+      21
+    ],
+    [
+      "Kuwait (KW)",
+      17
+    ],
+    [
+      "Kyrgyzstan (KG)",
+      20
+    ],
+    [
+      "Laos (LA)",
+      5
+    ],
+    [
+      "Latvia (LV)",
+      18
+    ],
+    [
+      "Lebanon (LB)",
+      20
+    ],
+    [
+      "Lesotho (LS)",
+      20
+    ],
+    [
+      "Liberia (LR)",
+      20
+    ],
+    [
+      "Libya (LY)",
+      20
+    ],
+    [
+      "Liechtenstein (LI)",
+      7
+    ],
+    [
+      "Lithuania (LT)",
+      18
+    ],
+    [
+      "Luxembourg (LU)",
+      7
+    ],
+    [
+      "Macau SAR China (MO)",
+      5
+    ],
+    [
+      "Madagascar (MG)",
+      20
+    ],
+    [
+      "Malawi (MW)",
+      20
+    ],
+    [
+      "Malaysia (MY)",
+      2
+    ],
+    [
+      "Maldives (MV)",
+      16
+    ],
+    [
+      "Mali (ML)",
+      20
+    ],
+    [
+      "Malta (MT)",
+      18
+    ],
+    [
+      "Marshall Islands (MH)",
+      9
+    ],
+    [
+      "Martinique (MQ)",
+      10
+    ],
+    [
+      "Mauritania (MR)",
+      20
+    ],
+    [
+      "Mauritius (MU)",
+      13
+    ],
+    [
+      "Mayotte (YT)",
+      20
+    ],
+    [
+      "Mexico (MX)",
+      9
+    ],
+    [
+      "Micronesia (FM)",
+      22
+    ],
+    [
+      "Moldova, Rep. Of (MD)",
+      21
+    ],
+    [
+      "Monaco (MC)",
+      7
+    ],
+    [
+      "Mongolia (MN)",
+      11
+    ],
+    [
+      "Montenegro, Rep Of (ME)",
+      21
+    ],
+    [
+      "Montserrat (MS)",
+      10
+    ],
+    [
+      "Morocco (MA)",
+      20
+    ],
+    [
+      "Mozambique (MZ)",
+      13
+    ],
+    [
+      "Myanmar (MM)",
+      5
+    ],
+    [
+      "Namibia (NA)",
+      20
+    ],
+    [
+      "Nauru, Rep. Of (NR)",
+      11
+    ],
+    [
+      "Nepal (NP)",
+      16
+    ],
+    [
+      "Netherlands, The (NL)",
+      7
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      "Nevis (XN)",
+      10
+    ],
+    [
+      "New Caledonia (NC)",
+      11
+    ],
+    [
+      "New Zealand (NZ)",
+      6
+    ],
+    [
+      "Nicaragua (NI)",
+      19
+    ],
+    [
+      "Niger (NE)",
+      20
+    ],
+    [
+      "Nigeria (NG)",
+      13
+    ],
+    [
+      "Niue (NU)",
+      11
+    ],
+    [
+      "North Macedonia (MK)",
+      21
+    ],
+    [
+      "Northern Mariana Islands (MP)",
+      9
+    ],
+    [
+      "Norway (NO)",
+      18
+    ],
+    [
+      "Oman (OM)",
+      17
+    ],
+    [
+      "Pakistan (PK)",
+      4
+    ],
+    [
+      "Palau (PW)",
+      22
+    ],
+    [
+      "Panama (PA)",
+      19
+    ],
+    [
+      "Papua New Guinea (PG)",
+      6
+    ],
+    [
+      "Paraguay (PY)",
+      19
+    ],
+    [
+      "Peru (PE)",
+      19
+    ],
+    [
+      "Philippines, The (PH)",
+      5
+    ],
+    [
+      "Poland (PL)",
+      7
+    ],
+    [
+      "Portugal (PT)",
+      7
+    ],
+    [
+      "Puerto Rico (PR)",
+      9
+    ],
+    [
+      "Qatar (QA)",
+      17
+    ],
+    [
+      "Reunion, Island Of (RE)",
+      20
+    ],
+    [
+      "Romania (RO)",
+      7
+    ],
+    [
+      "Russian Federation (RU)",
+      20
+    ],
+    [
+      "Rwanda (RW)",
+      20
+    ],
+    [
+      "Saint Helena (SH)",
+      20
+    ],
+    [
+      "Samoa (WS)",
+      11
+    ],
+    [
+      "San Marino (SM)",
+      21
+    ],
+    [
+      "Sao Tome And Principe (ST)",
+      20
+    ],
+    [
+      "Saudi Arabia (SA)",
+      17
+    ],
+    [
+      "Senegal (SN)",
+      20
+    ],
+    [
+      "Serbia, Rep. Of (RS)",
+      21
+    ],
+    [
+      "Seychelles (SC)",
+      20
+    ],
+    [
+      "Sierra Leone (SL)",
+      20
+    ],
+    [
+      "Singapore (SG)",
+      2
+    ],
+    [
+      "Slovakia (SK)",
+      7
+    ],
+    [
+      "Slovenia (SI)",
+      18
+    ],
+    [
+      "Solomon Islands (SB)",
+      11
+    ],
+    [
+      "Somalia (SO)",
+      20
+    ],
+    [
+      "Somaliland, Rep Of (XS)",
+      20
+    ],
+    [
+      "South Africa (ZA)",
+      13
+    ],
+    [
+      "South Sudan (SS)",
+      20
+    ],
+    [
+      "Spain (ES)",
+      7
+    ],
+    [
+      "Sri Lanka (LK)",
+      16
+    ],
+    [
+      "St. Barthelemy (XY)",
+      10
+    ],
+    [
+      "St. Eustatius (XE)",
+      10
+    ],
+    [
+      "St. Kitts (KN)",
+      10
+    ],
+    [
+      "St. Lucia (LC)",
+      10
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      "St. Maarten (XM)",
+      10
+    ],
+    [
+      "St. Vincent (VC)",
+      10
+    ],
+    [
+      "Sudan (SD)",
+      13
+    ],
+    [
+      "Suriname (SR)",
+      19
+    ],
+    [
+      "Sweden (SE)",
+      7
+    ],
+    [
+      "Switzerland (CH)",
+      7
+    ],
+    [
+      "Syria (SY)",
+      20
+    ],
+    [
+      "Tahiti (PF)",
+      11
+    ],
+    [
+      "Taiwan (TW)",
+      5
+    ],
+    [
+      "Tajikistan (TJ)",
+      20
+    ],
+    [
+      "Tanzania (TZ)",
+      13
+    ],
+    [
+      "Thailand (TH)",
+      2
+    ],
+    [
+      "Timor-Leste (TL)",
+      5
+    ],
+    [
+      "Togo (TG)",
+      20
+    ],
+    [
+      "Tonga (TO)",
+      11
+    ],
+    [
+      "Trinidad And Tobago (TT)",
+      10
+    ],
+    [
+      "Tunisia (TN)",
+      20
+    ],
+    [
+      "Turkey (TR)",
+      18
+    ],
+    [
+      "Turkmenistan (TM)",
+      20
+    ],
+    [
+      "Turks & Caicos (TC)",
+      10
+    ],
+    [
+      "Tuvalu (TV)",
+      11
+    ],
+    [
+      "USA (US)",
+      12
+    ],
+    [
+      "Uganda (UG)",
+      13
+    ],
+    [
+      "Ukraine (UA)",
+      20
+    ],
+    [
+      "United Arab Emirates (AE)",
+      1
+    ],
+    [
+      "United Kingdom (GB)",
+      7
+    ],
+    [
+      "Uruguay (UY)",
+      19
+    ],
+    [
+      "Uzbekistan (UZ)",
+      20
+    ],
+    [
+      "Vanuatu (VU)",
+      11
+    ],
+    [
+      "Vatican City (VA)",
+      7
+    ],
+    [
+      "Venezuela (VE)",
+      10
+    ],
+    [
+      "Vietnam (VN)",
+      5
+    ],
+    [
+      "Virgin Islands-British (VG)",
+      10
+    ],
+    [
+      "Virgin Islands-US (VI)",
+      9
+    ],
+    [
+      "Yemen, Rep. Of (YE)",
+      20
+    ],
+    [
+      "Zambia (ZM)",
+      20
+    ],
+    [
+      "Zimbabwe (ZW)",
+      13
+    ]
+  ],
+  "DHL / Zones(Dhl)": [
+    [
+      "Service",
+      "Country",
+      "Country",
+      "Code",
+      "Type of Contry",
+      "Zone",
+      "Zone",
+      "Type of Contry",
+      1,
+      2,
+      3
+    ],
+    [
+      "DHL",
+      "Afghanistan (AF)",
+      "Afghanistan",
+      "AF",
+      "Asian",
+      "11A",
+      11,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Albania (AL)",
+      "Albania",
+      "AL",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Algeria (DZ)",
+      "Algeria",
+      "DZ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "American Samoa (AS)",
+      "American Samoa",
+      "AS",
+      "ROW",
+      "9A",
+      9,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Andorra (AD)",
+      "Andorra",
+      "AD",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Angola (AO)",
+      "Angola",
+      "AO",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Anguilla (AI)",
+      "Anguilla",
+      "AI",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Antigua (AG)",
+      "Antigua",
+      "AG",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Argentina (AR)",
+      "Argentina",
+      "AR",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Armenia (AM)",
+      "Armenia",
+      "AM",
+      "Asian",
+      "11A",
+      11,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Aruba (AW)",
+      "Aruba",
+      "AW",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Australia (AU)",
+      "Australia",
+      "AU",
+      "Australia",
+      "14A",
+      14,
+      "Australia",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Austria (AT)",
+      "Austria",
+      "AT",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Azerbaijan (AZ)",
+      "Azerbaijan",
+      "AZ",
+      "Asian",
+      "11A",
+      11,
+      "Asian",
+      "Asian",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bahamas (BS)",
+      "Bahamas",
+      "BS",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bahrain (BH)",
+      "Bahrain",
+      "BH",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bangladesh (BD)",
+      "Bangladesh",
+      "BD",
+      "Asian",
+      "1A",
+      1,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Barbados (BB)",
+      "Barbados",
+      "BB",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Belarus (BY)",
+      "Belarus",
+      "BY",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Belgium (BE)",
+      "Belgium",
+      "BE",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Belize (BZ)",
+      "Belize",
+      "BZ",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Benin (BJ)",
+      "Benin",
+      "BJ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bermuda (BM)",
+      "Bermuda",
+      "BM",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bhutan (BT)",
+      "Bhutan",
+      "BT",
+      "Asian",
+      "1A",
+      1,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bolivia (BO)",
+      "Bolivia",
+      "BO",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bonaire (XB)",
+      "Bonaire",
+      "XB",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bosnia & Herzegovina(BA)",
+      "Bosnia-Herzegovina",
+      "BA",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Botswana (BW)",
+      "Botswana",
+      "BW",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Brazil (BR)",
+      "Brazil",
+      "BR",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Brunei (BN)",
+      "Brunei",
+      "BN",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Bulgaria (BG)",
+      "Bulgaria",
+      "BG",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Burkina Faso (BF)",
+      "Burkina Faso",
+      "BF",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Burundi (BI)",
+      "Burundi",
+      "BI",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cambodia (KH)",
+      "Cambodia",
+      "KH",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cameroon (CM)",
+      "Cameroon",
+      "CM",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Canada (CA)",
+      "Canada",
+      "CA",
+      "ROW'2",
+      "9A",
+      9,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Canary Islands, The (IC)",
+      "Canary Islands, The",
+      "IC",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cape Verde (CV)",
+      "Cape Verde",
+      "CV",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cayman Islands (KY)",
+      "Cayman Islands",
+      "KY",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Central African Rep(CF)",
+      "Central African Republic",
+      "CF",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Chad (TD)",
+      "Chad",
+      "TD",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Chile (CL)",
+      "Chile",
+      "CL",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "China (CN)",
+      "China",
+      "CN",
+      "Asian",
+      "3A",
+      3,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Colombia (CO)",
+      "Colombia",
+      "CO",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Comoros (KM)",
+      "Comoros",
+      "KM",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Congo (CG)",
+      "Congo",
+      "CG",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Congo, DPR (CD)",
+      "Congo, DPR",
+      "CD",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cook Islands (CK)",
+      "Cook Islands",
+      "CK",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Costa Rica (CR)",
+      "Costa Rica",
+      "CR",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cote D Ivoire (CI)",
+      "Cote D Ivoire",
+      "CI",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Croatia (HR)",
+      "Croatia",
+      "HR",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cuba (CU)",
+      "Cuba",
+      "CU",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Curacao (XC)",
+      "Curacao",
+      "XC",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Cyprus (CY)",
+      "Cyprus",
+      "CY",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Czech Rep., The (CZ)",
+      "Czech Republic",
+      "CZ",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Denmark (DK)",
+      "Denmark",
+      "DK",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Djibouti (DJ)",
+      "Djibouti",
+      "DJ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Dominica (DM)",
+      "Dominica",
+      "DM",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Dominican Rep. (DO)",
+      "Dominican Republic",
+      "DO",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Ecuador (EC)",
+      "Ecuador",
+      "EC",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Egypt (EG)",
+      "Egypt",
+      "EG",
+      "ROW",
+      "13A",
+      13,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "El Salvador (SV)",
+      "El Salvador",
+      "SV",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Eritrea (ER)",
+      "Eritrea",
+      "ER",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Estonia (EE)",
+      "Estonia",
+      "EE",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Eswatini (SZ)",
+      "Eswatini",
+      "SZ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Ethiopia (ET)",
+      "Ethiopia",
+      "ET",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Falkland Islands (FK)",
+      "Falkland Islands",
+      "FK",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Faroe Islands (FO)",
+      "Faroe Islands",
+      "FO",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Fiji (FJ)",
+      "Fiji",
+      "FJ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Finland (FI)",
+      "Finland",
+      "FI",
+      "ROW'2",
+      "8A",
+      8,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "France (FR)",
+      "France",
+      "FR",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "French Guyana (GF)",
+      "French Guyana",
+      "GF",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Gabon (GA)",
+      "Gabon",
+      "GA",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Gambia (GM)",
+      "Gambia",
+      "GM",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Georgia (GE)",
+      "Georgia",
+      "GE",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Germany (DE)",
+      "Germany",
+      "DE",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Ghana (GH)",
+      "Ghana",
+      "GH",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Gibraltar (GI)",
+      "Gibraltar",
+      "GI",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Greece (GR)",
+      "Greece",
+      "GR",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Greenland (GL)",
+      "Greenland",
+      "GL",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Grenada (GD)",
+      "Grenada",
+      "GD",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guadeloupe (GP)",
+      "Guadeloupe",
+      "GP",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guam (GU)",
+      "Guam",
+      "GU",
+      "ROW",
+      "9A",
+      9,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guatemala (GT)",
+      "Guatemala",
+      "GT",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guernsey (GG)",
+      "Guernsey",
+      "GG",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guinea Rep. (GN)",
+      "Guinea Republic",
+      "GN",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guinea-Bissau (GW)",
+      "Guinea-Bissau",
+      "GW",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guinea-Equatorial (GQ)",
+      "Guinea-Equatorial",
+      "GQ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Guyana (British) (GY)",
+      "Guyana-British ",
+      "GY",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Haiti (HT)",
+      "Haiti",
+      "HT",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Honduras (HN)",
+      "Honduras",
+      "HN",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Hong Kong SAR China (HK)",
+      "Hong Kong SAR China",
+      "HK",
+      "Asian",
+      "2A",
+      2,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Hungary (HU)",
+      "Hungary",
+      "HU",
+      "ROW",
+      "7A",
+      7,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Iceland (IS)",
+      "Iceland",
+      "IS",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Indonesia (ID)",
+      "Indonesia",
+      "ID",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Iran (IR)",
+      "Iran",
+      "IR",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Iraq (IQ)",
+      "Iraq",
+      "IQ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Ireland, Rep. Of (IE)",
+      "Ireland",
+      "IE",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Israel (IL)",
+      "Israel",
+      "IL",
+      "ROW'2",
+      "8A",
+      8,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Italy (IT)",
+      "Italy",
+      "IT",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Jamaica (JM)",
+      "Jamaica",
+      "JM",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Japan (JP)",
+      "Japan",
+      "JP",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Jersey (JE)",
+      "Jersey",
+      "JE",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Jordan (JO)",
+      "Jordan",
+      "JO",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Kazakhstan (KZ)",
+      "Kazakhstan",
+      "KZ",
+      "Asian",
+      "11A",
+      11,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Kenya (KE)",
+      "Kenya",
+      "KE",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Kiribati (KI)",
+      "Kiribati",
+      "KI",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Korea, Rep. Of (KR)",
+      "Korea, Rep. Of",
+      "KR",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Korea, \u00a0D.P.R Of (KP)",
+      "Korea, \u00a0D.P.R Of",
+      "KP",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Kosovo (KV)",
+      "Kosovo",
+      "KV",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Kuwait (KW)",
+      "Kuwait",
+      "KW",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Kyrgyzstan (KG)",
+      "Kyrgyzstan",
+      "KG",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Laos (LA)",
+      "Laos",
+      "LA",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Latvia (LV)",
+      "Latvia",
+      "LV",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Lebanon (LB)",
+      "Lebanon",
+      "LB",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Lesotho (LS)",
+      "Lesotho",
+      "LS",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Liberia (LR)",
+      "Liberia",
+      "LR",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Libya (LY)",
+      "Libya",
+      "LY",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Liechtenstein (LI)",
+      "Liechtenstein",
+      "LI",
+      "ROW",
+      "7A",
+      7,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Lithuania (LT)",
+      "Lithuania",
+      "LT",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Luxembourg (LU)",
+      "Luxembourg",
+      "LU",
+      "ROW",
+      "7A",
+      7,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Macau SAR China (MO)",
+      "Macau SAR China",
+      "MO",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Madagascar (MG)",
+      "Madagascar",
+      "MG",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Malawi (MW)",
+      "Malawi",
+      "MW",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Malaysia (MY)",
+      "Malaysia",
+      "MY",
+      "Asian",
+      "2A",
+      2,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Maldives (MV)",
+      "Maldives",
+      "MV",
+      "Asian",
+      "1A",
+      1,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mali (ML)",
+      "Mali",
+      "ML",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Malta (MT)",
+      "Malta",
+      "MT",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mariana Islands (MP)",
+      "Mariana Islands",
+      "MP",
+      "ROW",
+      "9A",
+      9,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Marshall Islands (MH)",
+      "Marshall Islands",
+      "MH",
+      "ROW",
+      "9A",
+      9,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Martinique (MQ)",
+      "Martinique",
+      "MQ",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mauritania (MR)",
+      "Mauritania",
+      "MR",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mauritius (MU)",
+      "Mauritius",
+      "MU",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mayotte (YT)",
+      "Mayotte",
+      "YT",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mexico (MX)",
+      "Mexico",
+      "MX",
+      "ROW",
+      "9A",
+      9,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Micronesia (FM)",
+      "Micronesia",
+      "FM",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Moldova, Rep. Of (MD)",
+      "Moldova, Rep. Of",
+      "MD",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Monaco (MC)",
+      "Monaco",
+      "MC",
+      "ROW",
+      "7A",
+      7,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mongolia (MN)",
+      "Mongolia",
+      "MN",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Montenegro, Rep Of (ME)",
+      "Montenegro, Rep Of",
+      "ME",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Montserrat (MS)",
+      "Montserrat",
+      "MS",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Morocco (MA)",
+      "Morocco",
+      "MA",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Mozambique (MZ)",
+      "Mozambique",
+      "MZ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Myanmar (MM)",
+      "Myanmar",
+      "MM",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Namibia (NA)",
+      "Namibia",
+      "NA",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Nauru, Rep. Of (NR)",
+      "Nauru, Rep. Of",
+      "NR",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Nepal (NP)",
+      "Nepal",
+      "NP",
+      "Asian",
+      "1A",
+      1,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Netherlands, The (NL)",
+      "Netherlands",
+      "NL",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Nevis (XN)",
+      "Nevis",
+      "XN",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "New Caledonia (NC)",
+      "New Caledonia",
+      "NC",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "New Zealand (NZ)",
+      "New Zealand",
+      "NZ",
+      "New Zealand",
+      "6A",
+      6,
+      "New Zealand",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Nicaragua (NI)",
+      "Nicaragua",
+      "NI",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Niger (NE)",
+      "Niger",
+      "NE",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Nigeria (NG)",
+      "Nigeria",
+      "NG",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Niue (NU)",
+      "Niue",
+      "NU",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "North Macedonia (MK)",
+      "North Macedonia",
+      "MK",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Norway (NO)",
+      "Norway",
+      "NO",
+      "ROW'2",
+      "8A",
+      8,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Oman (OM)",
+      "Oman",
+      "OM",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Pakistan (PK)",
+      "Pakistan",
+      "PK",
+      "Asian",
+      "4A",
+      4,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Palau (PW)",
+      "Palau",
+      "PW",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Panama (PA)",
+      "Panama",
+      "PA",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Papua New Guinea (PG)",
+      "Papua New Guinea",
+      "PG",
+      "Asian",
+      "6A",
+      6,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Paraguay (PY)",
+      "Paraguay",
+      "PY",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Peru (PE)",
+      "Peru",
+      "PE",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Philippines, The (PH)",
+      "Philippines",
+      "PH",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Poland (PL)",
+      "Poland",
+      "PL",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Portugal (PT)",
+      "Portugal",
+      "PT",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Puerto Rico (PR)",
+      "Puerto Rico",
+      "PR",
+      "ROW",
+      "9A",
+      9,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Qatar (QA)",
+      "Qatar",
+      "QA",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Reunion, Island Of (RE)",
+      "Reunion, Island Of",
+      "RE",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Romania (RO)",
+      "Romania",
+      "RO",
+      "ROW",
+      "7A",
+      7,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Russian Federation (RU)",
+      "Russian Federation",
+      "RU",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Rwanda (RW)",
+      "Rwanda",
+      "RW",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Saint Helena (SH)",
+      "Saint Helena",
+      "SH",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Samoa (WS)",
+      "Samoa",
+      "WS",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "San Marino (SM)",
+      "San Marino",
+      "SM",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Sao Tome And Principe (ST)",
+      "Sao Tome And Principe",
+      "ST",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Saudi Arabia (SA)",
+      "Saudi Arabia",
+      "SA",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Senegal (SN)",
+      "Senegal",
+      "SN",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Serbia, Rep. Of (RS)",
+      "Serbia, Rep. Of",
+      "RS",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Seychelles (SC)",
+      "Seychelles",
+      "SC",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Sierra Leone (SL)",
+      "Sierra Leone",
+      "SL",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Singapore (SG)",
+      "Singapore",
+      "SG",
+      "Asian",
+      "2A",
+      2,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Slovakia (SK)",
+      "Slovakia",
+      "SK",
+      "ROW",
+      "7A",
+      7,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Slovenia (SI)",
+      "Slovenia",
+      "SI",
+      "ROW",
+      "8A",
+      8,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Solomon Islands (SB)",
+      "Solomon Islands",
+      "SB",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Somalia (SO)",
+      "Somalia",
+      "SO",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Somaliland, Rep Of (XS)",
+      "Somaliland, Rep Of",
+      "XS",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "South Africa (ZA)",
+      "South Africa",
+      "ZA",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "South Sudan (SS)",
+      "South Sudan",
+      "SS",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Spain (ES)",
+      "Spain",
+      "ES",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Sri Lanka (LK)",
+      "Sri Lanka",
+      "LK",
+      "Asian",
+      "1A",
+      1,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "St. Barthelemy (XY)",
+      "St. Barthelemy",
+      "XY",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "St. Eustatius (XE)",
+      "St. Eustatius",
+      "XE",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "St. Kitts (KN)",
+      "St. Kitts",
+      "KN",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "St. Lucia (LC)",
+      "St. Lucia",
+      "LC",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "St. Maarten (XM)",
+      "St. Maarten",
+      "XM",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "St. Vincent (VC)",
+      "St. Vincent",
+      "VC",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Sudan (SD)",
+      "Sudan",
+      "SD",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Suriname (SR)",
+      "Suriname",
+      "SR",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Sweden (SE)",
+      "Sweden",
+      "SE",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Switzerland (CH)",
+      "Switzerland",
+      "CH",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Syria (SY)",
+      "Syria",
+      "SY",
+      "Asian",
+      "4A",
+      4,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Tahiti (PF)",
+      "Tahiti",
+      "PF",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Taiwan (TW)",
+      "Taiwan",
+      "TW",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Tajikistan (TJ)",
+      "Tajikistan",
+      "TJ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Tanzania (TZ)",
+      "Tanzania",
+      "TZ",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Thailand (TH)",
+      "Thailand",
+      "TH",
+      "Asian",
+      "2A",
+      2,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Timor-Leste (TL)",
+      "Timor-Leste",
+      "TL",
+      "ROW",
+      "5A",
+      5,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Togo (TG)",
+      "Togo",
+      "TG",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Tonga (TO)",
+      "Tonga",
+      "TO",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Trinidad And Tobago (TT)",
+      "Trinidad And Tobago",
+      "TT",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Tunisia (TN)",
+      "Tunisia",
+      "TN",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Turkey (TR)",
+      "Turkey",
+      "TR",
+      "ROW'2",
+      "8A",
+      8,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Turkmenistan (TM)",
+      "Turkmenistan",
+      "TM",
+      "Asian",
+      "11A",
+      11,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Turks & Caicos (TC)",
+      "Turks & Caicos",
+      "TC",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Tuvalu (TV)",
+      "Tuvalu",
+      "TV",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "USA (US)",
+      "USA",
+      "US",
+      "ROW'2",
+      "12A",
+      12,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Uganda (UG)",
+      "Uganda",
+      "UG",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Ukraine (UA)",
+      "Ukraine",
+      "UA",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "United Arab Emirates (AE)",
+      "UNITED ARAB EMIRATES",
+      "AE",
+      "ROW",
+      "1A",
+      1,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "United Kingdom (GB)",
+      "United Kingdom",
+      "GB",
+      "ROW'2",
+      "7A",
+      7,
+      "ROW",
+      "ROW'2",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Uruguay (UY)",
+      "Uruguay",
+      "UY",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Uzbekistan (UZ)",
+      "Uzbekistan",
+      "UZ",
+      "Asian",
+      "11A",
+      11,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Vanuatu (VU)",
+      "Vanuatu",
+      "VU",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Vatican City (VA)",
+      "Vatican City",
+      "VA",
+      "ROW",
+      "7A",
+      7,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Venezuela (VE)",
+      "Venezuela",
+      "VE",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Vietnam (VN)",
+      "Vietnam",
+      "VN",
+      "Asian",
+      "5A",
+      5,
+      "Asian",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Virgin Islands-British (VG)",
+      "Virgin Islands-British",
+      "VG",
+      "ROW",
+      "10A",
+      10,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Virgin Islands-US (VI)",
+      "Virgin Islands-US",
+      "VI",
+      "ROW",
+      "9A",
+      9,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Yemen, Rep. Of (YE)",
+      "Yemen, Rep. Of",
+      "YE",
+      "ROW",
+      "4A",
+      4,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Zambia (ZM)",
+      "Zambia",
+      "ZM",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ],
+    [
+      "DHL",
+      "Zimbabwe (ZW)",
+      "Zimbabwe",
+      "ZW",
+      "ROW",
+      "11A",
+      11,
+      "ROW",
+      "#N/A",
+      null,
+      null
+    ]
+  ],
+  "DHL / Sheet2": [
+    [
+      "Countries & Territories",
+      "Zone",
+      null,
+      null,
+      null,
+      "Countries & Territories",
+      null,
+      null
+    ],
+    [
+      "Afghanistan (AF)",
+      20,
+      "20A",
+      null,
+      null,
+      "Afghanistan ",
+      "AF",
+      "20A"
+    ],
+    [
+      "Albania (AL)",
+      21,
+      "21A",
+      null,
+      null,
+      "Albania ",
+      "AL",
+      "21A"
+    ],
+    [
+      "Algeria (DZ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Algeria ",
+      "DZ",
+      "20A"
+    ],
+    [
+      "American Samoa (AS)",
+      9,
+      "9A",
+      null,
+      null,
+      "American Samoa ",
+      "AS",
+      "9A"
+    ],
+    [
+      "Andorra (AD)",
+      18,
+      "18A",
+      null,
+      null,
+      "Andorra ",
+      "AD",
+      "18A"
+    ],
+    [
+      "Angola (AO)",
+      20,
+      "20A",
+      null,
+      null,
+      "Angola ",
+      "AO",
+      "20A"
+    ],
+    [
+      "Anguilla (AI)",
+      10,
+      "10A",
+      null,
+      null,
+      "Anguilla ",
+      "AI",
+      "10A"
+    ],
+    [
+      "Antigua (AG)",
+      10,
+      "10A",
+      null,
+      null,
+      "Antigua ",
+      "AG",
+      "10A"
+    ],
+    [
+      "Argentina (AR)",
+      19,
+      "19A",
+      null,
+      null,
+      "Argentina ",
+      "AR",
+      "19A"
+    ],
+    [
+      "Armenia (AM)",
+      20,
+      "20A",
+      null,
+      null,
+      "Armenia ",
+      "AM",
+      "20A"
+    ],
+    [
+      "Aruba (AW)",
+      10,
+      "10A",
+      null,
+      null,
+      "Aruba ",
+      "AW",
+      "10A"
+    ],
+    [
+      "Australia (AU)",
+      14,
+      "14A",
+      null,
+      null,
+      "Australia ",
+      "AU",
+      "14A"
+    ],
+    [
+      "Austria (AT)",
+      7,
+      "7A",
+      null,
+      null,
+      "Austria ",
+      "AT",
+      "7A"
+    ],
+    [
+      "Azerbaijan (AZ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Azerbaijan ",
+      "AZ",
+      "20A"
+    ],
+    [
+      "Bahamas (BS)",
+      10,
+      "10A",
+      null,
+      null,
+      "Bahamas ",
+      "BS",
+      "10A"
+    ],
+    [
+      "Bahrain (BH)",
+      17,
+      "17A",
+      null,
+      null,
+      "Bahrain ",
+      "BH",
+      "17A"
+    ],
+    [
+      "Bangladesh (BD)",
+      16,
+      "16A",
+      null,
+      null,
+      "Bangladesh ",
+      "BD",
+      "16A"
+    ],
+    [
+      "Barbados (BB)",
+      10,
+      "10A",
+      null,
+      null,
+      "Barbados ",
+      "BB",
+      "10A"
+    ],
+    [
+      "Belarus (BY)",
+      8,
+      "8A",
+      null,
+      null,
+      "Belarus ",
+      "BY",
+      "8A"
+    ],
+    [
+      "Belgium (BE)",
+      7,
+      "7A",
+      null,
+      null,
+      "Belgium ",
+      "BE",
+      "7A"
+    ],
+    [
+      "Belize (BZ)",
+      19,
+      "19A",
+      null,
+      null,
+      "Belize ",
+      "BZ",
+      "19A"
+    ],
+    [
+      "Benin (BJ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Benin ",
+      "BJ",
+      "20A"
+    ],
+    [
+      "Bermuda (BM)",
+      10,
+      "10A",
+      null,
+      null,
+      "Bermuda ",
+      "BM",
+      "10A"
+    ],
+    [
+      "Bhutan (BT)",
+      16,
+      "16A",
+      null,
+      null,
+      "Bhutan ",
+      "BT",
+      "16A"
+    ],
+    [
+      "Bolivia (BO)",
+      19,
+      "19A",
+      null,
+      null,
+      "Bolivia ",
+      "BO",
+      "19A"
+    ],
+    [
+      "Bonaire (XB)",
+      10,
+      "10A",
+      null,
+      null,
+      "Bonaire ",
+      "XB",
+      "10A"
+    ],
+    [
+      "Bosnia & Herzegovina(BA)",
+      21,
+      "21A",
+      null,
+      null,
+      "Bosnia & Herzegovina",
+      "BA",
+      "21A"
+    ],
+    [
+      "Botswana (BW)",
+      20,
+      "20A",
+      null,
+      null,
+      "Botswana ",
+      "BW",
+      "20A"
+    ],
+    [
+      "Brazil (BR)",
+      19,
+      "19A",
+      null,
+      null,
+      "Brazil ",
+      "BR",
+      "19A"
+    ],
+    [
+      "Brunei (BN)",
+      5,
+      "5A",
+      null,
+      null,
+      "Brunei ",
+      "BN",
+      "5A"
+    ],
+    [
+      "Bulgaria (BG)",
+      18,
+      "18A",
+      null,
+      null,
+      "Bulgaria ",
+      "BG",
+      "18A"
+    ],
+    [
+      "Burkina Faso (BF)",
+      20,
+      "20A",
+      null,
+      null,
+      "Burkina Faso ",
+      "BF",
+      "20A"
+    ],
+    [
+      "Burundi (BI)",
+      20,
+      "20A",
+      null,
+      null,
+      "Burundi ",
+      "BI",
+      "20A"
+    ],
+    [
+      "Cambodia (KH)",
+      5,
+      "5A",
+      null,
+      null,
+      "Cambodia ",
+      "KH",
+      "5A"
+    ],
+    [
+      "Cameroon (CM)",
+      20,
+      "20A",
+      null,
+      null,
+      "Cameroon ",
+      "CM",
+      "20A"
+    ],
+    [
+      "Canada (CA)",
+      15,
+      "15A",
+      null,
+      null,
+      "Canada ",
+      "CA",
+      "15A"
+    ],
+    [
+      "Canary Islands, The (IC)",
+      18,
+      "18A",
+      null,
+      null,
+      "Canary Islands, The ",
+      "IC",
+      "18A"
+    ],
+    [
+      "Cape Verde (CV)",
+      20,
+      "20A",
+      null,
+      null,
+      "Cape Verde ",
+      "CV",
+      "20A"
+    ],
+    [
+      "Cayman Islands (KY)",
+      10,
+      "10A",
+      null,
+      null,
+      "Cayman Islands ",
+      "KY",
+      "10A"
+    ],
+    [
+      "Central African Rep(CF)",
+      20,
+      "20A",
+      null,
+      null,
+      "Central African Rep",
+      "CF",
+      "20A"
+    ],
+    [
+      "Chad (TD)",
+      20,
+      "20A",
+      null,
+      null,
+      "Chad ",
+      "TD",
+      "20A"
+    ],
+    [
+      "Chile (CL)",
+      19,
+      "19A",
+      null,
+      null,
+      "Chile ",
+      "CL",
+      "19A"
+    ],
+    [
+      "China (CN)",
+      3,
+      "3A",
+      null,
+      null,
+      "China ",
+      "CN",
+      "3A"
+    ],
+    [
+      "Colombia (CO)",
+      19,
+      "19A",
+      null,
+      null,
+      "Colombia ",
+      "CO",
+      "19A"
+    ],
+    [
+      "Comoros (KM)",
+      20,
+      "20A",
+      null,
+      null,
+      "Comoros ",
+      "KM",
+      "20A"
+    ],
+    [
+      "Congo (CG)",
+      20,
+      "20A",
+      null,
+      null,
+      "Congo ",
+      "CG",
+      "20A"
+    ],
+    [
+      "Congo, DPR (CD)",
+      20,
+      "20A",
+      null,
+      null,
+      "Congo, DPR ",
+      "CD",
+      "20A"
+    ],
+    [
+      "Cook Islands (CK)",
+      11,
+      "11A",
+      null,
+      null,
+      "Cook Islands ",
+      "CK",
+      "11A"
+    ],
+    [
+      "Costa Rica (CR)",
+      19,
+      "19A",
+      null,
+      null,
+      "Costa Rica ",
+      "CR",
+      "19A"
+    ],
+    [
+      "Cote D Ivoire (CI)",
+      20,
+      "20A",
+      null,
+      null,
+      "Cote D Ivoire ",
+      "CI",
+      "20A"
+    ],
+    [
+      "Croatia (HR)",
+      21,
+      "21A",
+      null,
+      null,
+      "Croatia ",
+      "HR",
+      "21A"
+    ],
+    [
+      "Cuba (CU)",
+      10,
+      "10A",
+      null,
+      null,
+      "Cuba ",
+      "CU",
+      "10A"
+    ],
+    [
+      "Curacao (XC)",
+      10,
+      "10A",
+      null,
+      null,
+      "Curacao ",
+      "XC",
+      "10A"
+    ],
+    [
+      "Cyprus (CY)",
+      18,
+      "18A",
+      null,
+      null,
+      "Cyprus ",
+      "CY",
+      "18A"
+    ],
+    [
+      "Czech Rep., The (CZ)",
+      7,
+      "7A",
+      null,
+      null,
+      "Czech Rep., The ",
+      "CZ",
+      "7A"
+    ],
+    [
+      "Denmark (DK)",
+      7,
+      "7A",
+      null,
+      null,
+      "Denmark ",
+      "DK",
+      "7A"
+    ],
+    [
+      "Djibouti (DJ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Djibouti ",
+      "DJ",
+      "20A"
+    ],
+    [
+      "Dominica (DM)",
+      10,
+      "10A",
+      null,
+      null,
+      "Dominica ",
+      "DM",
+      "10A"
+    ],
+    [
+      "Dominican Rep. (DO)",
+      10,
+      "10A",
+      null,
+      null,
+      "Dominican Rep. ",
+      "DO",
+      "10A"
+    ],
+    [
+      "Ecuador (EC)",
+      19,
+      "19A",
+      null,
+      null,
+      "Ecuador ",
+      "EC",
+      "19A"
+    ],
+    [
+      "Egypt (EG)",
+      13,
+      "13A",
+      null,
+      null,
+      "Egypt ",
+      "EG",
+      "13A"
+    ],
+    [
+      "El Salvador (SV)",
+      19,
+      "19A",
+      null,
+      null,
+      "El Salvador ",
+      "SV",
+      "19A"
+    ],
+    [
+      "Eritrea (ER)",
+      20,
+      "20A",
+      null,
+      null,
+      "Eritrea ",
+      "ER",
+      "20A"
+    ],
+    [
+      "Estonia (EE)",
+      18,
+      "18A",
+      null,
+      null,
+      "Estonia ",
+      "EE",
+      "18A"
+    ],
+    [
+      "Eswatini (SZ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Eswatini ",
+      "SZ",
+      "20A"
+    ],
+    [
+      "Ethiopia (ET)",
+      20,
+      "20A",
+      null,
+      null,
+      "Ethiopia ",
+      "ET",
+      "20A"
+    ],
+    [
+      "Falkland Islands (FK)",
+      8,
+      "8A",
+      null,
+      null,
+      "Falkland Islands ",
+      "FK",
+      "8A"
+    ],
+    [
+      "Faroe Islands (FO)",
+      8,
+      "8A",
+      null,
+      null,
+      "Faroe Islands ",
+      "FO",
+      "8A"
+    ],
+    [
+      "Fiji (FJ)",
+      11,
+      "11A",
+      null,
+      null,
+      "Fiji ",
+      "FJ",
+      "11A"
+    ],
+    [
+      "Finland (FI)",
+      18,
+      "18A",
+      null,
+      null,
+      "Finland ",
+      "FI",
+      "18A"
+    ],
+    [
+      "France (FR)",
+      7,
+      "7A",
+      null,
+      null,
+      "France ",
+      "FR",
+      "7A"
+    ],
+    [
+      "French Guyana (GF)",
+      19,
+      "19A",
+      null,
+      null,
+      "French Guyana ",
+      "GF",
+      "19A"
+    ],
+    [
+      "Gabon (GA)",
+      20,
+      "20A",
+      null,
+      null,
+      "Gabon ",
+      "GA",
+      "20A"
+    ],
+    [
+      "Gambia (GM)",
+      20,
+      "20A",
+      null,
+      null,
+      "Gambia ",
+      "GM",
+      "20A"
+    ],
+    [
+      "Georgia (GE)",
+      20,
+      "20A",
+      null,
+      null,
+      "Georgia ",
+      "GE",
+      "20A"
+    ],
+    [
+      "Germany (DE)",
+      7,
+      "7A",
+      null,
+      null,
+      "Germany ",
+      "DE",
+      "7A"
+    ],
+    [
+      "Ghana (GH)",
+      13,
+      "13A",
+      null,
+      null,
+      "Ghana ",
+      "GH",
+      "13A"
+    ],
+    [
+      "Gibraltar (GI)",
+      18,
+      "18A",
+      null,
+      null,
+      "Gibraltar ",
+      "GI",
+      "18A"
+    ],
+    [
+      "Greece (GR)",
+      18,
+      "18A",
+      null,
+      null,
+      "Greece ",
+      "GR",
+      "18A"
+    ],
+    [
+      "Greenland (GL)",
+      8,
+      "8A",
+      null,
+      null,
+      "Greenland ",
+      "GL",
+      "8A"
+    ],
+    [
+      "Grenada (GD)",
+      10,
+      "10A",
+      null,
+      null,
+      "Grenada ",
+      "GD",
+      "10A"
+    ],
+    [
+      "Guadeloupe (GP)",
+      10,
+      "10A",
+      null,
+      null,
+      "Guadeloupe ",
+      "GP",
+      "10A"
+    ],
+    [
+      "Guam (GU)",
+      9,
+      "9A",
+      null,
+      null,
+      "Guam ",
+      "GU",
+      "9A"
+    ],
+    [
+      "Guatemala (GT)",
+      19,
+      "19A",
+      null,
+      null,
+      "Guatemala ",
+      "GT",
+      "19A"
+    ],
+    [
+      "Guernsey (GG)",
+      18,
+      "18A",
+      null,
+      null,
+      "Guernsey ",
+      "GG",
+      "18A"
+    ],
+    [
+      "Guinea Rep. (GN)",
+      20,
+      "20A",
+      null,
+      null,
+      "Guinea Rep. ",
+      "GN",
+      "20A"
+    ],
+    [
+      "Guinea-Bissau (GW)",
+      20,
+      "20A",
+      null,
+      null,
+      "Guinea-Bissau ",
+      "GW",
+      "20A"
+    ],
+    [
+      "Guinea-Equatorial (GQ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Guinea-Equatorial ",
+      "GQ",
+      "20A"
+    ],
+    [
+      "Guyana (British) (GY)",
+      19,
+      "19A",
+      null,
+      null,
+      "Guyana (British)",
+      "GY",
+      "19A"
+    ],
+    [
+      "Haiti (HT)",
+      10,
+      "10A",
+      null,
+      null,
+      "Haiti ",
+      "HT",
+      "10A"
+    ],
+    [
+      "Honduras (HN)",
+      19,
+      "19A",
+      null,
+      null,
+      "Honduras ",
+      "HN",
+      "19A"
+    ],
+    [
+      "Hong Kong SAR China (HK)",
+      2,
+      "2A",
+      null,
+      null,
+      "Hong Kong SAR China ",
+      "HK",
+      "2A"
+    ],
+    [
+      "Hungary (HU)",
+      7,
+      "7A",
+      null,
+      null,
+      "Hungary ",
+      "HU",
+      "7A"
+    ],
+    [
+      "Iceland (IS)",
+      18,
+      "18A",
+      null,
+      null,
+      "Iceland ",
+      "IS",
+      "18A"
+    ],
+    [
+      "Indonesia (ID)",
+      5,
+      "5A",
+      null,
+      null,
+      "Indonesia ",
+      "ID",
+      "5A"
+    ],
+    [
+      "Iran (IR)",
+      20,
+      "20A",
+      null,
+      null,
+      "Iran ",
+      "IR",
+      "20A"
+    ],
+    [
+      "Iraq (IQ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Iraq ",
+      "IQ",
+      "20A"
+    ],
+    [
+      "Ireland, Rep. Of (IE)",
+      7,
+      "7A",
+      null,
+      null,
+      "Ireland, Rep. Of ",
+      "IE",
+      "7A"
+    ],
+    [
+      "Israel (IL)",
+      18,
+      "18A",
+      null,
+      null,
+      "Israel ",
+      "IL",
+      "18A"
+    ],
+    [
+      "Italy (IT)",
+      7,
+      "7A",
+      null,
+      null,
+      "Italy ",
+      "IT",
+      "7A"
+    ],
+    [
+      "Jamaica (JM)",
+      10,
+      "10A",
+      null,
+      null,
+      "Jamaica ",
+      "JM",
+      "10A"
+    ],
+    [
+      "Japan (JP)",
+      5,
+      "5A",
+      null,
+      null,
+      "Japan ",
+      "JP",
+      "5A"
+    ],
+    [
+      "Jersey (JE)",
+      18,
+      "18A",
+      null,
+      null,
+      "Jersey ",
+      "JE",
+      "18A"
+    ],
+    [
+      "Jordan (JO)",
+      17,
+      "17A",
+      null,
+      null,
+      "Jordan ",
+      "JO",
+      "17A"
+    ],
+    [
+      "Kazakhstan (KZ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Kazakhstan ",
+      "KZ",
+      "20A"
+    ],
+    [
+      "Kenya (KE)",
+      13,
+      "13A",
+      null,
+      null,
+      "Kenya ",
+      "KE",
+      "13A"
+    ],
+    [
+      "Kiribati (KI)",
+      11,
+      "11A",
+      null,
+      null,
+      "Kiribati ",
+      "KI",
+      "11A"
+    ],
+    [
+      "Korea, Rep. Of (KR)",
+      5,
+      "5A",
+      null,
+      null,
+      "Korea, Rep. Of ",
+      "KR",
+      "5A"
+    ],
+    [
+      "Korea, \u00a0D.P.R Of (KP)",
+      20,
+      "20A",
+      null,
+      null,
+      "Korea, \u00a0D.P.R Of ",
+      "KP",
+      "20A"
+    ],
+    [
+      "Kosovo (KV)",
+      21,
+      "21A",
+      null,
+      null,
+      "Kosovo ",
+      "KV",
+      "21A"
+    ],
+    [
+      "Kuwait (KW)",
+      17,
+      "17A",
+      null,
+      null,
+      "Kuwait ",
+      "KW",
+      "17A"
+    ],
+    [
+      "Kyrgyzstan (KG)",
+      20,
+      "20A",
+      null,
+      null,
+      "Kyrgyzstan ",
+      "KG",
+      "20A"
+    ],
+    [
+      "Laos (LA)",
+      5,
+      "5A",
+      null,
+      null,
+      "Laos ",
+      "LA",
+      "5A"
+    ],
+    [
+      "Latvia (LV)",
+      18,
+      "18A",
+      null,
+      null,
+      "Latvia ",
+      "LV",
+      "18A"
+    ],
+    [
+      "Lebanon (LB)",
+      20,
+      "20A",
+      null,
+      null,
+      "Lebanon ",
+      "LB",
+      "20A"
+    ],
+    [
+      "Lesotho (LS)",
+      20,
+      "20A",
+      null,
+      null,
+      "Lesotho ",
+      "LS",
+      "20A"
+    ],
+    [
+      "Liberia (LR)",
+      20,
+      "20A",
+      null,
+      null,
+      "Liberia ",
+      "LR",
+      "20A"
+    ],
+    [
+      "Libya (LY)",
+      20,
+      "20A",
+      null,
+      null,
+      "Libya ",
+      "LY",
+      "20A"
+    ],
+    [
+      "Liechtenstein (LI)",
+      7,
+      "7A",
+      null,
+      null,
+      "Liechtenstein ",
+      "LI",
+      "7A"
+    ],
+    [
+      "Lithuania (LT)",
+      18,
+      "18A",
+      null,
+      null,
+      "Lithuania ",
+      "LT",
+      "18A"
+    ],
+    [
+      "Luxembourg (LU)",
+      7,
+      "7A",
+      null,
+      null,
+      "Luxembourg ",
+      "LU",
+      "7A"
+    ],
+    [
+      "Macau SAR China (MO)",
+      5,
+      "5A",
+      null,
+      null,
+      "Macau SAR China ",
+      "MO",
+      "5A"
+    ],
+    [
+      "Madagascar (MG)",
+      20,
+      "20A",
+      null,
+      null,
+      "Madagascar ",
+      "MG",
+      "20A"
+    ],
+    [
+      "Malawi (MW)",
+      20,
+      "20A",
+      null,
+      null,
+      "Malawi ",
+      "MW",
+      "20A"
+    ],
+    [
+      "Malaysia (MY)",
+      2,
+      "2A",
+      null,
+      null,
+      "Malaysia ",
+      "MY",
+      "2A"
+    ],
+    [
+      "Maldives (MV)",
+      16,
+      "16A",
+      null,
+      null,
+      "Maldives ",
+      "MV",
+      "16A"
+    ],
+    [
+      "Mali (ML)",
+      20,
+      "20A",
+      null,
+      null,
+      "Mali ",
+      "ML",
+      "20A"
+    ],
+    [
+      "Malta (MT)",
+      18,
+      "18A",
+      null,
+      null,
+      "Malta ",
+      "MT",
+      "18A"
+    ],
+    [
+      "Marshall Islands (MH)",
+      9,
+      "9A",
+      null,
+      null,
+      "Marshall Islands ",
+      "MH",
+      "9A"
+    ],
+    [
+      "Martinique (MQ)",
+      10,
+      "10A",
+      null,
+      null,
+      "Martinique ",
+      "MQ",
+      "10A"
+    ],
+    [
+      "Mauritania (MR)",
+      20,
+      "20A",
+      null,
+      null,
+      "Mauritania ",
+      "MR",
+      "20A"
+    ],
+    [
+      "Mauritius (MU)",
+      13,
+      "13A",
+      null,
+      null,
+      "Mauritius ",
+      "MU",
+      "13A"
+    ],
+    [
+      "Mayotte (YT)",
+      20,
+      "20A",
+      null,
+      null,
+      "Mayotte ",
+      "YT",
+      "20A"
+    ],
+    [
+      "Mexico (MX)",
+      9,
+      "9A",
+      null,
+      null,
+      "Mexico ",
+      "MX",
+      "9A"
+    ],
+    [
+      "Micronesia (FM)",
+      22,
+      "22A",
+      null,
+      null,
+      "Micronesia ",
+      "FM",
+      "22A"
+    ],
+    [
+      "Moldova, Rep. Of (MD)",
+      21,
+      "21A",
+      null,
+      null,
+      "Moldova, Rep. Of ",
+      "MD",
+      "21A"
+    ],
+    [
+      "Monaco (MC)",
+      7,
+      "7A",
+      null,
+      null,
+      "Monaco ",
+      "MC",
+      "7A"
+    ],
+    [
+      "Mongolia (MN)",
+      11,
+      "11A",
+      null,
+      null,
+      "Mongolia ",
+      "MN",
+      "11A"
+    ],
+    [
+      "Montenegro, Rep Of (ME)",
+      21,
+      "21A",
+      null,
+      null,
+      "Montenegro, Rep Of ",
+      "ME",
+      "21A"
+    ],
+    [
+      "Montserrat (MS)",
+      10,
+      "10A",
+      null,
+      null,
+      "Montserrat ",
+      "MS",
+      "10A"
+    ],
+    [
+      "Morocco (MA)",
+      20,
+      "20A",
+      null,
+      null,
+      "Morocco ",
+      "MA",
+      "20A"
+    ],
+    [
+      "Mozambique (MZ)",
+      13,
+      "13A",
+      null,
+      null,
+      "Mozambique ",
+      "MZ",
+      "13A"
+    ],
+    [
+      "Myanmar (MM)",
+      5,
+      "5A",
+      null,
+      null,
+      "Myanmar ",
+      "MM",
+      "5A"
+    ],
+    [
+      "Namibia (NA)",
+      20,
+      "20A",
+      null,
+      null,
+      "Namibia ",
+      "NA",
+      "20A"
+    ],
+    [
+      "Nauru, Rep. Of (NR)",
+      11,
+      "11A",
+      null,
+      null,
+      "Nauru, Rep. Of ",
+      "NR",
+      "11A"
+    ],
+    [
+      "Nepal (NP)",
+      16,
+      "16A",
+      null,
+      null,
+      "Nepal ",
+      "NP",
+      "16A"
+    ],
+    [
+      "Netherlands, The (NL)",
+      7,
+      "7A",
+      null,
+      null,
+      "Netherlands, The ",
+      "NL",
+      "7A"
+    ],
+    [
+      "Nevis (XN)",
+      10,
+      "10A",
+      null,
+      null,
+      "Nevis ",
+      "XN",
+      "10A"
+    ],
+    [
+      "New Caledonia (NC)",
+      11,
+      "11A",
+      null,
+      null,
+      "New Caledonia ",
+      "NC",
+      "11A"
+    ],
+    [
+      "New Zealand (NZ)",
+      6,
+      "6A",
+      null,
+      null,
+      "New Zealand ",
+      "NZ",
+      "6A"
+    ],
+    [
+      "Nicaragua (NI)",
+      19,
+      "19A",
+      null,
+      null,
+      "Nicaragua ",
+      "NI",
+      "19A"
+    ],
+    [
+      "Niger (NE)",
+      20,
+      "20A",
+      null,
+      null,
+      "Niger ",
+      "NE",
+      "20A"
+    ],
+    [
+      "Nigeria (NG)",
+      13,
+      "13A",
+      null,
+      null,
+      "Nigeria ",
+      "NG",
+      "13A"
+    ],
+    [
+      "Niue (NU)",
+      11,
+      "11A",
+      null,
+      null,
+      "Niue ",
+      "NU",
+      "11A"
+    ],
+    [
+      "North Macedonia (MK)",
+      21,
+      "21A",
+      null,
+      null,
+      "North Macedonia ",
+      "MK",
+      "21A"
+    ],
+    [
+      "Northern Mariana Islands (MP)",
+      9,
+      "9A",
+      null,
+      null,
+      "Northern Mariana Islands ",
+      "MP",
+      "9A"
+    ],
+    [
+      "Norway (NO)",
+      18,
+      "18A",
+      null,
+      null,
+      "Norway ",
+      "NO",
+      "18A"
+    ],
+    [
+      "Oman (OM)",
+      17,
+      "17A",
+      null,
+      null,
+      "Oman ",
+      "OM",
+      "17A"
+    ],
+    [
+      "Pakistan (PK)",
+      4,
+      "4A",
+      null,
+      null,
+      "Pakistan ",
+      "PK",
+      "4A"
+    ],
+    [
+      "Palau (PW)",
+      22,
+      "22A",
+      null,
+      null,
+      "Palau ",
+      "PW",
+      "22A"
+    ],
+    [
+      "Panama (PA)",
+      19,
+      "19A",
+      null,
+      null,
+      "Panama ",
+      "PA",
+      "19A"
+    ],
+    [
+      "Papua New Guinea (PG)",
+      6,
+      "6A",
+      null,
+      null,
+      "Papua New Guinea ",
+      "PG",
+      "6A"
+    ],
+    [
+      "Paraguay (PY)",
+      19,
+      "19A",
+      null,
+      null,
+      "Paraguay ",
+      "PY",
+      "19A"
+    ],
+    [
+      "Peru (PE)",
+      19,
+      "19A",
+      null,
+      null,
+      "Peru ",
+      "PE",
+      "19A"
+    ],
+    [
+      "Philippines, The (PH)",
+      5,
+      "5A",
+      null,
+      null,
+      "Philippines, The ",
+      "PH",
+      "5A"
+    ],
+    [
+      "Poland (PL)",
+      7,
+      "7A",
+      null,
+      null,
+      "Poland ",
+      "PL",
+      "7A"
+    ],
+    [
+      "Portugal (PT)",
+      7,
+      "7A",
+      null,
+      null,
+      "Portugal ",
+      "PT",
+      "7A"
+    ],
+    [
+      "Puerto Rico (PR)",
+      9,
+      "9A",
+      null,
+      null,
+      "Puerto Rico ",
+      "PR",
+      "9A"
+    ],
+    [
+      "Qatar (QA)",
+      17,
+      "17A",
+      null,
+      null,
+      "Qatar ",
+      "QA",
+      "17A"
+    ],
+    [
+      "Reunion, Island Of (RE)",
+      20,
+      "20A",
+      null,
+      null,
+      "Reunion, Island Of ",
+      "RE",
+      "20A"
+    ],
+    [
+      "Romania (RO)",
+      7,
+      "7A",
+      null,
+      null,
+      "Romania ",
+      "RO",
+      "7A"
+    ],
+    [
+      "Russian Federation (RU)",
+      20,
+      "20A",
+      null,
+      null,
+      "Russian Federation ",
+      "RU",
+      "20A"
+    ],
+    [
+      "Rwanda (RW)",
+      20,
+      "20A",
+      null,
+      null,
+      "Rwanda ",
+      "RW",
+      "20A"
+    ],
+    [
+      "Saint Helena (SH)",
+      20,
+      "20A",
+      null,
+      null,
+      "Saint Helena ",
+      "SH",
+      "20A"
+    ],
+    [
+      "Samoa (WS)",
+      11,
+      "11A",
+      null,
+      null,
+      "Samoa ",
+      "WS",
+      "11A"
+    ],
+    [
+      "San Marino (SM)",
+      21,
+      "21A",
+      null,
+      null,
+      "San Marino ",
+      "SM",
+      "21A"
+    ],
+    [
+      "Sao Tome And Principe (ST)",
+      20,
+      "20A",
+      null,
+      null,
+      "Sao Tome And Principe ",
+      "ST",
+      "20A"
+    ],
+    [
+      "Saudi Arabia (SA)",
+      17,
+      "17A",
+      null,
+      null,
+      "Saudi Arabia ",
+      "SA",
+      "17A"
+    ],
+    [
+      "Senegal (SN)",
+      20,
+      "20A",
+      null,
+      null,
+      "Senegal ",
+      "SN",
+      "20A"
+    ],
+    [
+      "Serbia, Rep. Of (RS)",
+      21,
+      "21A",
+      null,
+      null,
+      "Serbia, Rep. Of ",
+      "RS",
+      "21A"
+    ],
+    [
+      "Seychelles (SC)",
+      20,
+      "20A",
+      null,
+      null,
+      "Seychelles ",
+      "SC",
+      "20A"
+    ],
+    [
+      "Sierra Leone (SL)",
+      20,
+      "20A",
+      null,
+      null,
+      "Sierra Leone ",
+      "SL",
+      "20A"
+    ],
+    [
+      "Singapore (SG)",
+      2,
+      "2A",
+      null,
+      null,
+      "Singapore ",
+      "SG",
+      "2A"
+    ],
+    [
+      "Slovakia (SK)",
+      7,
+      "7A",
+      null,
+      null,
+      "Slovakia ",
+      "SK",
+      "7A"
+    ],
+    [
+      "Slovenia (SI)",
+      18,
+      "18A",
+      null,
+      null,
+      "Slovenia ",
+      "SI",
+      "18A"
+    ],
+    [
+      "Solomon Islands (SB)",
+      11,
+      "11A",
+      null,
+      null,
+      "Solomon Islands ",
+      "SB",
+      "11A"
+    ],
+    [
+      "Somalia (SO)",
+      20,
+      "20A",
+      null,
+      null,
+      "Somalia ",
+      "SO",
+      "20A"
+    ],
+    [
+      "Somaliland, Rep Of (XS)",
+      20,
+      "20A",
+      null,
+      null,
+      "Somaliland, Rep Of ",
+      "XS",
+      "20A"
+    ],
+    [
+      "South Africa (ZA)",
+      13,
+      "13A",
+      null,
+      null,
+      "South Africa ",
+      "ZA",
+      "13A"
+    ],
+    [
+      "South Sudan (SS)",
+      20,
+      "20A",
+      null,
+      null,
+      "South Sudan ",
+      "SS",
+      "20A"
+    ],
+    [
+      "Spain (ES)",
+      7,
+      "7A",
+      null,
+      null,
+      "Spain ",
+      "ES",
+      "7A"
+    ],
+    [
+      "Sri Lanka (LK)",
+      16,
+      "16A",
+      null,
+      null,
+      "Sri Lanka ",
+      "LK",
+      "16A"
+    ],
+    [
+      "St. Barthelemy (XY)",
+      10,
+      "10A",
+      null,
+      null,
+      "St. Barthelemy ",
+      "XY",
+      "10A"
+    ],
+    [
+      "St. Eustatius (XE)",
+      10,
+      "10A",
+      null,
+      null,
+      "St. Eustatius ",
+      "XE",
+      "10A"
+    ],
+    [
+      "St. Kitts (KN)",
+      10,
+      "10A",
+      null,
+      null,
+      "St. Kitts ",
+      "KN",
+      "10A"
+    ],
+    [
+      "St. Lucia (LC)",
+      10,
+      "10A",
+      null,
+      null,
+      "St. Lucia ",
+      "LC",
+      "10A"
+    ],
+    [
+      "St. Maarten (XM)",
+      10,
+      "10A",
+      null,
+      null,
+      "St. Maarten ",
+      "XM",
+      "10A"
+    ],
+    [
+      "St. Vincent (VC)",
+      10,
+      "10A",
+      null,
+      null,
+      "St. Vincent ",
+      "VC",
+      "10A"
+    ],
+    [
+      "Sudan (SD)",
+      13,
+      "13A",
+      null,
+      null,
+      "Sudan ",
+      "SD",
+      "13A"
+    ],
+    [
+      "Suriname (SR)",
+      19,
+      "19A",
+      null,
+      null,
+      "Suriname ",
+      "SR",
+      "19A"
+    ],
+    [
+      "Sweden (SE)",
+      7,
+      "7A",
+      null,
+      null,
+      "Sweden ",
+      "SE",
+      "7A"
+    ],
+    [
+      "Switzerland (CH)",
+      7,
+      "7A",
+      null,
+      null,
+      "Switzerland ",
+      "CH",
+      "7A"
+    ],
+    [
+      "Syria (SY)",
+      20,
+      "20A",
+      null,
+      null,
+      "Syria ",
+      "SY",
+      "20A"
+    ],
+    [
+      "Tahiti (PF)",
+      11,
+      "11A",
+      null,
+      null,
+      "Tahiti ",
+      "PF",
+      "11A"
+    ],
+    [
+      "Taiwan (TW)",
+      5,
+      "5A",
+      null,
+      null,
+      "Taiwan ",
+      "TW",
+      "5A"
+    ],
+    [
+      "Tajikistan (TJ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Tajikistan ",
+      "TJ",
+      "20A"
+    ],
+    [
+      "Tanzania (TZ)",
+      13,
+      "13A",
+      null,
+      null,
+      "Tanzania ",
+      "TZ",
+      "13A"
+    ],
+    [
+      "Thailand (TH)",
+      2,
+      "2A",
+      null,
+      null,
+      "Thailand ",
+      "TH",
+      "2A"
+    ],
+    [
+      "Timor-Leste (TL)",
+      5,
+      "5A",
+      null,
+      null,
+      "Timor-Leste ",
+      "TL",
+      "5A"
+    ],
+    [
+      "Togo (TG)",
+      20,
+      "20A",
+      null,
+      null,
+      "Togo ",
+      "TG",
+      "20A"
+    ],
+    [
+      "Tonga (TO)",
+      11,
+      "11A",
+      null,
+      null,
+      "Tonga ",
+      "TO",
+      "11A"
+    ],
+    [
+      "Trinidad And Tobago (TT)",
+      10,
+      "10A",
+      null,
+      null,
+      "Trinidad And Tobago ",
+      "TT",
+      "10A"
+    ],
+    [
+      "Tunisia (TN)",
+      20,
+      "20A",
+      null,
+      null,
+      "Tunisia ",
+      "TN",
+      "20A"
+    ],
+    [
+      "Turkey (TR)",
+      18,
+      "18A",
+      null,
+      null,
+      "Turkey ",
+      "TR",
+      "18A"
+    ],
+    [
+      "Turkmenistan (TM)",
+      20,
+      "20A",
+      null,
+      null,
+      "Turkmenistan ",
+      "TM",
+      "20A"
+    ],
+    [
+      "Turks & Caicos (TC)",
+      10,
+      "10A",
+      null,
+      null,
+      "Turks & Caicos ",
+      "TC",
+      "10A"
+    ],
+    [
+      "Tuvalu (TV)",
+      11,
+      "11A",
+      null,
+      null,
+      "Tuvalu ",
+      "TV",
+      "11A"
+    ],
+    [
+      "USA (US)",
+      12,
+      "12A",
+      null,
+      null,
+      "USA ",
+      "US",
+      "12A"
+    ],
+    [
+      "Uganda (UG)",
+      13,
+      "13A",
+      null,
+      null,
+      "Uganda ",
+      "UG",
+      "13A"
+    ],
+    [
+      "Ukraine (UA)",
+      20,
+      "20A",
+      null,
+      null,
+      "Ukraine ",
+      "UA",
+      "20A"
+    ],
+    [
+      "United Arab Emirates (AE)",
+      1,
+      "1A",
+      null,
+      null,
+      "United Arab Emirates ",
+      "AE",
+      "1A"
+    ],
+    [
+      "United Kingdom (GB)",
+      7,
+      "7A",
+      null,
+      null,
+      "United Kingdom ",
+      "GB",
+      "7A"
+    ],
+    [
+      "Uruguay (UY)",
+      19,
+      "19A",
+      null,
+      null,
+      "Uruguay ",
+      "UY",
+      "19A"
+    ],
+    [
+      "Uzbekistan (UZ)",
+      20,
+      "20A",
+      null,
+      null,
+      "Uzbekistan ",
+      "UZ",
+      "20A"
+    ],
+    [
+      "Vanuatu (VU)",
+      11,
+      "11A",
+      null,
+      null,
+      "Vanuatu ",
+      "VU",
+      "11A"
+    ],
+    [
+      "Vatican City (VA)",
+      7,
+      "7A",
+      null,
+      null,
+      "Vatican City ",
+      "VA",
+      "7A"
+    ],
+    [
+      "Venezuela (VE)",
+      10,
+      "10A",
+      null,
+      null,
+      "Venezuela ",
+      "VE",
+      "10A"
+    ],
+    [
+      "Vietnam (VN)",
+      5,
+      "5A",
+      null,
+      null,
+      "Vietnam ",
+      "VN",
+      "5A"
+    ],
+    [
+      "Virgin Islands-British (VG)",
+      10,
+      "10A",
+      null,
+      null,
+      "Virgin Islands-British ",
+      "VG",
+      "10A"
+    ],
+    [
+      "Virgin Islands-US (VI)",
+      9,
+      "9A",
+      null,
+      null,
+      "Virgin Islands-US ",
+      "VI",
+      "9A"
+    ],
+    [
+      "Yemen, Rep. Of (YE)",
+      20,
+      "20A",
+      null,
+      null,
+      "Yemen, Rep. Of ",
+      "YE",
+      "20A"
+    ],
+    [
+      "Zambia (ZM)",
+      20,
+      "20A",
+      null,
+      null,
+      "Zambia ",
+      "ZM",
+      "20A"
+    ],
+    [
+      "Zimbabwe (ZW)",
+      13,
+      "13A",
+      null,
+      null,
+      "Zimbabwe ",
+      "ZW",
+      "13A"
+    ]
+  ],
+  "UPS / Zones": [
+    [
+      "India Country Grouping",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      "Export Zone",
+      "",
+      "",
+      "",
+      "",
+      "Import Zone",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "IATA",
+      "COUNTRY",
+      "Plus",
+      "Express",
+      "Saver",
+      "Expedited",
+      "Freight",
+      "Plus",
+      "Express",
+      "Saver",
+      "Expedited",
+      "Freight",
+      ""
+    ],
+    [
+      "AF",
+      "Afghanistan",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AX",
+      "Aland Island (Finland)*",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      42
+    ],
+    [
+      "AL",
+      "Albania",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "DZ",
+      "Algeria",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AS",
+      "American Samoa",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AD",
+      "Andorra",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AO",
+      "Angola",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AI",
+      "Anguilla",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AG",
+      "Antigua and Barbuda",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AR",
+      "Argentina*",
+      "-",
+      7.0,
+      "7A",
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "AR"
+    ],
+    [
+      "AM",
+      "Armenia",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AW",
+      "Aruba",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "AW"
+    ],
+    [
+      "AU",
+      "Australia*",
+      "-",
+      "-",
+      "AU",
+      3.0,
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      42
+    ],
+    [
+      "AT",
+      "Austria*",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "AZ",
+      "Azerbaijan",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "A2",
+      "Azores (Portugal)*",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BS",
+      "Bahamas *",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "BS"
+    ],
+    [
+      "BH",
+      "Bahrain",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      42
+    ],
+    [
+      "BD",
+      "Bangladesh *",
+      "-",
+      "-",
+      1.0,
+      1.0,
+      1.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BB",
+      "Barbados",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BY",
+      "Belarus/ Byelorussia *",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BE",
+      "Belgium",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "BZ",
+      "Belize",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BJ",
+      "Benin",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BM",
+      "Bermuda",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "BM"
+    ],
+    [
+      "BT",
+      "Bhutan",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BO",
+      "Bolivia",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "BO"
+    ],
+    [
+      "BQ",
+      "Bonaire, St.Eustatius, Saba",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BA",
+      "Bosnia and Herzegovina",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BW",
+      "Botswana",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BR",
+      "Brazil *",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "VG",
+      "British Virgin Islands",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "VG"
+    ],
+    [
+      "BN",
+      "Brunei *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "B1",
+      "Buesingen (Germany)",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BG",
+      "Bulgaria",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "BF",
+      "Burkina Faso",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BI",
+      "Burundi",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "KH",
+      "Cambodia *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CM",
+      "Cameroon",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "CM"
+    ],
+    [
+      "IT",
+      "Campione / Lake Lugano (Italy)",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "CA",
+      "Canada *",
+      5.0,
+      5.0,
+      "CA",
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      42
+    ],
+    [
+      "IC",
+      "Canary Islands (Spain)*",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CV",
+      "Cape Verde",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KY",
+      "Cayman Islands",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CF",
+      "Central African Republic",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ES",
+      "Ceuta (Spain)",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TD",
+      "Chad",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CL",
+      "Chile *",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "SO",
+      "China South\u00b9* (Fujian & Guangdong Province)\nPostal code - 330000 - 369999\nPostal code - 400000 - 429999\nPostal code - 450321 - 450321\nPostal code - 510000 - 549999\nPostal code - 570000 - 579999\nPostal code - 617300 - 617300\nPostal code - 650000 - 679999",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      10.0,
+      10.0,
+      10.0,
+      10.0,
+      10.0,
+      42
+    ],
+    [
+      "CN",
+      "China\u00b2 (Excluding China South)*\nPostal code - 000000 - 329999\nPostal code - 370000 - 379999\nPostal code - 430000 - 450320\nPostal code - 450322 - 509999\nPostal code - 550000 - 569999\nPostal code - 580000 - 617299\nPostal code - 617301 - 649999\nPostal code - 680000 - 869999",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      42
+    ],
+    [
+      "CO",
+      "Colombia *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "KM",
+      "Comoros",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CG",
+      "Congo (Brazzaville)",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      "CG"
+    ],
+    [
+      "CD",
+      "Congo, Democratic Republic of",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CK",
+      "Cook Islands",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CR",
+      "Costa Rica*",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "CR"
+    ],
+    [
+      "CI",
+      "Cote d'Ivoire (Ivory Coast)",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "CI"
+    ],
+    [
+      "HR",
+      "Croatia *",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "CW",
+      "Curacao",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "CW"
+    ],
+    [
+      "CY",
+      "Cyprus",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "CZ",
+      "Czech Republic *",
+      7.0,
+      7.0,
+      "CZ",
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "DK",
+      "Denmark *",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      42
+    ],
+    [
+      "DJ",
+      "Djibouti",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      "DJ"
+    ],
+    [
+      "DM",
+      "Dominica",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "DO",
+      "Dominican Republic *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "EC",
+      "Ecuador *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "EG",
+      "Egypt",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      42
+    ],
+    [
+      "SV",
+      "El Salvador *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "GB",
+      "England (United Kingdom)*",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "GQ",
+      "Equatorial Guinea",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ER",
+      "Eritrea",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "EE",
+      "Estonia",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "ET",
+      "Ethiopia",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "FO",
+      "Faroe Islands",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "FJ",
+      "Fiji",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "FI",
+      "Finland *",
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      42
+    ],
+    [
+      "FR",
+      "France *",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "GF",
+      "French Guiana",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "PF",
+      "French Polynesia",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GA",
+      "Gabon",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GM",
+      "Gambia",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      "GM"
+    ],
+    [
+      "GE",
+      "Georgia *",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "DE",
+      "Germany *",
+      4.0,
+      4.0,
+      "DE",
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "GH",
+      "Ghana",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GI",
+      "Gibraltar",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GR",
+      "Greece *",
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "GL",
+      "Greenland",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GD",
+      "Grenada",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "GD"
+    ],
+    [
+      "GP",
+      "Guadeloupe*",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "GP"
+    ],
+    [
+      "GU",
+      "Guam",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GT",
+      "Guatemala *",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "GT"
+    ],
+    [
+      "GG",
+      "Guernsey (Channel Islands)",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      42
+    ],
+    [
+      "GN",
+      "Guinea",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GW",
+      "Guinea-Bissau",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GY",
+      "Guyana *",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "GY"
+    ],
+    [
+      "HT",
+      "Haiti *",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "HT"
+    ],
+    [
+      "DE",
+      "Heligoland (Germany)*",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "HN",
+      "Honduras *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "HK",
+      "Hong Kong",
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      42
+    ],
+    [
+      "HU",
+      "Hungary *",
+      7.0,
+      7.0,
+      "HU",
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "IS",
+      "Iceland",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ID",
+      "Indonesia *",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      4.0,
+      4.0,
+      4.0,
+      "-",
+      4.0,
+      42
+    ],
+    [
+      "IQ",
+      "Iraq",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "IE",
+      "Ireland, Republic of",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "IL",
+      "Israel",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "IT",
+      "Italy *",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "JM",
+      "Jamaica *",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "JM"
+    ],
+    [
+      "JP",
+      "Japan *",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      42
+    ],
+    [
+      "JE",
+      "Jersey (Channel Islands)",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      42
+    ],
+    [
+      "JO",
+      "Jordan",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KZ",
+      "Kazakhstan *",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "KE",
+      "Kenya",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KG",
+      "Kirghizia (Kyrgyzstan)",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KI",
+      "Kiribati",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KR",
+      "Korea, South",
+      "-",
+      "-",
+      3.0,
+      3.0,
+      "-",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      42
+    ],
+    [
+      "RS",
+      "Kosovo",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KO",
+      "Kosrae (Micronesia Federated States of )",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KW",
+      "Kuwait",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      42
+    ],
+    [
+      "LA",
+      "Laos",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "LV",
+      "Latvia",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "LB",
+      "Lebanon",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "LS",
+      "Lesotho",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "LR",
+      "Liberia",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "LY",
+      "Libyan Arab Jamahiriya",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "LI",
+      "Liechtenstein",
+      "-",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      42
+    ],
+    [
+      "LT",
+      "Lithuania",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "IT",
+      "Livigno (Italy)*",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "LU",
+      "Luxembourg",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "MO",
+      "Macau",
+      "-",
+      "-",
+      2.0,
+      2.0,
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MK",
+      "Macedonia (FYROM)",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MG",
+      "Madagascar",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "PT",
+      "Madeira (Portugal)*",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MW",
+      "Malawi",
+      "-",
+      "-",
+      7.0,
+      "-",
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MY",
+      "Malaysia *",
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      42
+    ],
+    [
+      "MV",
+      "Maldives",
+      "-",
+      "-",
+      "6A",
+      6.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ML",
+      "Mali",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MT",
+      "Malta",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MH",
+      "Marshall Islands",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MQ",
+      "Martinique",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "MQ"
+    ],
+    [
+      "MR",
+      "Mauritania",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MU",
+      "Mauritius",
+      "-",
+      "-",
+      "6A",
+      6.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "YT",
+      "Mayotte",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ES",
+      "Melilla (Spain)*",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MX",
+      "Mexico *",
+      "-",
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      42
+    ],
+    [
+      "FM",
+      "Micronesia, Federated States of",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MD",
+      "Moldova *",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MC",
+      "Monaco (France)*",
+      "-",
+      4.0,
+      4.0,
+      4.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "MN",
+      "Mongolia",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ME",
+      "Montenegro",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MS",
+      "Montserrat",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MA",
+      "Morocco",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "GR",
+      "Mount Athos (Greece)",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "MZ",
+      "Mozambique",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MM",
+      "Myanmar",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      42
+    ],
+    [
+      "NA",
+      "Namibia",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "NP",
+      "Nepal *",
+      "-",
+      "-",
+      1.0,
+      1.0,
+      "-",
+      1.0,
+      1.0,
+      1.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "NL",
+      "Netherlands (Holland) *",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "NC",
+      "New Caledonia",
+      "-",
+      "-",
+      "6A",
+      6.0,
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "NZ",
+      "New Zealand *",
+      "-",
+      3.0,
+      "NZ",
+      3.0,
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      42
+    ],
+    [
+      "NI",
+      "Nicaragua",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "NE",
+      "Niger",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      "NE"
+    ],
+    [
+      "NG",
+      "Nigeria",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "NF",
+      "Norfolk Island (Australia)",
+      "-",
+      "-",
+      3.0,
+      3.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "NB",
+      "Northern Ireland (United Kingdom)*",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "MP",
+      "Northern Mariana Islands *",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "NO",
+      "Norway *",
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      42
+    ],
+    [
+      "OM",
+      "Oman",
+      "-",
+      "-",
+      3.0,
+      3.0,
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      42
+    ],
+    [
+      "PK",
+      "Pakistan *",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      42
+    ],
+    [
+      "PW",
+      "Palau",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "PA",
+      "Panama *",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "PA"
+    ],
+    [
+      "PG",
+      "Papua New Guinea",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "PY",
+      "Paraguay",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "PY"
+    ],
+    [
+      "PE",
+      "Peru *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "PH",
+      "Philippines *",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      42
+    ],
+    [
+      "FM",
+      "Ponape (Micronesia Federated States of)",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "PL",
+      "Poland *",
+      7.0,
+      7.0,
+      "PL",
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "PT",
+      "Portugal *",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      42
+    ],
+    [
+      "PR",
+      "Puerto Rico*",
+      "",
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      42
+    ],
+    [
+      "QA",
+      "Qatar",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      42
+    ],
+    [
+      "RE",
+      "Reunion Island",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "RE"
+    ],
+    [
+      "RO",
+      "Romania ",
+      "-",
+      7.0,
+      "RO",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "MP",
+      "Rota (Northern Mariana Islands)*",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      "-",
+      "-",
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "RU",
+      "Russia *",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "RW",
+      "Rwanda",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MP",
+      "Saipan (Northern Mariana Islands)",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      "-",
+      "-",
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "WS",
+      "Samoa",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "WS"
+    ],
+    [
+      "SM",
+      "San Marino ",
+      "-",
+      "-",
+      4.0,
+      4.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "SA",
+      "Saudi Arabia",
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      42
+    ],
+    [
+      "GB",
+      "Scotland (United Kingdom)*",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "SN",
+      "Senegal",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "RS",
+      "Serbia",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      9.0,
+      42
+    ],
+    [
+      "SC",
+      "Seychelles",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      "SC"
+    ],
+    [
+      "SL",
+      "Sierra Leone",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      "SL"
+    ],
+    [
+      "SG",
+      "Singapore *",
+      "-",
+      "-",
+      "SG",
+      2.0,
+      "-",
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      42
+    ],
+    [
+      "SK",
+      "Slovakia",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "SI",
+      "Slovenia",
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      42
+    ],
+    [
+      "SB",
+      "Solomon Islands",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ZA",
+      "South Africa",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      42
+    ],
+    [
+      "ES",
+      "Spain *",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "LK",
+      "Sri Lanka *",
+      "-",
+      "-",
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "BL",
+      "St. Barthelemy",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "KN",
+      "St. Christopher (St.Kitts)",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "VI",
+      "St.Croix (US Virgin Islands)",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "VI"
+    ],
+    [
+      "VI",
+      "St. John (US Virgin Islands)",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "VI"
+    ],
+    [
+      "KN",
+      "St. Kitts and Nevis",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      42
+    ],
+    [
+      "LC",
+      "St. Lucia",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "LC"
+    ],
+    [
+      "SX",
+      "St.Maarten, St. Martin",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "",
+      "-",
+      42
+    ],
+    [
+      "VI",
+      "St. Thomas (US Virgin Islands)",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "",
+      "-",
+      "VI"
+    ],
+    [
+      "VC",
+      "St. Vincent & the Grenadines",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "SR",
+      "Suriname",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "SR"
+    ],
+    [
+      "SZ",
+      "Swaziland",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "SE",
+      "Sweden *",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      42
+    ],
+    [
+      "CH",
+      "Switzerland *",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      42
+    ],
+    [
+      "SY",
+      "Syrian Arab Republic",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TA",
+      "Tahiti (French Polynesia)",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TW",
+      "Taiwan *",
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      42
+    ],
+    [
+      "TJ",
+      "Tajikistan *",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TZ",
+      "Tanzania, United Republic of",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TH",
+      "Thailand *",
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      "-",
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      42
+    ],
+    [
+      "TL",
+      "Timor-Leste ",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "MP",
+      "Tinian (Northern Mariana Islands)",
+      "-",
+      "-",
+      6.0,
+      6.0,
+      "-",
+      "-",
+      "-",
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TG",
+      "Togo",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TO",
+      "Tonga",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "VG",
+      "Tortola (British Virgin Islands)",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "VG"
+    ],
+    [
+      "TT",
+      "Trinidad & Tobago *",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "TT"
+    ],
+    [
+      "FM",
+      "Truk (Micronesia, Federated States of)",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TN",
+      "Tunisia",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TR",
+      "Turkey ",
+      "-",
+      7.0,
+      7.0,
+      7.0,
+      7.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      42
+    ],
+    [
+      "TC",
+      "Turks & Caicos Islands",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "TV",
+      "Tuvalu",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "VI",
+      "U.S. Virgin Islands",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "VI"
+    ],
+    [
+      "UG",
+      "Uganda",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "UA",
+      "Ukraine *",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "VC",
+      "Union Islands (St. Vincent & the Grenadines)",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "AE",
+      "United Arab Emirates",
+      "-",
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      42
+    ],
+    [
+      "GB",
+      "United Kingdom *",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      42
+    ],
+    [
+      "US",
+      "United States",
+      5.0,
+      5.0,
+      "US",
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      42
+    ],
+    [
+      "UY",
+      "Uruguay",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "UY"
+    ],
+    [
+      "UZ",
+      "Uzbekistan",
+      "-",
+      "-",
+      8.0,
+      8.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "VU",
+      "Vanuatu",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "VA",
+      "Vatican City (Italy)*",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "VE",
+      "Venezuela *",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      42
+    ],
+    [
+      "VN",
+      "Vietnam*",
+      "-",
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      42
+    ],
+    [
+      "VG",
+      "Virgin Gorda (British Virgin Islands)",
+      "-",
+      "-",
+      "7A",
+      7.0,
+      "-",
+      8.0,
+      8.0,
+      8.0,
+      "-",
+      "-",
+      "VG"
+    ],
+    [
+      "WL",
+      "Wales (United Kingdom)*",
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      "-",
+      6.0,
+      6.0,
+      6.0,
+      6.0,
+      "-",
+      42
+    ],
+    [
+      "WF",
+      "Wallis & Futuna Islands",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "FM",
+      "Yap (Micronesia, Federation States of)",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      42
+    ],
+    [
+      "YE",
+      "Yemen, Republic of",
+      "-",
+      "-",
+      3.0,
+      3.0,
+      "-",
+      3.0,
+      3.0,
+      3.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ZM",
+      "Zambia",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ],
+    [
+      "ZW",
+      "Zimbabwe",
+      "-",
+      "-",
+      7.0,
+      7.0,
+      "-",
+      9.0,
+      9.0,
+      9.0,
+      "-",
+      "-",
+      42
+    ]
+  ],
+  "UPS / Sheet1": [
+    [
+      "NE"
+    ],
+    [
+      "VI"
+    ],
+    [
+      "NT"
+    ],
+    [
+      "GD"
+    ],
+    [
+      "GT"
+    ],
+    [
+      "DJ"
+    ],
+    [
+      "CW"
+    ],
+    [
+      "PY"
+    ],
+    [
+      "GM"
+    ],
+    [
+      "AW"
+    ],
+    [
+      "GY"
+    ],
+    [
+      "CR"
+    ],
+    [
+      "CG"
+    ],
+    [
+      "RE"
+    ],
+    [
+      "WS"
+    ],
+    [
+      "MQ"
+    ],
+    [
+      "TT"
+    ],
+    [
+      "HT"
+    ],
+    [
+      "BO"
+    ],
+    [
+      "BM"
+    ],
+    [
+      "SC"
+    ],
+    [
+      "UY"
+    ],
+    [
+      "LC"
+    ],
+    [
+      "BS"
+    ],
+    [
+      "GP"
+    ],
+    [
+      "CM"
+    ],
+    [
+      "VG"
+    ],
+    [
+      "PA"
+    ],
+    [
+      "CI"
+    ],
+    [
+      "SL"
+    ],
+    [
+      "SR"
+    ],
+    [
+      "JM"
+    ],
+    [
+      "AR"
+    ]
+  ],
+  "UPS / Region": [
+    [
+      "Row Labels",
+      ""
+    ],
+    [
+      "OBC",
+      "Region"
+    ],
+    [
+      "AE",
+      "Middle East"
+    ],
+    [
+      "AF",
+      "Europe"
+    ],
+    [
+      "AL",
+      "Europe"
+    ],
+    [
+      "AR",
+      "America"
+    ],
+    [
+      "AT",
+      "Europe"
+    ],
+    [
+      "AU",
+      "Asiapac"
+    ],
+    [
+      "AZ",
+      "Europe"
+    ],
+    [
+      "BA",
+      "Europe"
+    ],
+    [
+      "BD",
+      "Asiapac"
+    ],
+    [
+      "BE",
+      "Europe"
+    ],
+    [
+      "BG",
+      "Europe"
+    ],
+    [
+      "BH",
+      "Europe"
+    ],
+    [
+      "BI",
+      "Europe"
+    ],
+    [
+      "BO",
+      "America"
+    ],
+    [
+      "BQ",
+      "America"
+    ],
+    [
+      "BR",
+      "America"
+    ],
+    [
+      "BT",
+      "Asiapac"
+    ],
+    [
+      "BW",
+      "Europe"
+    ],
+    [
+      "CA",
+      "Canada"
+    ],
+    [
+      "CH",
+      "Europe"
+    ],
+    [
+      "CI",
+      "Europe"
+    ],
+    [
+      "CL",
+      "America"
+    ],
+    [
+      "CM",
+      "Europe"
+    ],
+    [
+      "CN",
+      "China"
+    ],
+    [
+      "CO",
+      "America"
+    ],
+    [
+      "CR",
+      "America"
+    ],
+    [
+      "CY",
+      "Europe"
+    ],
+    [
+      "CZ",
+      "Europe"
+    ],
+    [
+      "DE",
+      "Europe"
+    ],
+    [
+      "DK",
+      "Europe"
+    ],
+    [
+      "DO",
+      "America"
+    ],
+    [
+      "DZ",
+      "Europe"
+    ],
+    [
+      "EC",
+      "America"
+    ],
+    [
+      "EE",
+      "Europe"
+    ],
+    [
+      "EG",
+      "Europe"
+    ],
+    [
+      "ES",
+      "Europe"
+    ],
+    [
+      "ET",
+      "Europe"
+    ],
+    [
+      "FI",
+      "Europe"
+    ],
+    [
+      "FR",
+      "Europe"
+    ],
+    [
+      "GA",
+      "Europe"
+    ],
+    [
+      "GB",
+      "Europe"
+    ],
+    [
+      "GH",
+      "Europe"
+    ],
+    [
+      "GR",
+      "Europe"
+    ],
+    [
+      "GT",
+      "America"
+    ],
+    [
+      "GW",
+      "Europe"
+    ],
+    [
+      "GY",
+      "America"
+    ],
+    [
+      "HK",
+      "Hong Kong"
+    ],
+    [
+      "HN",
+      "America"
+    ],
+    [
+      "HR",
+      "Europe"
+    ],
+    [
+      "HU",
+      "Europe"
+    ],
+    [
+      "ID",
+      "Asiapac"
+    ],
+    [
+      "IE",
+      "Europe"
+    ],
+    [
+      "IL",
+      "Europe"
+    ],
+    [
+      "IS",
+      "Europe"
+    ],
+    [
+      "IT",
+      "Europe"
+    ],
+    [
+      "JE",
+      "Europe"
+    ],
+    [
+      "JM",
+      "America"
+    ],
+    [
+      "JO",
+      "Middle East"
+    ],
+    [
+      "JP",
+      "Asiapac"
+    ],
+    [
+      "KE",
+      "Europe"
+    ],
+    [
+      "KH",
+      "Asiapac"
+    ],
+    [
+      "KR",
+      "Asiapac"
+    ],
+    [
+      "KW",
+      "Middle East"
+    ],
+    [
+      "LB",
+      "Middle East"
+    ],
+    [
+      "LK",
+      "Srilanka"
+    ],
+    [
+      "LR",
+      "Europe"
+    ],
+    [
+      "LT",
+      "Europe"
+    ],
+    [
+      "LU",
+      "Europe"
+    ],
+    [
+      "MA",
+      "Europe"
+    ],
+    [
+      "MD",
+      "Europe"
+    ],
+    [
+      "MG",
+      "Europe"
+    ],
+    [
+      "MK",
+      "Europe"
+    ],
+    [
+      "ML",
+      "Europe"
+    ],
+    [
+      "MM",
+      "Asiapac"
+    ],
+    [
+      "MR",
+      "Europe"
+    ],
+    [
+      "MT",
+      "Europe"
+    ],
+    [
+      "MU",
+      "Asiapac"
+    ],
+    [
+      "MW",
+      "Europe"
+    ],
+    [
+      "MX",
+      "Mexico"
+    ],
+    [
+      "MY",
+      "Asiapac"
+    ],
+    [
+      "MZ",
+      "Asiapac"
+    ],
+    [
+      "NG",
+      "Africa"
+    ],
+    [
+      "NI",
+      "America"
+    ],
+    [
+      "NL",
+      "Europe"
+    ],
+    [
+      "NO",
+      "Europe"
+    ],
+    [
+      "NP",
+      "Asiapac"
+    ],
+    [
+      "NZ",
+      "Asiapac"
+    ],
+    [
+      "OM",
+      "Middle East"
+    ],
+    [
+      "PA",
+      "America"
+    ],
+    [
+      "PE",
+      "America"
+    ],
+    [
+      "PH",
+      "Asiapac"
+    ],
+    [
+      "PK",
+      "Asiapac"
+    ],
+    [
+      "PL",
+      "Europe"
+    ],
+    [
+      "PT",
+      "Europe"
+    ],
+    [
+      "QA",
+      "Middle East"
+    ],
+    [
+      "RE",
+      "Europe"
+    ],
+    [
+      "RO",
+      "Europe"
+    ],
+    [
+      "RS",
+      "Europe"
+    ],
+    [
+      "RU",
+      "Russia"
+    ],
+    [
+      "RW",
+      "Europe"
+    ],
+    [
+      "SA",
+      "Middle East"
+    ],
+    [
+      "SC",
+      "Europe"
+    ],
+    [
+      "SE",
+      "Europe"
+    ],
+    [
+      "SG",
+      "Asiapac"
+    ],
+    [
+      "SI",
+      "Europe"
+    ],
+    [
+      "SK",
+      "Europe"
+    ],
+    [
+      "SL",
+      "Srilanka"
+    ],
+    [
+      "SN",
+      "Europe"
+    ],
+    [
+      "SV",
+      "America"
+    ],
+    [
+      "TG",
+      "Europe"
+    ],
+    [
+      "TH",
+      "Asiapac"
+    ],
+    [
+      "TN",
+      "Europe"
+    ],
+    [
+      "TR",
+      "Europe"
+    ],
+    [
+      "TT",
+      "America"
+    ],
+    [
+      "TW",
+      "Asiapac"
+    ],
+    [
+      "TZ",
+      "Europe"
+    ],
+    [
+      "UA",
+      "Europe"
+    ],
+    [
+      "UG",
+      "Europe"
+    ],
+    [
+      "US",
+      "USA"
+    ],
+    [
+      "VE",
+      "America"
+    ],
+    [
+      "VI",
+      "America"
+    ],
+    [
+      "VN",
+      "Asiapac"
+    ],
+    [
+      "ZA",
+      "South Africa"
+    ],
+    [
+      "ZM",
+      "Africa"
+    ],
+    [
+      "ZW",
+      "Africa"
+    ],
+    [
+      "Grand Total",
+      ""
+    ]
+  ],
+  "UPS / Import": [
+    [
+      "India Country Grouping",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      "Import Zone",
+      "",
+      ""
+    ],
+    [
+      "IATA",
+      "COUNTRY",
+      "Saver",
+      "Express",
+      "Expedited"
+    ],
+    [
+      "AE",
+      "United Arab Emirates",
+      2.0,
+      2.0,
+      2.0
+    ],
+    [
+      "AF",
+      "Afghanistan",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "AG",
+      "Antigua and Barbuda",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "AI",
+      "Anguilla",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "AL",
+      "Albania",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "AM",
+      "Armenia",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "AN",
+      "Netherlands Antilles",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "AO",
+      "Angola",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "AR*",
+      "Argentina*",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "AS",
+      "American Samoa",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "AT",
+      "Austria",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "AU*",
+      "Australia*",
+      2.0,
+      2.0,
+      2.0
+    ],
+    [
+      "AW",
+      "Aruba",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "AZ",
+      "Azerbaijan",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "BA",
+      "Bosnia and Herzegovina",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "BB",
+      "Barbados",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "BD*",
+      "Bangladesh *",
+      3.0,
+      0.0,
+      0.0
+    ],
+    [
+      "BE",
+      "Belgium",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "BF",
+      "Burkina Faso",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "BG",
+      "Bulgaria",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "BH",
+      "Bahrain",
+      3.0,
+      3.0,
+      3.0
+    ],
+    [
+      "BJ",
+      "Benin",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "BM",
+      "Bermuda",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "BN*",
+      "Brunei *",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "BO",
+      "Bolivia",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "BR*",
+      "Brazil *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "BS*",
+      "Bahamas *",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "BT",
+      "Bhutan",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "BW",
+      "Botswana",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "BY*",
+      "Belarus/ Byelorussia *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "CA*",
+      "Canada *",
+      5.0,
+      5.0,
+      5.0
+    ],
+    [
+      "CD",
+      "Congo, Democratic Republic of",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "CG",
+      "Congo (Brazzaville)",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "CH*",
+      "Switzerland *",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "CI",
+      "Cote d'Ivoire (Ivory Coast)",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "CL*",
+      "Chile *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "CM",
+      "Cameroon",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "CN*",
+      "China\u00b2 (Excluding China South)*",
+      4.0,
+      4.0,
+      4.0
+    ],
+    [
+      "CO*",
+      "Colombia *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "CR*",
+      "Costa Rica*",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "CV*",
+      "Cape Verde*",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "CY",
+      "Cyprus",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "CZ*",
+      "Czech Republic *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "DE*",
+      "Germany *",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "DJ",
+      "Djibouti",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "DK*",
+      "Denmark *",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "DM",
+      "Dominica",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "DO*",
+      "Dominican Republic *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "DZ",
+      "Algeria",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "EC*",
+      "Ecuador *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "EE",
+      "Estonia",
+      9.0,
+      9.0,
+      9.0
+    ],
+    [
+      "EG",
+      "Egypt",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "ER",
+      "Eritrea",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "ES*",
+      "Spain *",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "ET",
+      "Ethiopia",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "FI*",
+      "Finland *",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "FJ",
+      "Fiji",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "FR*",
+      "France *",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "GA",
+      "Gabon",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "GB*",
+      "United Kingdom *",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "GD",
+      "Grenada",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "GE*",
+      "Georgia *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "GG",
+      "Guernsey (Channel Islands)",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "GH",
+      "Ghana",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "GI",
+      "Gibraltar",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "GM",
+      "Gambia",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "GN",
+      "Guinea",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "GP*",
+      "Guadeloupe*",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "GR*",
+      "Greece *",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "GT*",
+      "Guatemala *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "GU",
+      "Guam",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "GW",
+      "Guinea-Bissau",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "GY*",
+      "Guyana *",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "HK",
+      "Hong Kong",
+      2.0,
+      2.0,
+      2.0
+    ],
+    [
+      "HN*",
+      "Honduras *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "HR*",
+      "Croatia *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "HT*",
+      "Haiti *",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "HU*",
+      "Hungary *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "ID*",
+      "Indonesia *",
+      4.0,
+      4.0,
+      0.0
+    ],
+    [
+      "IE",
+      "Ireland, Republic of",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "IL",
+      "Israel",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "IQ",
+      "Iraq",
+      9.0,
+      0.0,
+      0.0
+    ],
+    [
+      "IS",
+      "Iceland",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "IT*",
+      "Italy *",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "JE",
+      "Jersey (Channel Islands)",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "JM*",
+      "Jamaica *",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "JO",
+      "Jordan",
+      3.0,
+      3.0,
+      0.0
+    ],
+    [
+      "JP*",
+      "Japan *",
+      4.0,
+      4.0,
+      4.0
+    ],
+    [
+      "KE",
+      "Kenya",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "KG",
+      "Kirghizia (Kyrgyzstan)",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "KH*",
+      "Cambodia *",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "KM",
+      "Comoros",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "KN",
+      "St. Kitts and Nevis",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "KR",
+      "Korea, South",
+      4.0,
+      4.0,
+      4.0
+    ],
+    [
+      "KW",
+      "Kuwait",
+      3.0,
+      3.0,
+      3.0
+    ],
+    [
+      "KY",
+      "Cayman Islands",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "KZ*",
+      "Kazakhstan *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "LA",
+      "Laos",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "LB",
+      "Lebanon",
+      3.0,
+      3.0,
+      0.0
+    ],
+    [
+      "LC",
+      "St. Lucia",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "LK*",
+      "Sri Lanka *",
+      1.0,
+      1.0,
+      0.0
+    ],
+    [
+      "LR",
+      "Liberia",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "LT",
+      "Lithuania",
+      9.0,
+      9.0,
+      9.0
+    ],
+    [
+      "LU",
+      "Luxembourg",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "LV",
+      "Latvia",
+      9.0,
+      9.0,
+      9.0
+    ],
+    [
+      "LY",
+      "Libyan Arab Jamahiriya",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "MA",
+      "Morocco",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "MD*",
+      "Moldova *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "ME",
+      "Montenegro",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "MG",
+      "Madagascar",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "MK",
+      "Macedonia (FYROM)",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "ML",
+      "Mali",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "MN",
+      "Mongolia",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "MO",
+      "Macau",
+      2.0,
+      2.0,
+      0.0
+    ],
+    [
+      "MP*",
+      "Northern Mariana Islands *",
+      7.0,
+      0.0,
+      0.0
+    ],
+    [
+      "MQ",
+      "Martinique",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "MR",
+      "Mauritania",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "MS",
+      "Montserrat",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "MT",
+      "Malta",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "MU",
+      "Mauritius",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "MW",
+      "Malawi",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "MX*",
+      "Mexico *",
+      5.0,
+      5.0,
+      5.0
+    ],
+    [
+      "MY*",
+      "Malaysia *",
+      3.0,
+      3.0,
+      3.0
+    ],
+    [
+      "NA",
+      "Namibia",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "NC",
+      "New Caledonia",
+      7.0,
+      0.0,
+      0.0
+    ],
+    [
+      "NE",
+      "Niger",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "NG",
+      "Nigeria",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "NI",
+      "Nicaragua",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "NL*",
+      "Netherlands (Holland) *",
+      6.0,
+      6.0,
+      6.0
+    ],
+    [
+      "NO*",
+      "Norway *",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "NP*",
+      "Nepal *",
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      "NZ*",
+      "New Zealand *",
+      3.0,
+      3.0,
+      3.0
+    ],
+    [
+      "OM",
+      "Oman",
+      3.0,
+      3.0,
+      3.0
+    ],
+    [
+      "PA*",
+      "Panama *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "PE*",
+      "Peru *",
+      9.0,
+      9.0,
+      9.0
+    ],
+    [
+      "PF",
+      "French Polynesia",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "PH*",
+      "Philippines *",
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      "PK*",
+      "Pakistan *",
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      "PL*",
+      "Poland *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "PT*",
+      "Portugal *",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "PY",
+      "Paraguay",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "QA",
+      "Qatar",
+      3.0,
+      3.0,
+      3.0
+    ],
+    [
+      "RE",
+      "Reunion Island",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "RO",
+      "Romania ",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "RS",
+      "Serbia",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "RU*",
+      "Russia *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "SA",
+      "Saudi Arabia",
+      3.0,
+      3.0,
+      3.0
+    ],
+    [
+      "SC",
+      "Seychelles",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "SE*",
+      "Sweden *",
+      7.0,
+      7.0,
+      7.0
+    ],
+    [
+      "SG*",
+      "Singapore *",
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      "SI",
+      "Slovenia",
+      9.0,
+      9.0,
+      9.0
+    ],
+    [
+      "SK",
+      "Slovakia",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "SL",
+      "Sierra Leone",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "SM",
+      "San Marino ",
+      9.0,
+      9.0,
+      9.0
+    ],
+    [
+      "SN",
+      "Senegal",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "SO*",
+      "China South\u00b9* (Fujian & Guangdong Province)",
+      10.0,
+      10.0,
+      10.0
+    ],
+    [
+      "SR",
+      "Suriname",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "SV*",
+      "El Salvador *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "SY",
+      "Syrian Arab Republic",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "TD",
+      "Chad",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "TG",
+      "Togo",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "TH*",
+      "Thailand *",
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      "TJ*",
+      "Tajikistan *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "TR",
+      "Turkey ",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "TT*",
+      "Trinidad & Tobago *",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "TW*",
+      "Taiwan *",
+      2.0,
+      2.0,
+      2.0
+    ],
+    [
+      "TZ",
+      "Tanzania, United Republic of",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "UA*",
+      "Ukraine *",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "UG",
+      "Uganda",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "US",
+      "United States",
+      5.0,
+      5.0,
+      5.0
+    ],
+    [
+      "UY",
+      "Uruguay",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "UZ",
+      "Uzbekistan",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "VC",
+      "St. Vincent & the Grenadines",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "VE*",
+      "Venezuela *",
+      8.0,
+      8.0,
+      8.0
+    ],
+    [
+      "VG",
+      "British Virgin Islands",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "VI",
+      "U.S. Virgin Islands",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "VN*",
+      "Vietnam*",
+      2.0,
+      2.0,
+      2.0
+    ],
+    [
+      "WS",
+      "Samoa",
+      8.0,
+      0.0,
+      0.0
+    ],
+    [
+      "YE",
+      "Yemen, Republic of",
+      3.0,
+      3.0,
+      0.0
+    ],
+    [
+      "YT",
+      "Mayotte",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "ZA",
+      "South Africa",
+      8.0,
+      8.0,
+      0.0
+    ],
+    [
+      "ZM",
+      "Zambia",
+      9.0,
+      9.0,
+      0.0
+    ],
+    [
+      "ZW",
+      "Zimbabwe",
+      9.0,
+      9.0,
+      0.0
+    ]
+  ]
+}

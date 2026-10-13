@@ -1,0 +1,13 @@
+data/internal-store.json
+data/internal-store.json.tmp
+.internal-test/
+node_modules/
+.env
+.env.*
+!.env.example
+preview/
+*.log
+*.xls
+*.xlsx
+__pycache__/
+*.pyc

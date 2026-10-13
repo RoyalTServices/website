@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import {matchQuestions} from '../assistant-knowledge.js';
+import {model} from '../assistant-model.js';
+import {evaluationCases, unrelatedCases} from './fixtures/assistant-evaluation.mjs';
+import {challengeCases} from './fixtures/assistant-challenge.mjs';
+const cases = Object.entries(evaluationCases).flatMap(([expected,queries]) => queries.map(query => ({query,expected})));
+const results = cases.map(test => ({...test, actual:matchQuestions(test.query).map(e => e.id)}));
+const correct = results.filter(r => r.actual[0] === r.expected).length;
+const top3 = results.filter(r => r.actual.includes(r.expected)).length;
+const unknown = unrelatedCases.map(query => ({query,actual:matchQuestions(query).map(e => e.id)}));
+const challenges = challengeCases.map(([expected,query]) => ({expected,query,actual:matchQuestions(query).map(e => e.id)}));
+const report = {trainingSamples:model.samples, validationCases:cases.length, note:'Curated development validation, not a guarantee of real-world accuracy. Feature rules were refined against these cases; classifier weights were not trained on them.', top1Correct:correct, top1Accuracy:correct/cases.length, top3Correct:top3, challengeCases:challenges.length, challengeTop1Correct:challenges.filter(r => r.actual[0] === r.expected).length, challengeMisses:challenges.filter(r => r.actual[0] !== r.expected), unknownCases:unknown.length, unknownRejected:unknown.filter(r => !r.actual.length).length, misses:results.filter(r => r.actual[0] !== r.expected), falseMatches:unknown.filter(r => r.actual.length)};
+await fs.writeFile(new URL('../data/assistant-evaluation-report.json',import.meta.url), JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

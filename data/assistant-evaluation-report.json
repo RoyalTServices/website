@@ -1,0 +1,15 @@
+{
+  "trainingSamples": 519,
+  "validationCases": 105,
+  "note": "Curated development validation, not a guarantee of real-world accuracy. Feature rules were refined against these cases; classifier weights were not trained on them.",
+  "top1Correct": 105,
+  "top1Accuracy": 1,
+  "top3Correct": 105,
+  "challengeCases": 35,
+  "challengeTop1Correct": 35,
+  "challengeMisses": [],
+  "unknownCases": 15,
+  "unknownRejected": 15,
+  "misses": [],
+  "falseMatches": []
+}

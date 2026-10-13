@@ -1,0 +1,2937 @@
+{
+  "tabs": {
+    "DHL / Sheet2 (2)": {
+      "rows": 238,
+      "columns": 2,
+      "nonemptyRows": 234
+    },
+    "DHL / Zones(Dhl)": {
+      "rows": 234,
+      "columns": 11,
+      "nonemptyRows": 234
+    },
+    "DHL / Sheet2": {
+      "rows": 234,
+      "columns": 8,
+      "nonemptyRows": 234
+    },
+    "UPS / Zones": {
+      "rows": 253,
+      "columns": 13,
+      "nonemptyRows": 253
+    },
+    "UPS / Sheet1": {
+      "rows": 33,
+      "columns": 1,
+      "nonemptyRows": 33
+    },
+    "UPS / Region": {
+      "rows": 128,
+      "columns": 2,
+      "nonemptyRows": 128
+    },
+    "UPS / Import": {
+      "rows": 186,
+      "columns": 5,
+      "nonemptyRows": 186
+    }
+  },
+  "dhl": {
+    "rows": 233,
+    "uniqueCodes": 233,
+    "zoneLabels": {
+      "11A": 91,
+      "9A": 8,
+      "8A": 23,
+      "10A": 49,
+      "14A": 1,
+      "7A": 22,
+      "4A": 10,
+      "1A": 6,
+      "5A": 14,
+      "3A": 1,
+      "13A": 1,
+      "2A": 4,
+      "6A": 2,
+      "12A": 1
+    },
+    "changesFromTemporaryMapping": [
+      {
+        "code": "AF",
+        "country": "Afghanistan",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "AL",
+        "country": "Albania",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "DZ",
+        "country": "Algeria",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "AS",
+        "country": "American Samoa",
+        "old": "7",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "AD",
+        "country": "Andorra",
+        "old": "4",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "AO",
+        "country": "Angola",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "AI",
+        "country": "Anguilla",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "AG",
+        "country": "Antigua and Barbuda",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "AR",
+        "country": "Argentina",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "AM",
+        "country": "Armenia",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "AW",
+        "country": "Aruba",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "AU",
+        "country": "Australia",
+        "old": "AU",
+        "new": "14",
+        "sourceLabel": "14A"
+      },
+      {
+        "code": "AT",
+        "country": "Austria",
+        "old": "6",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "AZ",
+        "country": "Azerbaijan",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "BS",
+        "country": "Bahamas",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "BH",
+        "country": "Bahrain",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "BB",
+        "country": "Barbados",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "BE",
+        "country": "Belgium",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "BZ",
+        "country": "Belize",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "BJ",
+        "country": "Benin",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "BM",
+        "country": "Bermuda",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "BT",
+        "country": "Bhutan",
+        "old": "7",
+        "new": "1",
+        "sourceLabel": "1A"
+      },
+      {
+        "code": "BO",
+        "country": "Bolivia",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "BA",
+        "country": "Bosnia and Herzegovina",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "BW",
+        "country": "Botswana",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "BR",
+        "country": "Brazil",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "VG",
+        "country": "British Virgin Islands",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "BN",
+        "country": "Brunei",
+        "old": "7",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "BG",
+        "country": "Bulgaria",
+        "old": "7",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "BF",
+        "country": "Burkina Faso",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "BI",
+        "country": "Burundi",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "KH",
+        "country": "Cambodia",
+        "old": "7",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "CM",
+        "country": "Cameroon",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "IT",
+        "country": "Campione / Lake Lugano (Italy)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "IC",
+        "country": "Canary Islands (Spain)",
+        "old": "4",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "CV",
+        "country": "Cape Verde",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "KY",
+        "country": "Cayman Islands",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "CF",
+        "country": "Central African Republic",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "ES",
+        "country": "Ceuta (Spain)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "TD",
+        "country": "Chad",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "CL",
+        "country": "Chile",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "SO",
+        "country": "China South\u00b9 (Fujian & Guangdong Province)",
+        "old": "9",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "CO",
+        "country": "Colombia",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "KM",
+        "country": "Comoros",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "CG",
+        "country": "Congo (Brazzaville)",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "CD",
+        "country": "Congo, Democratic Republic of",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "CK",
+        "country": "Cook Islands",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "CR",
+        "country": "Costa Rica",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "CI",
+        "country": "Cote d'Ivoire (Ivory Coast)",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "HR",
+        "country": "Croatia",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "CY",
+        "country": "Cyprus",
+        "old": "7",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "CZ",
+        "country": "Czech Republic",
+        "old": "CZ",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "DK",
+        "country": "Denmark",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "DJ",
+        "country": "Djibouti",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "DM",
+        "country": "Dominica",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "DO",
+        "country": "Dominican Republic",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "EC",
+        "country": "Ecuador",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "EG",
+        "country": "Egypt",
+        "old": "7",
+        "new": "13",
+        "sourceLabel": "13A"
+      },
+      {
+        "code": "SV",
+        "country": "El Salvador",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "GB",
+        "country": "England (United Kingdom)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "GQ",
+        "country": "Equatorial Guinea",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "ER",
+        "country": "Eritrea",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "ET",
+        "country": "Ethiopia",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "FJ",
+        "country": "Fiji",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "FI",
+        "country": "Finland",
+        "old": "6",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "FR",
+        "country": "France",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "GF",
+        "country": "French Guiana",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "PF",
+        "country": "French Polynesia",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "GA",
+        "country": "Gabon",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "GM",
+        "country": "Gambia",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "GE",
+        "country": "Georgia",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "DE",
+        "country": "Germany",
+        "old": "DE",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "GH",
+        "country": "Ghana",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "GI",
+        "country": "Gibraltar",
+        "old": "7",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "GR",
+        "country": "Greece",
+        "old": "6",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "GD",
+        "country": "Grenada",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "GP",
+        "country": "Guadeloupe",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "GU",
+        "country": "Guam",
+        "old": "7",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "GT",
+        "country": "Guatemala",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "GG",
+        "country": "Guernsey (Channel Islands)",
+        "old": "6",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "GN",
+        "country": "Guinea",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "GW",
+        "country": "Guinea-Bissau",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "GY",
+        "country": "Guyana",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "HT",
+        "country": "Haiti",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "DE",
+        "country": "Heligoland (Germany)",
+        "old": "DE",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "HN",
+        "country": "Honduras",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "HU",
+        "country": "Hungary",
+        "old": "HU",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "IS",
+        "country": "Iceland",
+        "old": "7",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "ID",
+        "country": "Indonesia",
+        "old": "3",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "IQ",
+        "country": "Iraq",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "IE",
+        "country": "Ireland, Republic of",
+        "old": "6",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "IL",
+        "country": "Israel",
+        "old": "7",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "IT",
+        "country": "Italy",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "JM",
+        "country": "Jamaica",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "JP",
+        "country": "Japan",
+        "old": "3",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "JE",
+        "country": "Jersey (Channel Islands)",
+        "old": "6",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "JO",
+        "country": "Jordan",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "KZ",
+        "country": "Kazakhstan",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "KE",
+        "country": "Kenya",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "KG",
+        "country": "Kirghizia (Kyrgyzstan)",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "KI",
+        "country": "Kiribati",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "KR",
+        "country": "Korea, South",
+        "old": "3",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "RS",
+        "country": "Kosovo",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "KW",
+        "country": "Kuwait",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "LA",
+        "country": "Laos",
+        "old": "7",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "LB",
+        "country": "Lebanon",
+        "old": "3",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "LS",
+        "country": "Lesotho",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "LR",
+        "country": "Liberia",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "LY",
+        "country": "Libyan Arab Jamahiriya",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "LI",
+        "country": "Liechtenstein",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "IT",
+        "country": "Livigno (Italy)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "LU",
+        "country": "Luxembourg",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "MO",
+        "country": "Macau",
+        "old": "2",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "MK",
+        "country": "Macedonia (FYROM)",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MG",
+        "country": "Madagascar",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "PT",
+        "country": "Madeira (Portugal)",
+        "old": "6",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "MW",
+        "country": "Malawi",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MV",
+        "country": "Maldives",
+        "old": "6A",
+        "new": "1",
+        "sourceLabel": "1A"
+      },
+      {
+        "code": "ML",
+        "country": "Mali",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MT",
+        "country": "Malta",
+        "old": "7",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "MH",
+        "country": "Marshall Islands",
+        "old": "7",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "MQ",
+        "country": "Martinique",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "MR",
+        "country": "Mauritania",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MU",
+        "country": "Mauritius",
+        "old": "6A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "YT",
+        "country": "Mayotte",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "ES",
+        "country": "Melilla (Spain)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "MX",
+        "country": "Mexico",
+        "old": "5",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "FM",
+        "country": "Micronesia, Federated States of",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MD",
+        "country": "Moldova",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MC",
+        "country": "Monaco (France)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "MN",
+        "country": "Mongolia",
+        "old": "7",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "ME",
+        "country": "Montenegro",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MA",
+        "country": "Morocco",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "GR",
+        "country": "Mount Athos (Greece)",
+        "old": "6",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "MZ",
+        "country": "Mozambique",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MM",
+        "country": "Myanmar",
+        "old": "7",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "NA",
+        "country": "Namibia",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "NL",
+        "country": "Netherlands (Holland)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "NC",
+        "country": "New Caledonia",
+        "old": "6A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "NZ",
+        "country": "New Zealand",
+        "old": "NZ",
+        "new": "6",
+        "sourceLabel": "6A"
+      },
+      {
+        "code": "NI",
+        "country": "Nicaragua",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "NE",
+        "country": "Niger",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "NG",
+        "country": "Nigeria",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MP",
+        "country": "Northern Mariana Islands",
+        "old": "6",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "NO",
+        "country": "Norway",
+        "old": "6",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "OM",
+        "country": "Oman",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "PK",
+        "country": "Pakistan",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "PW",
+        "country": "Palau",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "PA",
+        "country": "Panama",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "PG",
+        "country": "Papua New Guinea",
+        "old": "7",
+        "new": "6",
+        "sourceLabel": "6A"
+      },
+      {
+        "code": "PY",
+        "country": "Paraguay",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "PE",
+        "country": "Peru",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "PH",
+        "country": "Philippines",
+        "old": "3",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "PL",
+        "country": "Poland",
+        "old": "PL",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "FM",
+        "country": "Ponape (Micronesia Federated States of)",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "PT",
+        "country": "Portugal",
+        "old": "6",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "PR",
+        "country": "Puerto Rico",
+        "old": "5",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "QA",
+        "country": "Qatar",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "RE",
+        "country": "Reunion Island",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "RO",
+        "country": "Romania",
+        "old": "RO",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "MP",
+        "country": "Rota (Northern Mariana Islands)",
+        "old": "6",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "RW",
+        "country": "Rwanda",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "MP",
+        "country": "Saipan (Northern Mariana Islands)",
+        "old": "6",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "WS",
+        "country": "Samoa",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "SM",
+        "country": "San Marino",
+        "old": "4",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "SA",
+        "country": "Saudi Arabia",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "GB",
+        "country": "Scotland (United Kingdom)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "SN",
+        "country": "Senegal",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "RS",
+        "country": "Serbia",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "SC",
+        "country": "Seychelles",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "SL",
+        "country": "Sierra Leone",
+        "old": "7A",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "SG",
+        "country": "Singapore",
+        "old": "SG",
+        "new": "2",
+        "sourceLabel": "2A"
+      },
+      {
+        "code": "SB",
+        "country": "Solomon Islands",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "ZA",
+        "country": "South Africa",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "ES",
+        "country": "Spain",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "KN",
+        "country": "St. Christopher (St.Kitts)",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "VI",
+        "country": "St. John (US Virgin Islands)",
+        "old": "7",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "KN",
+        "country": "St. Kitts and Nevis",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "LC",
+        "country": "St. Lucia",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "VI",
+        "country": "St. Thomas (US Virgin Islands)",
+        "old": "7",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "VC",
+        "country": "St. Vincent & the Grenadines",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "VI",
+        "country": "St.Croix (US Virgin Islands)",
+        "old": "7A",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "SR",
+        "country": "Suriname",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "SZ",
+        "country": "Swaziland",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "SE",
+        "country": "Sweden",
+        "old": "6",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "CH",
+        "country": "Switzerland",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "SY",
+        "country": "Syrian Arab Republic",
+        "old": "8",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "TW",
+        "country": "Taiwan",
+        "old": "2",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "TJ",
+        "country": "Tajikistan",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "TZ",
+        "country": "Tanzania, United Republic of",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "TL",
+        "country": "Timor-Leste",
+        "old": "7",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "MP",
+        "country": "Tinian (Northern Mariana Islands)",
+        "old": "6",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "TG",
+        "country": "Togo",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "TO",
+        "country": "Tonga",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "VG",
+        "country": "Tortola (British Virgin Islands)",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "TT",
+        "country": "Trinidad & Tobago",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "FM",
+        "country": "Truk (Micronesia, Federated States of)",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "TN",
+        "country": "Tunisia",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "TR",
+        "country": "Turkey",
+        "old": "7",
+        "new": "8",
+        "sourceLabel": "8A"
+      },
+      {
+        "code": "TC",
+        "country": "Turks & Caicos Islands",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "TV",
+        "country": "Tuvalu",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "VI",
+        "country": "U.S. Virgin Islands",
+        "old": "7",
+        "new": "9",
+        "sourceLabel": "9A"
+      },
+      {
+        "code": "UG",
+        "country": "Uganda",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "UA",
+        "country": "Ukraine",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "VC",
+        "country": "Union Islands (St. Vincent & the Grenadines)",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "GB",
+        "country": "United Kingdom",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "UY",
+        "country": "Uruguay",
+        "old": "7A",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "UZ",
+        "country": "Uzbekistan",
+        "old": "8",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "VU",
+        "country": "Vanuatu",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "VA",
+        "country": "Vatican City (Italy)",
+        "old": "4",
+        "new": "7",
+        "sourceLabel": "7A"
+      },
+      {
+        "code": "VE",
+        "country": "Venezuela",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "VN",
+        "country": "Vietnam",
+        "old": "2",
+        "new": "5",
+        "sourceLabel": "5A"
+      },
+      {
+        "code": "VG",
+        "country": "Virgin Gorda (British Virgin Islands)",
+        "old": "7",
+        "new": "10",
+        "sourceLabel": "10A"
+      },
+      {
+        "code": "FM",
+        "country": "Yap (Micronesia, Federation States of)",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "YE",
+        "country": "Yemen, Republic of",
+        "old": "3",
+        "new": "4",
+        "sourceLabel": "4A"
+      },
+      {
+        "code": "ZM",
+        "country": "Zambia",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      },
+      {
+        "code": "ZW",
+        "country": "Zimbabwe",
+        "old": "7",
+        "new": "11",
+        "sourceLabel": "11A"
+      }
+    ],
+    "notMatchedToCurrentCountryCodes": [
+      {
+        "code": "AX",
+        "name": "Aland Island (Finland)",
+        "zone": "6"
+      },
+      {
+        "code": "A2",
+        "name": "Azores (Portugal)",
+        "zone": "6"
+      },
+      {
+        "code": "BQ",
+        "name": "Bonaire, St.Eustatius, Saba",
+        "zone": "7"
+      },
+      {
+        "code": "B1",
+        "name": "Buesingen (Germany)",
+        "zone": "4"
+      },
+      {
+        "code": "CW",
+        "name": "Curacao",
+        "zone": "7A"
+      },
+      {
+        "code": "KO",
+        "name": "Kosrae (Micronesia Federated States of )",
+        "zone": "7"
+      },
+      {
+        "code": "NF",
+        "name": "Norfolk Island (Australia)",
+        "zone": "3"
+      },
+      {
+        "code": "NB",
+        "name": "Northern Ireland (United Kingdom)",
+        "zone": "4"
+      },
+      {
+        "code": "BL",
+        "name": "St. Barthelemy",
+        "zone": "7"
+      },
+      {
+        "code": "SX",
+        "name": "St.Maarten, St. Martin",
+        "zone": "7"
+      },
+      {
+        "code": "TA",
+        "name": "Tahiti (French Polynesia)",
+        "zone": "7"
+      },
+      {
+        "code": "WL",
+        "name": "Wales (United Kingdom)",
+        "zone": "4"
+      },
+      {
+        "code": "WF",
+        "name": "Wallis & Futuna Islands",
+        "zone": "7"
+      }
+    ],
+    "differencesBetweenTabs": [
+      {
+        "country": "Afghanistan",
+        "code": "AF",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Albania",
+        "code": "AL",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Algeria",
+        "code": "DZ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Andorra",
+        "code": "AD",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Angola",
+        "code": "AO",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Argentina",
+        "code": "AR",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Armenia",
+        "code": "AM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Azerbaijan",
+        "code": "AZ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Bahrain",
+        "code": "BH",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "17",
+        "Sheet2": "17"
+      },
+      {
+        "country": "Bangladesh",
+        "code": "BD",
+        "Zones(Dhl)": "1A",
+        "Sheet2 (2)": "16",
+        "Sheet2": "16"
+      },
+      {
+        "country": "Belize",
+        "code": "BZ",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Benin",
+        "code": "BJ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Bhutan",
+        "code": "BT",
+        "Zones(Dhl)": "1A",
+        "Sheet2 (2)": "16",
+        "Sheet2": "16"
+      },
+      {
+        "country": "Bolivia",
+        "code": "BO",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Bosnia-Herzegovina",
+        "code": "BA",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Botswana",
+        "code": "BW",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Brazil",
+        "code": "BR",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Bulgaria",
+        "code": "BG",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Burkina Faso",
+        "code": "BF",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Burundi",
+        "code": "BI",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Cameroon",
+        "code": "CM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Canada",
+        "code": "CA",
+        "Zones(Dhl)": "9A",
+        "Sheet2 (2)": "15",
+        "Sheet2": "15"
+      },
+      {
+        "country": "Canary Islands, The",
+        "code": "IC",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Cape Verde",
+        "code": "CV",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Central African Republic",
+        "code": "CF",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Chad",
+        "code": "TD",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Chile",
+        "code": "CL",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Colombia",
+        "code": "CO",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Comoros",
+        "code": "KM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Congo",
+        "code": "CG",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Congo, DPR",
+        "code": "CD",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Costa Rica",
+        "code": "CR",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Cote D Ivoire",
+        "code": "CI",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Croatia",
+        "code": "HR",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Cyprus",
+        "code": "CY",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Djibouti",
+        "code": "DJ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Ecuador",
+        "code": "EC",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "El Salvador",
+        "code": "SV",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Eritrea",
+        "code": "ER",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Estonia",
+        "code": "EE",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Eswatini",
+        "code": "SZ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Ethiopia",
+        "code": "ET",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Finland",
+        "code": "FI",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "French Guyana",
+        "code": "GF",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Gabon",
+        "code": "GA",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Gambia",
+        "code": "GM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Georgia",
+        "code": "GE",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Ghana",
+        "code": "GH",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "Gibraltar",
+        "code": "GI",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Greece",
+        "code": "GR",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Guatemala",
+        "code": "GT",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Guernsey",
+        "code": "GG",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Guinea Republic",
+        "code": "GN",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Guinea-Bissau",
+        "code": "GW",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Guinea-Equatorial",
+        "code": "GQ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Guyana-British ",
+        "code": "GY",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Honduras",
+        "code": "HN",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Iceland",
+        "code": "IS",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Iran",
+        "code": "IR",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Iraq",
+        "code": "IQ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Israel",
+        "code": "IL",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Jersey",
+        "code": "JE",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Jordan",
+        "code": "JO",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "17",
+        "Sheet2": "17"
+      },
+      {
+        "country": "Kazakhstan",
+        "code": "KZ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Kenya",
+        "code": "KE",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "Korea, \u00a0D.P.R Of",
+        "code": "KP",
+        "Zones(Dhl)": "5A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Kosovo",
+        "code": "KV",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Kuwait",
+        "code": "KW",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "17",
+        "Sheet2": "17"
+      },
+      {
+        "country": "Kyrgyzstan",
+        "code": "KG",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Latvia",
+        "code": "LV",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Lebanon",
+        "code": "LB",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Lesotho",
+        "code": "LS",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Liberia",
+        "code": "LR",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Libya",
+        "code": "LY",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Lithuania",
+        "code": "LT",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Madagascar",
+        "code": "MG",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Malawi",
+        "code": "MW",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Maldives",
+        "code": "MV",
+        "Zones(Dhl)": "1A",
+        "Sheet2 (2)": "16",
+        "Sheet2": "16"
+      },
+      {
+        "country": "Mali",
+        "code": "ML",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Malta",
+        "code": "MT",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Mauritania",
+        "code": "MR",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Mauritius",
+        "code": "MU",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "Mayotte",
+        "code": "YT",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Micronesia",
+        "code": "FM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "22",
+        "Sheet2": "22"
+      },
+      {
+        "country": "Moldova, Rep. Of",
+        "code": "MD",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Mongolia",
+        "code": "MN",
+        "Zones(Dhl)": "5A",
+        "Sheet2 (2)": "11",
+        "Sheet2": "11"
+      },
+      {
+        "country": "Montenegro, Rep Of",
+        "code": "ME",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Morocco",
+        "code": "MA",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Mozambique",
+        "code": "MZ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "Namibia",
+        "code": "NA",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Nepal",
+        "code": "NP",
+        "Zones(Dhl)": "1A",
+        "Sheet2 (2)": "16",
+        "Sheet2": "16"
+      },
+      {
+        "country": "Nicaragua",
+        "code": "NI",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Niger",
+        "code": "NE",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Nigeria",
+        "code": "NG",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "North Macedonia",
+        "code": "MK",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Norway",
+        "code": "NO",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Oman",
+        "code": "OM",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "17",
+        "Sheet2": "17"
+      },
+      {
+        "country": "Palau",
+        "code": "PW",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "22",
+        "Sheet2": "22"
+      },
+      {
+        "country": "Panama",
+        "code": "PA",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Paraguay",
+        "code": "PY",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Peru",
+        "code": "PE",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Qatar",
+        "code": "QA",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "17",
+        "Sheet2": "17"
+      },
+      {
+        "country": "Reunion, Island Of",
+        "code": "RE",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Russian Federation",
+        "code": "RU",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Rwanda",
+        "code": "RW",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Saint Helena",
+        "code": "SH",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "San Marino",
+        "code": "SM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Sao Tome And Principe",
+        "code": "ST",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Saudi Arabia",
+        "code": "SA",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "17",
+        "Sheet2": "17"
+      },
+      {
+        "country": "Senegal",
+        "code": "SN",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Serbia, Rep. Of",
+        "code": "RS",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "21",
+        "Sheet2": "21"
+      },
+      {
+        "country": "Seychelles",
+        "code": "SC",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Sierra Leone",
+        "code": "SL",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Slovenia",
+        "code": "SI",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Somalia",
+        "code": "SO",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Somaliland, Rep Of",
+        "code": "XS",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "South Africa",
+        "code": "ZA",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "South Sudan",
+        "code": "SS",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Sri Lanka",
+        "code": "LK",
+        "Zones(Dhl)": "1A",
+        "Sheet2 (2)": "16",
+        "Sheet2": "16"
+      },
+      {
+        "country": "Sudan",
+        "code": "SD",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "Suriname",
+        "code": "SR",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Syria",
+        "code": "SY",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Tajikistan",
+        "code": "TJ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Tanzania",
+        "code": "TZ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "Togo",
+        "code": "TG",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Tunisia",
+        "code": "TN",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Turkey",
+        "code": "TR",
+        "Zones(Dhl)": "8A",
+        "Sheet2 (2)": "18",
+        "Sheet2": "18"
+      },
+      {
+        "country": "Turkmenistan",
+        "code": "TM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Uganda",
+        "code": "UG",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      },
+      {
+        "country": "Ukraine",
+        "code": "UA",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Uruguay",
+        "code": "UY",
+        "Zones(Dhl)": "10A",
+        "Sheet2 (2)": "19",
+        "Sheet2": "19"
+      },
+      {
+        "country": "Uzbekistan",
+        "code": "UZ",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Yemen, Rep. Of",
+        "code": "YE",
+        "Zones(Dhl)": "4A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Zambia",
+        "code": "ZM",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "20",
+        "Sheet2": "20"
+      },
+      {
+        "country": "Zimbabwe",
+        "code": "ZW",
+        "Zones(Dhl)": "11A",
+        "Sheet2 (2)": "13",
+        "Sheet2": "13"
+      }
+    ]
+  },
+  "ups": {
+    "rows": 250,
+    "changes": [
+      {
+        "country": "British Virgin Islands",
+        "old": "7",
+        "new": "7A"
+      },
+      {
+        "country": "Heligoland (Germany)",
+        "old": "DE",
+        "new": "4"
+      },
+      {
+        "country": "Nicaragua",
+        "old": "7A",
+        "new": "7"
+      },
+      {
+        "country": "St. John (US Virgin Islands)",
+        "old": "7",
+        "new": "7A"
+      },
+      {
+        "country": "St. Thomas (US Virgin Islands)",
+        "old": "7",
+        "new": "7A"
+      },
+      {
+        "country": "U.S. Virgin Islands",
+        "old": "7",
+        "new": "7A"
+      },
+      {
+        "country": "Virgin Gorda (British Virgin Islands)",
+        "old": "7",
+        "new": "7A"
+      }
+    ],
+    "notMatchedByName": [],
+    "specialZones": [
+      {
+        "code": "AR",
+        "name": "Argentina",
+        "zone": "7A",
+        "row": 13
+      },
+      {
+        "code": "AW",
+        "name": "Aruba",
+        "zone": "7A",
+        "row": 15
+      },
+      {
+        "code": "AU",
+        "name": "Australia",
+        "zone": "AU",
+        "row": 16
+      },
+      {
+        "code": "BS",
+        "name": "Bahamas",
+        "zone": "7A",
+        "row": 20
+      },
+      {
+        "code": "BM",
+        "name": "Bermuda",
+        "zone": "7A",
+        "row": 28
+      },
+      {
+        "code": "BO",
+        "name": "Bolivia",
+        "zone": "7A",
+        "row": 30
+      },
+      {
+        "code": "VG",
+        "name": "British Virgin Islands",
+        "zone": "7A",
+        "row": 35
+      },
+      {
+        "code": "CM",
+        "name": "Cameroon",
+        "zone": "7A",
+        "row": 42
+      },
+      {
+        "code": "CA",
+        "name": "Canada",
+        "zone": "CA",
+        "row": 44
+      },
+      {
+        "code": "CG",
+        "name": "Congo (Brazzaville)",
+        "zone": "7A",
+        "row": 56
+      },
+      {
+        "code": "CR",
+        "name": "Costa Rica",
+        "zone": "7A",
+        "row": 59
+      },
+      {
+        "code": "CI",
+        "name": "Cote d'Ivoire (Ivory Coast)",
+        "zone": "7A",
+        "row": 60
+      },
+      {
+        "code": "CW",
+        "name": "Curacao",
+        "zone": "7A",
+        "row": 62
+      },
+      {
+        "code": "CZ",
+        "name": "Czech Republic",
+        "zone": "CZ",
+        "row": 64
+      },
+      {
+        "code": "DJ",
+        "name": "Djibouti",
+        "zone": "7A",
+        "row": 66
+      },
+      {
+        "code": "GM",
+        "name": "Gambia",
+        "zone": "7A",
+        "row": 84
+      },
+      {
+        "code": "DE",
+        "name": "Germany",
+        "zone": "DE",
+        "row": 86
+      },
+      {
+        "code": "GD",
+        "name": "Grenada",
+        "zone": "7A",
+        "row": 91
+      },
+      {
+        "code": "GP",
+        "name": "Guadeloupe",
+        "zone": "7A",
+        "row": 92
+      },
+      {
+        "code": "GT",
+        "name": "Guatemala",
+        "zone": "7A",
+        "row": 94
+      },
+      {
+        "code": "GY",
+        "name": "Guyana",
+        "zone": "7A",
+        "row": 98
+      },
+      {
+        "code": "HT",
+        "name": "Haiti",
+        "zone": "7A",
+        "row": 99
+      },
+      {
+        "code": "HU",
+        "name": "Hungary",
+        "zone": "HU",
+        "row": 103
+      },
+      {
+        "code": "JM",
+        "name": "Jamaica",
+        "zone": "7A",
+        "row": 110
+      },
+      {
+        "code": "MV",
+        "name": "Maldives",
+        "zone": "6A",
+        "row": 138
+      },
+      {
+        "code": "MQ",
+        "name": "Martinique",
+        "zone": "7A",
+        "row": 142
+      },
+      {
+        "code": "MU",
+        "name": "Mauritius",
+        "zone": "6A",
+        "row": 144
+      },
+      {
+        "code": "NC",
+        "name": "New Caledonia",
+        "zone": "6A",
+        "row": 161
+      },
+      {
+        "code": "NZ",
+        "name": "New Zealand",
+        "zone": "NZ",
+        "row": 162
+      },
+      {
+        "code": "NE",
+        "name": "Niger",
+        "zone": "7A",
+        "row": 164
+      },
+      {
+        "code": "PA",
+        "name": "Panama",
+        "zone": "7A",
+        "row": 173
+      },
+      {
+        "code": "PY",
+        "name": "Paraguay",
+        "zone": "7A",
+        "row": 175
+      },
+      {
+        "code": "PL",
+        "name": "Poland",
+        "zone": "PL",
+        "row": 179
+      },
+      {
+        "code": "RE",
+        "name": "Reunion Island",
+        "zone": "7A",
+        "row": 183
+      },
+      {
+        "code": "RO",
+        "name": "Romania",
+        "zone": "RO",
+        "row": 184
+      },
+      {
+        "code": "WS",
+        "name": "Samoa",
+        "zone": "7A",
+        "row": 189
+      },
+      {
+        "code": "SC",
+        "name": "Seychelles",
+        "zone": "7A",
+        "row": 195
+      },
+      {
+        "code": "SL",
+        "name": "Sierra Leone",
+        "zone": "7A",
+        "row": 196
+      },
+      {
+        "code": "SG",
+        "name": "Singapore",
+        "zone": "SG",
+        "row": 197
+      },
+      {
+        "code": "VI",
+        "name": "St.Croix (US Virgin Islands)",
+        "zone": "7A",
+        "row": 206
+      },
+      {
+        "code": "VI",
+        "name": "St. John (US Virgin Islands)",
+        "zone": "7A",
+        "row": 207
+      },
+      {
+        "code": "LC",
+        "name": "St. Lucia",
+        "zone": "7A",
+        "row": 209
+      },
+      {
+        "code": "VI",
+        "name": "St. Thomas (US Virgin Islands)",
+        "zone": "7A",
+        "row": 211
+      },
+      {
+        "code": "SR",
+        "name": "Suriname",
+        "zone": "7A",
+        "row": 213
+      },
+      {
+        "code": "VG",
+        "name": "Tortola (British Virgin Islands)",
+        "zone": "7A",
+        "row": 227
+      },
+      {
+        "code": "TT",
+        "name": "Trinidad & Tobago",
+        "zone": "7A",
+        "row": 228
+      },
+      {
+        "code": "VI",
+        "name": "U.S. Virgin Islands",
+        "zone": "7A",
+        "row": 234
+      },
+      {
+        "code": "US",
+        "name": "United States",
+        "zone": "US",
+        "row": 240
+      },
+      {
+        "code": "UY",
+        "name": "Uruguay",
+        "zone": "7A",
+        "row": 241
+      },
+      {
+        "code": "VG",
+        "name": "Virgin Gorda (British Virgin Islands)",
+        "zone": "7A",
+        "row": 247
+      }
+    ]
+  }
+}

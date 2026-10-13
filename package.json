@@ -1,0 +1,7 @@
+{
+  "name": "royal-t-courier",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "node server.mjs", "start": "node server.mjs", "check": "node --check app.js && node --check server.mjs && node --check assistant.js && node --check assistant-knowledge.js && node --check assistant-nlu.js && node --check assistant-model.js && node --check legal-content.js && node --check legal-pages.js && node --check pages.js && node --check seo.js && node --check seo-content.js && node --check site-server.mjs", "train:assistant": "node scripts/train-assistant.mjs", "evaluate:assistant": "node scripts/evaluate-assistant.mjs", "test": "node --test scripts/*.test.mjs" }
+}

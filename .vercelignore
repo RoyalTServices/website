@@ -11,6 +11,8 @@ data/admin-invite.txt
 !.env.example
 *.xls
 *.xlsx
+!assets/royal-t-price-list-template.xlsx
+sign_raghav.jpeg
 *.log
 __pycache__/
 *.pyc

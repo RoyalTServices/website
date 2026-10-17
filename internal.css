@@ -9,3 +9,59 @@ dialog{border:0;padding:0;width:660px;max-width:calc(100vw - 32px);max-height:90
 .business-settings{max-width:1000px}.business-settings>p,.business-settings form p{margin:16px 0;line-height:1.7}.business-settings fieldset{border:0;padding:0;min-width:0}.business-settings legend{font-weight:650;font-size:17px;margin:22px 0}.business-settings h3,#gst-invoice-form h3{font-size:19px;margin:28px 0 18px}.business-settings textarea,#gst-invoice-form textarea{width:100%;resize:vertical}.business-settings fieldset[disabled]{opacity:.8}.invoice-dialog{width:min(1100px,96vw);max-width:1100px}.invoice-dialog .dialog-body{padding:26px}.invoice-dialog label{display:flex;flex-direction:column;gap:8px;font-size:13px;margin-bottom:16px}.invoice-dialog input,.invoice-dialog select,.invoice-dialog textarea{padding:10px;border:1px solid #bfcbd4;border-radius:3px;max-width:100%;min-width:0;font:inherit;background:#fff;color:#173b54}.invoice-dialog>header{position:sticky;top:0;background:#fff;z-index:2}.invoice-line{display:grid;grid-template-columns:1.2fr .8fr .7fr 1fr .9fr .7fr auto;gap:12px;padding:18px 0;border-top:1px solid #dbe3e8}.invoice-line .invoice-description{grid-column:1/-1}.invoice-line label{margin:0}.invoice-line>button{align-self:end;margin-bottom:7px}.invoice-totals{display:flex;flex-wrap:wrap;gap:18px;padding:20px;background:#eef4f6;margin:24px 0}.invoice-frame-wrap{overflow:auto;margin-top:18px;background:#d9dfe3;border:1px solid #bfcbd4}.invoice-frame{display:block;width:100%;min-width:740px;height:70vh;border:0;background:#fff}.invoice-help{margin-bottom:20px;line-height:1.7}.invoice-print-actions{margin:18px 0}.invoice-status{margin-top:12px;color:#8c2929}.invoice-list-error{margin-top:15px}#find-invoices{display:flex;align-items:end;gap:14px;flex:1}#find-invoices label{flex:1;margin:0}#gst-invoice-form>.input-hint{line-height:1.7;margin:16px 0}#gst-invoice-form>.record-actions{margin-top:22px}.badge.confirmed{background:#e4f0ec;color:#166447}
 @media(max-width:700px){.invoice-dialog .dialog-body{padding:18px}.invoice-line{grid-template-columns:1fr 1fr;gap:12px}.invoice-line .invoice-description{grid-column:1/-1}.invoice-line>button{grid-column:1/-1;justify-self:start}.invoice-totals{flex-direction:column;gap:10px}#find-invoices{align-items:stretch;flex-direction:column}}
 @media print{body:has(#record-dialog.invoice-dialog[open]){background:#fff}body:has(#record-dialog.invoice-dialog[open]) .staff-layout{display:none}#record-dialog.invoice-dialog{position:static;max-width:none;width:100%;max-height:none;border:0}#record-dialog.invoice-dialog .dialog-header,#record-dialog.invoice-dialog .invoice-help,#record-dialog.invoice-dialog .invoice-print-actions{display:none}}
+
+/* Content panels share an inset; table panels keep their full-width rows. */
+:root{--panel-inset:28px}
+.content-panel{padding:var(--panel-inset)}
+.content-panel>h2{line-height:1.4;margin-bottom:12px}
+.content-panel>p{color:var(--muted);line-height:1.7;margin:0 0 24px}
+.content-panel form{display:grid;gap:20px}
+.content-panel form>label,.content-panel form>.form-grid{margin:0}
+.content-panel form>p{margin:0;line-height:1.7}
+.content-panel form>button{justify-self:start}
+.form-result:empty,.invoice-list-error:empty,#page-error:empty{display:none}
+.content-panel .form-result:not(:empty){margin:0}
+.rate-downloads{gap:12px;margin:24px 0;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.rate-downloads .secondary{line-height:1.5;text-align:left;white-space:normal}
+.rate-management input[type=file]{max-width:100%;min-width:0;line-height:1.5}
+.panel-note{padding:20px 24px;color:var(--muted);line-height:1.7}
+.business-settings legend{margin:0;padding:0;line-height:1.5}
+.business-settings .form-grid{gap:20px 24px;margin:20px 0 24px}
+.business-settings h3{margin:32px 0 16px}
+.staff-form>.secondary{margin-top:24px}
+#staff-invitation{display:block;margin-top:20px;line-height:1.7;overflow-wrap:anywhere}
+.sidebar{overflow-y:auto}
+.sidebar nav,.sidebar-bottom{flex-shrink:0}
+.list-toolbar{align-items:flex-end}
+.list-toolbar>label{flex:1;min-width:0}
+.list-toolbar>label:has(select){flex:0 1 190px}
+.list-toolbar select{width:100%;min-width:0}
+.pagination{flex-wrap:wrap}
+.record-summary{gap:16px;flex-wrap:wrap}
+.dialog-header h2{line-height:1.4;overflow-wrap:anywhere}
+.dialog-header button{flex:none}
+.dialog-body>label{margin-bottom:20px}
+.dialog-body>form:not(#gst-invoice-form){display:grid;gap:20px;margin-top:24px;padding-top:24px}
+.dialog-body>form:not(#gst-invoice-form)>label,.dialog-body>form:not(#gst-invoice-form)>.form-grid{margin:0}
+.dialog-body>form:not(#gst-invoice-form)>.form-result{margin:0}
+.dialog-body>form:not(#gst-invoice-form)>button{justify-self:start}
+.dialog-body>form+button{margin-top:20px}
+.invoice-dialog label{margin-bottom:0;line-height:1.5}
+.invoice-dialog input,.invoice-dialog select,.invoice-dialog textarea{margin-top:0}
+.invoice-line>button{margin-bottom:0}
+#find-invoices{margin:0;min-width:0}
+#find-invoices label{line-height:1.5}
+.heading-actions{flex-wrap:wrap}
+@media(max-width:760px){
+  :root{--panel-inset:20px}
+  .sidebar{overflow-y:visible}
+  .sidebar nav{padding:3px 0 7px}
+  .panel-note{padding:18px 20px}
+  .panel-heading{align-items:flex-start;flex-wrap:wrap;line-height:1.5}
+  .list-toolbar>label,.list-toolbar>label:has(select){flex-basis:100%}
+  .rate-downloads{flex-direction:column;align-items:stretch}
+  .content-panel form>button{justify-self:stretch;text-align:center}
+  .content-panel input,.content-panel select,.content-panel textarea,
+  .invoice-dialog input,.invoice-dialog select,.invoice-dialog textarea{font-size:16px}
+  .invoice-dialog{max-width:calc(100vw - 24px)}
+}

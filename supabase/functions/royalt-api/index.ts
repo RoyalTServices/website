@@ -5,7 +5,7 @@ globalThis.Buffer=Buffer;
 const env={...Deno.env.toObject(),COOKIE_SECURE:'true'};
 env.SUPABASE_PUBLISHABLE_KEY ||= JSON.parse(env.SUPABASE_PUBLISHABLE_KEYS||'{}').default;
 env.SUPABASE_SECRET_KEY ||= JSON.parse(env.SUPABASE_SECRET_KEYS||'{}').default;
-env.APP_URL ||= 'https://website-plum-tau-44.vercel.app';
+env.APP_URL ||= 'https://royaltservices.in';
 const privilegedKey=env.SUPABASE_SECRET_KEY||env.SUPABASE_SERVICE_ROLE_KEY;
 if(privilegedKey){env.CRON_SECRET ||= createHmac('sha256',privilegedKey).update('royalt/tracking-cron/v1').digest('hex');env.RATE_LIMIT_SECRET ||= createHmac('sha256',privilegedKey).update('royalt/rate-limits/v1').digest('hex');}
 const api=supabaseApi({env});

@@ -5,14 +5,14 @@ import { calculateRate } from '../pricing.js';
 const data=JSON.parse(fs.readFileSync(new URL('../data/rates.json',import.meta.url)));
 const destination=name=>data.countries.find(c=>c.name===name);
 test('USA rates match workbook examples, with separate document and parcel values',()=>{
-  assert.equal(calculateRate(data,'UPS',destination('United States'),'parcels',1).amount,1887);
-  assert.equal(calculateRate(data,'UPS',destination('United States'),'documents',.5).amount,1812);
-  assert.ok(Math.abs(calculateRate(data,'DHL',destination('United States'),'documents',1).amount-3434.3702055)<.00001);
-  assert.ok(Math.abs(calculateRate(data,'DHL',destination('United States'),'parcels',.5).amount-2965.8274875)<.00001);
+  assert.equal(calculateRate(data,'UPS',destination('United States'),'parcels',1).amount,1967);
+  assert.equal(calculateRate(data,'UPS',destination('United States'),'documents',.5).amount,1892);
+  assert.ok(Math.abs(calculateRate(data,'DHL',destination('United States'),'documents',1).amount-3514.3702055)<.00001);
+  assert.ok(Math.abs(calculateRate(data,'DHL',destination('United States'),'parcels',.5).amount-3005.8274875)<.00001);
 });
 test('heavy UPS shipments use a manual enquiry instead of broken formula values',()=>{
   for(const weight of [300,301,500,1000])assert.equal(calculateRate(data,'UPS',destination('United States'),'parcels',weight).manual,true);
-  assert.equal(calculateRate(data,'UPS',destination('United States'),'parcels',299).amount,699*299);
+  assert.equal(calculateRate(data,'UPS',destination('United States'),'parcels',299).amount,779*299);
 });
 test('fractional weights select the next listed slab and per-kg bands retain precision',()=>{
   assert.equal(calculateRate(data,'UPS',destination('United States'),'parcels',1.01).chargedWeight,1.5);

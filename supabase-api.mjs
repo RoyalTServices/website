@@ -2,16 +2,18 @@ import {createHash,randomUUID,timingSafeEqual} from 'node:crypto';
 import {supabaseClients} from './supabase-client.mjs';
 import {failure,clean,uuid,reference,validDate,numeric,customer,requestPayload,publicTracking} from './business-validation.mjs';
 import {courierAdapters} from './courier-adapters.mjs';
+import {currentRates,rateStorage} from './rate-storage.mjs';
+import {billingApi} from './billing-api.mjs';
 
 const shipments='royalt_shipments',enquiries='royalt_enquiries',customers='royalt_customers';
 const send=(res,status,data)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'});res.end(JSON.stringify(data));};
 export async function result(query) {const {data,error}=await query;if(error)throw failure(error.code==='23505'?'This record already exists. Refresh before retrying.':'The operation could not be completed. Please try again.',error.code==='23505'?409:503);return data;}
-export async function jsonBody(req) {
+export async function jsonBody(req,maxBytes=32000) {
   let value='',parsed;try {
     if(req.body!==undefined){parsed=typeof req.body==='string'?JSON.parse(req.body):req.body;value=JSON.stringify(parsed);}
-    else{for await(const chunk of req){value+=chunk;if(Buffer.byteLength(value)>32000)throw failure('The request is too large.',413);}parsed=JSON.parse(value);}
+    else{for await(const chunk of req){value+=chunk;if(Buffer.byteLength(value)>maxBytes)throw failure('The request is too large.',413);}parsed=JSON.parse(value);}
   }catch(error){if(error.status)throw error;throw failure('Enter valid request details.');}
-  if(Buffer.byteLength(value)>32000)throw failure('The request is too large.',413);
+  if(Buffer.byteLength(value)>maxBytes)throw failure('The request is too large.',413);
   if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw failure('Enter valid request details.');return parsed;
 }
 const legacyRecord=s=>({id:s.id,reference:s.reference,type:s.request_type,status:s.booking_status,name:s.royalt_customers?.name||'',email:s.royalt_customers?.email||'',phone:s.royalt_customers?.phone||'',company:s.royalt_customers?.company||'',customerId:s.customer_id,service:s.service,address:s.sender?.address||'',sender:s.sender,receiver:s.receiver,origin:s.origin,destination:s.destination,fromPin:s.from_pin,toPin:s.to_pin,kind:s.shipment_kind,weight:s.weight||'',boxes:s.packages||'',dimensions:s.dimensions,declaredValue:s.declared_value,message:s.package_description,pickupDate:s.pickup_date||'',carrier:s.courier_partner||'',trackingId:s.external_tracking_number,trackingStatus:s.tracking_status,shippingCost:s.shipping_cost,sellingPrice:s.selling_price,currency:s.currency,estimatedDelivery:s.estimated_delivery||'',deliveredAt:s.delivered_at||'',lastSync:s.last_tracking_sync||'',staffNotes:s.staff_notes,createdAt:s.created_at,updatedAt:s.updated_at,history:[...(s.legacy_data?.history||[]),...(s.royalt_activity||[]).map(e=>({at:e.created_at,text:e.message,by:'Staff'}))]});
@@ -77,6 +79,7 @@ export function supabaseApi({env=process.env,clients=supabaseClients,adapters=co
       // Reject invalid intake before accessing the database.
       const submitted=pathname==='/api/requests'&&req.method==='POST'?requestPayload(await jsonBody(req)):null;
       const {staff,service}=clients(req,res,env);
+      if(pathname==='/api/rates'&&req.method==='GET') {send(res,200,await currentRates(service));return true;}
       if(pathname==='/api/requests'&&req.method==='POST') {
         await limit(service,req,'request',15);const values=submitted;
         const ref=await result(service.rpc('royalt_submit_request',{p_customer:values.customer,p_payload:values.payload,p_reference:reference(),p_key:values.key}));
@@ -109,6 +112,13 @@ export function supabaseApi({env=process.env,clients=supabaseClients,adapters=co
       if(pathname==='/api/internal/setup')throw failure('Staff registration is disabled. Ask an administrator for an invitation.',403);
       if(pathname==='/api/internal/logout'&&req.method==='POST'){const {error}=await staff.auth.signOut({scope:'local'});if(error)throw failure('Sign out could not be completed. Please try again.');send(res,200,{ok:true});return true;}
       const profile=await authorized(staff);
+      if(pathname==='/api/internal/business-settings'||pathname.startsWith('/api/internal/invoices')||/^\/api\/internal\/records\/[a-f0-9-]+\/invoice$/i.test(pathname)){
+        const data=await billingApi(service,profile,req,pathname,url,jsonBody);if(data===null)throw failure('Billing endpoint not found.',404);send(res,200,data);return true;
+      }
+      if(pathname==='/api/internal/rates'&&['GET','POST'].includes(req.method)) {
+        if(req.method==='POST')await limit(service,req,'rate-upload',30);
+        send(res,200,await rateStorage(service,profile,req.method,req.method==='POST'?await jsonBody(req,2050000):{}));return true;
+      }
       if(pathname==='/api/internal/invite'&&req.method==='POST') {
         if(profile.role!=='admin')throw failure('Administrator access required.',403);
         const values=await jsonBody(req),email=customer({name:'Staff',email:values.email}).email,role=values.role==='admin'?'admin':'staff';
@@ -143,9 +153,9 @@ export function supabaseApi({env=process.env,clients=supabaseClients,adapters=co
         const id=match[1],section=match[2];await record(staff,id);
         if(!section&&req.method==='GET'){send(res,200,{record:await record(staff,id)});return true;}
         if(!section&&req.method==='PATCH') {
-          const v=await jsonBody(req);if(!['new','pending_pickup','in_progress','completed','cancelled'].includes(v.status))throw failure('Choose a valid shipment status.');
+          const v=await jsonBody(req);if(!['new','confirmed','pending_pickup','in_progress','completed','cancelled'].includes(v.status))throw failure('Choose a valid shipment status.');
           if(v.pickupDate&&!validDate(v.pickupDate)||v.estimatedDelivery&&!validDate(v.estimatedDelivery))throw failure('Enter valid dates.');
-          if(v.carrier&&!['DHL','UPS'].includes(v.carrier))throw failure('Choose DHL or UPS.');
+          if(v.carrier&&!['DHL','UPS','SELF'].includes(v.carrier))throw failure('Choose DHL, UPS or Self.');
           const update={booking_status:v.status,pickup_date:v.pickupDate||null,courier_partner:v.carrier||null,external_tracking_number:clean(v.trackingId,80),staff_notes:clean(v.staffNotes),updated_at:new Date().toISOString()};
           if(!v.updatedAt||!Number.isFinite(Date.parse(v.updatedAt)))throw failure('Refresh the shipment before saving.');
           if(v.service!==undefined)update.service=clean(v.service,100);

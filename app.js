@@ -3,8 +3,13 @@ import { calculateRate } from './pricing.js';
 import { services, dockPanel, button, esc, renderSite } from './pages.js';
 import { updateSeo } from './seo.js';
 const $ = (selector, root = document) => root.querySelector(selector);
-let rateData;
-const getRates = () => rateData ? Promise.resolve(rateData) : fetch('/data/rates.json').then(r => { if (!r.ok) throw Error('Rates unavailable'); return r.json(); }).then(data => rateData = data);
+let releaseHeaderScroll=()=>{};
+const getRates = async () => {
+  // Refresh published prices for each quote; a failed backend must not silently serve old prices.
+  const response=await fetch('/api/rates',{cache:'no-store',signal:AbortSignal.timeout(20000)});
+  if(response.ok)return response.json();
+  throw Error('Current rates could not be loaded. Please refresh or request a quote.');
+};
 async function render() {
 
   let path=location.pathname.replace(/\/$/,'')||'/';
@@ -22,7 +27,37 @@ function scrollToSection() { if(location.hash) document.getElementById(location.
 function navigate(href) { const samePage=new URL(href,location.origin).pathname===location.pathname;history.pushState({},'',href);if(!samePage)render();window.scrollTo({top:0,behavior:'instant'});scrollToSection();$('#main').focus({preventScroll:true}); }
 document.addEventListener('click',event=>{const link=event.target.closest('a[data-link]');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button!==0)return;event.preventDefault();navigate(link.getAttribute('href'));});
 window.addEventListener('popstate',()=>{render();window.scrollTo(0,0);scrollToSection();});
-function bindCommon() { $('.menu-toggle').addEventListener('click',()=>{const toggle=$('.menu-toggle'),opened=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!opened));toggle.setAttribute('aria-label',opened?'Open navigation':'Close navigation');$('#navigation').classList.toggle('open',!opened);});document.onkeydown=e=>{if(e.key==='Escape'&&$('#navigation').classList.contains('open')){$('.menu-toggle').click();$('.menu-toggle').focus();}}; }
+function bindCommon() {
+  const toggle=$('.menu-toggle'),nav=$('#navigation');
+  toggle.onclick=()=>{const opened=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!opened));toggle.setAttribute('aria-label',opened?'Open navigation':'Close navigation');nav.classList.toggle('open',!opened);};
+  document.onkeydown=e=>{if(e.key==='Escape'&&nav.classList.contains('open')){toggle.click();toggle.focus();}};
+  bindHeaderScroll();
+}
+function bindHeaderScroll(){
+  releaseHeaderScroll();
+  const header=$('.site-header'),toggle=$('.menu-toggle');
+  if(!header)return;
+  let previous=Math.max(0,window.scrollY),distance=0,direction=0,frame=0;
+  const reveal=()=>{header.classList.remove('header-folded');distance=0;};
+  const measure=()=>document.documentElement.style.setProperty('--site-header-height',`${header.offsetHeight}px`);
+  const update=()=>{
+    frame=0;
+    const max=Math.max(0,document.documentElement.scrollHeight-window.innerHeight),position=Math.min(max,Math.max(0,window.scrollY)),delta=position-previous;
+    previous=position;
+    if(position<=header.offsetHeight||toggle.getAttribute('aria-expanded')==='true'||(header.contains(document.activeElement)&&document.activeElement.matches(':focus-visible'))){reveal();direction=0;return;}
+    if(!delta)return;
+    const next=delta>0?1:-1;
+    if(next!==direction){distance=0;direction=next;}
+    distance+=Math.abs(delta);
+    if(distance>=(next>0?16:10)){header.classList.toggle('header-folded',next>0);distance=0;}
+  };
+  const onScroll=()=>{if(!frame)frame=requestAnimationFrame(update);};
+  header.classList.remove('header-folded');measure();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',measure);
+  header.addEventListener('focusin',reveal);
+  releaseHeaderScroll=()=>{window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',measure);header.removeEventListener('focusin',reveal);if(frame)cancelAnimationFrame(frame);};
+}
 function bindDock() {
   const bindQuick=()=>$('#quick-track')?.addEventListener('submit',e=>{e.preventDefault();navigate('/tracking?id='+encodeURIComponent(new FormData(e.target).get('tracking').trim()));});
   const activate=tab=>{document.querySelectorAll('[data-tool]').forEach(t=>{t.classList.toggle('active',t===tab);t.setAttribute('aria-selected',String(t===tab));t.tabIndex=t===tab?0:-1;});$('#dock-panel').setAttribute('aria-labelledby',tab.id);$('#dock-panel').innerHTML=dockPanel(tab.dataset.tool);bindQuick();};
@@ -64,17 +99,26 @@ async function initQuote() {
     try{
       const data=await getRates();
       if(!form.isConnected||requestRevision!==revision)return;
-      const country=select.value===''?null:data.countries[Number(select.value)];
+      const country=data.countries.find(c=>c.name===select.value);
       if(!country)throw Error('Choose a destination country.');
-    const expired=new Date().toISOString().slice(0,10)>data.validUntil;
-    $('#quote-result').innerHTML=`<span class="tiny">SHIPPING OPTIONS</span><h2 class="result-destination">India <span>→</span><br>${esc(country.name)}</h2><p class="result-meta">${weight} kg · ${kind==='documents'?'Documents':'Parcel'}</p>${['DHL','UPS'].map(carrier=>{const result=calculateRate(data,carrier,country,kind,weight);return `<article class="rate-option"><div class="rate-carrier"><strong>${carrier}</strong><span>${carrier==='DHL'?'Express Worldwide':'Express Saver'}</span></div>${result.manual?`<h3>Rate enquiry required</h3><p>${result.reason}</p>${button('/contact?'+new URLSearchParams({service:'Spot-rate enquiry',intent:'quotation',carrier,destination:country.name,weight:String(weight),kind}).toString(),'Request a rate','outline')}`:`<span class="tiny">${expired?'HISTORICAL REFERENCE':'REFERENCE ESTIMATE'}</span><div class="rate-price">${money(result.amount)}</div><p>Rate slab: ${result.chargedWeight} kg</p>${button('/contact?'+new URLSearchParams({service:'International courier',intent:'booking',carrier,destination:country.name,weight:String(weight),kind,referenceEstimate:String(result.amount),quoteValidUntil:data.validUntil,chargedWeight:String(result.chargedWeight)}).toString(),'Confirm this shipment','outline')}`}</article>`;}).join('')}${expired?'<p class="input-hint">The supplied rates have expired. Request a current quote before shipping.</p>':''}`;
+    const expired=Boolean(data.validUntil&&new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'})>data.validUntil);
+    $('#quote-result').innerHTML=`<span class="tiny">SHIPPING OPTIONS</span><h2 class="result-destination">India <span>→</span><br>${esc(country.name)}</h2><p class="result-meta">${weight} kg · ${kind==='documents'?'Documents':'Parcel'}</p>${[...['DHL','UPS'].map(carrier=>({carrier})),...(data.SELF?.routes||[]).filter(route=>route.country===country.name).map(route=>({carrier:'SELF',route}))].map(({carrier,route})=>{const result=calculateRate(data,carrier,route||country,kind,weight);const until=carrier==='SELF'?data.SELF.validUntil:data.validUntil;const from=carrier==='SELF'?data.SELF.validFrom:data.validFrom;const today=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});const outsidePeriod=Boolean(until&&today>until||from&&today<from);return `<article class="rate-option"><div class="rate-carrier"><strong>${carrier==='SELF'?'Self':carrier}</strong><span>${carrier==='SELF'?'Self managed · '+esc(route.name):carrier==='DHL'?'Express Worldwide':'Express Saver'}</span></div>${result.manual?`<h3>Rate enquiry required</h3><p>${result.reason}</p>${button('/contact?'+new URLSearchParams({service:'Spot-rate enquiry',intent:'quotation',carrier,selfService:route?.name||'',destination:country.name,weight:String(weight),kind}).toString(),'Request a rate','outline')}`:`<span class="tiny">${outsidePeriod?'OUTSIDE VALIDITY PERIOD':'REFERENCE ESTIMATE'}</span><div class="rate-price">${money(result.amount)}</div><p>Rate slab: ${result.chargedWeight} kg</p>${button('/contact?'+new URLSearchParams({service:'International courier',intent:'booking',carrier,destination:country.name,weight:String(weight),kind,referenceEstimate:String(result.amount),quoteValidUntil:until||'',selfService:route?.name||'',chargedWeight:String(result.chargedWeight)}).toString(),'Confirm this shipment','outline')}`}${carrier==='SELF'?`<p class="input-hint">${esc(route.group)}${route.maxWeight<99999?` · Maximum ${route.maxWeight} kg.`:""} ${esc(route.notes)}</p>`:''}${outsidePeriod?'<p class="input-hint">Request a current quote before shipping.</p>':''}</article>`;}).join('')}${expired?'<p class="input-hint">The supplied rates have expired. Request a current quote before shipping.</p>':''}`;
       error.textContent='';
     }catch(failure){if(form.isConnected&&requestRevision===revision)error.textContent=failure.message;}
     finally{submit.disabled=false;}
   });
   try{
     const data=await getRates();if(!form.isConnected)return;
-    select.innerHTML='<option value="">Choose a destination</option>'+data.countries.map((country,index)=>`<option value="${index}">${esc(country.name)}</option>`).join('');select.disabled=false;
+    select.innerHTML='<option value="">Choose a destination</option>'+data.countries.map((country,index)=>`<option value="${esc(country.name)}">${esc(country.name)}</option>`).join('');select.disabled=false;
+    const search=$('#country-search'),status=$('#country-search-status');
+    search.disabled=false;
+    search.addEventListener('input',()=>{
+      const term=search.value.trim().toLocaleLowerCase(),previous=select.value;
+      const matches=data.countries.map((country,index)=>({country,index})).filter(({country})=>country.name.toLocaleLowerCase().includes(term)||country.code.toLocaleLowerCase()===term);
+      select.innerHTML='<option value="">'+(matches.length?'Choose a destination':'No matching countries')+'</option>'+matches.map(({country,index})=>`<option value="${esc(country.name)}">${esc(country.name)}</option>`).join('');
+      if(matches.some(m=>m.country.name===previous))select.value=previous;
+      status.textContent=matches.length+' destinations found';
+    });
   }catch{
     rateError='International rates could not be loaded. Refresh or prepare an enquiry.';
     if(form.isConnected&&mode==='international')error.textContent=rateError;
@@ -111,11 +155,11 @@ function initRequest(path) {
   if(path==='/contact'){
     const route=new URLSearchParams(location.search),fromPin=route.get('fromPin')||'',toPin=route.get('toPin')||'',weight=Number(route.get('weight'));
     const destination=(route.get('destination')||'').trim().slice(0,120),carrier=route.get('carrier');
-    for(const key of ['intent','destination','weight','kind','carrier','fromPin','toPin','referenceEstimate','quoteValidUntil','chargedWeight']){
+    for(const key of ['intent','destination','weight','kind','carrier','fromPin','toPin','referenceEstimate','quoteValidUntil','chargedWeight','selfService']){
       if(route.get(key)){const hidden=document.createElement('input');hidden.type='hidden';hidden.name=key;hidden.value=route.get(key).slice(0,120);form.append(hidden);}
     }
-    if(route.get('intent')==='booking'&&destination&&['DHL','UPS'].includes(carrier)&&Number.isFinite(weight)&&weight>0&&weight<=99999){
-      const shipment=`from India to ${destination} weighing ${weight} kg (${route.get('kind')==='documents'?'documents':'non-documents'}) via ${carrier}`;
+    if(route.get('intent')==='booking'&&destination&&['DHL','UPS','SELF'].includes(carrier)&&Number.isFinite(weight)&&weight>0&&weight<=99999){
+      const shipment=`from India to ${destination} weighing ${weight} kg (${route.get('kind')==='documents'?'documents':'non-documents'}) via ${carrier==='SELF'?'Self managed ('+(route.get('selfService')||'service to confirm')+')':carrier}`;
       const drafts=[
         `I would like to book a shipment ${shipment}. Please contact me to confirm the details and arrange a pickup.`,
         `Please help me arrange a shipment ${shipment}. Kindly reach out to discuss the booking and pickup options.`,

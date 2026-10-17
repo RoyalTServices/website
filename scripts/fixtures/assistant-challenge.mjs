@@ -26,7 +26,7 @@ export const challengeCases = [
   ['restricted','Is it possible to ship dangerous goods containing batteries'],
   ['delivery-time','Before I book, what is the usual transit time for this service'],
   ['services','Do you have international courier and domestic cargo services'],
-  ['imports','I need a package from abroad brought into India'],
+  ['export-scope','I need a package from abroad brought into India'],
   ['surface','Can my goods go by road instead of air'],
   ['air','I need to book freight transport on an aircraft'],
   ['refund','How can I request reimbursement of the courier payment'],

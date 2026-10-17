@@ -1,5 +1,7 @@
 # Royal T Supabase
 
+**17 October 2026 status:** the database and both private Storage buckets are live, including rate-list and GST-billing migrations; `royalt-api` is deployed at version 6. The latest frontend is included in this release and ships through the existing GitHub/Vercel production workflow. GST billing is available through the invoice workflow described in [GST-BILLING.md](GST-BILLING.md). Automatic tracking still requires approved carrier credentials and scheduler activation. The current Supabase Cron setup and verification guide is [TRACKING-SETUP.md](TRACKING-SETUP.md); it supersedes the older external-scheduler suggestion below. No Supabase Cron job has been created yet.
+
 Project: `vjnfefdfvneiqbkduezt` — RoyalT Courier Services, connected through the Royal T Services account. Its existing public business schema and Auth users were empty before setup. Both checked-in migrations are now applied. The `royalt-documents` private PDF bucket and `royalt-api` Edge Function are deployed.
 
 The first administrator is `royaltservices360@gmail.com`. Its private activation link is stored outside Git; open it to set a password of at least 12 characters. No password was chosen on the user's behalf. The protected temporary setup and verification functions were closed and switched to gateway JWT verification after use.

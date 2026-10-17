@@ -1,5 +1,7 @@
 # Website policy draft and launch review
 
+The owner approved publication on 17 October 2026. The website policy status is now published and draft notices are removed. Missing business particulars remain unset rather than invented; this document retains the original review history below.
+
 Drafted on 13 October 2026 for **Royal T Services Private Limited**, trading as Royal T Courier Services. The legal company name was supplied by the owner. All policies are visible in the local preview and marked as drafts. They are not a certification of legal compliance.
 
 ## Included pages

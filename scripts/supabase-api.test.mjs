@@ -32,7 +32,7 @@ test('cron authorization and unauthenticated staff checks happen before accessin
 test('nonstaff users cannot use server-side document, payment or invitation operations',async()=>{
   let writes=0;const handler=supabaseApi({clients:()=>({staff:{auth:{getUser:async()=>({data:{user:{id:'test'}}})},rpc:async()=>({data:false})},service:{from(){writes++;throw Error('Forbidden');}}})});
   const request=req('POST',{});request.headers.cookie='sb-test-auth-token=present';
-  for(const route of ['/api/internal/invite','/api/internal/records/11111111-1111-4111-8111-111111111111/payments','/api/internal/records/11111111-1111-4111-8111-111111111111/documents']){const response=res();await handler(request,response,route);assert.equal(response.status,403);}
+  for(const route of ['/api/internal/business-settings','/api/internal/invoices','/api/internal/records/11111111-1111-4111-8111-111111111111/invoice','/api/internal/rates','/api/internal/invite','/api/internal/records/11111111-1111-4111-8111-111111111111/payments','/api/internal/records/11111111-1111-4111-8111-111111111111/documents']){const response=res();await handler(request,response,route);assert.equal(response.status,403);}
   assert.equal(writes,0);
 });
 

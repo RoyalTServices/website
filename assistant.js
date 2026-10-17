@@ -169,7 +169,7 @@ export function mountAssistant() {
       session.pending = Boolean(state.pending);
       session.needsClarification = Boolean(state.needsClarification);
       session.context = state.context && knowledge.some(entry => entry.category === state.context.category) ? {category:state.context.category, ...(knowledge.some(entry => entry.id === state.context.id) ? {id:state.context.id} : {})} : null;
-      session.transcript = state.transcript.filter(item => ['customer','assistant'].includes(item.role) && typeof item.text === 'string').map(item => ({role:item.role, text:item.text}));
+      session.transcript = state.transcript.filter(item => ['customer','assistant'].includes(item.role) && typeof item.text === 'string').map(item => ({role:item.role, text:item.role==='assistant' && /imports? express|inbound|shipments? coming into India/i.test(item.text) ? 'Our international services cover exports from India only. We also handle domestic courier enquiries within India.' : item.text}));
       lastQuestion = typeof cached.lastQuestion === 'string' ? cached.lastQuestion : '';
       session.transcript.forEach(item => {
         const line = document.createElement('p'); line.className = `assistant-message ${item.role === 'customer' ? 'customer' : ''}`; line.textContent = item.text; log.append(line);

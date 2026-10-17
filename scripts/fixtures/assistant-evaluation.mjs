@@ -29,7 +29,7 @@ export const evaluationCases = {
   'restricted': ['Is perfume accepted for international courier','Are lithium cells permitted in an overseas package','Can hazardous chemicals go by courier'],
   'delivery-time': ['What transit duration should I allow before sending','Approximately how long does express delivery take','Can you tell me the usual number of days to arrive'],
   'services': ['Which kinds of shipping can I book with Royal T','Tell me which carrier services you have','Do you provide both cargo and document courier options'],
-  'imports': ['Can you organise a parcel from London arriving into India','I want to import goods from Canada to India','Do you arrange collection abroad for delivery in India'],
+  'export-scope': ['Can you organise a parcel from London arriving into India','I want to import goods from Canada to India','Do you arrange collection abroad for delivery in India'],
   'surface': ['Can stock be moved domestically on a truck','I need to send several cartons using surface transport','Do you organise overland freight for goods'],
   'air': ['I want to transport export freight on an aircraft','Can goods be dispatched overseas by cargo plane','How do I use air transport for commercial cargo'],
   'refund': ['I would like my courier charges reimbursed','Where can I file a compensation request for this consignment','Can I apply to get the payment refunded'],

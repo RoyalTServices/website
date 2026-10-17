@@ -8,23 +8,33 @@ import {publicRoutes,renderSite} from '../pages.js';
 import {createSiteServer} from '../site-server.mjs';
 const origin = 'https://royalt.example'; // Test-only origin; never inserted into site configuration.
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+test('public services and search content describe outbound international shipping only',()=>{
+  assert.ok(!publicRoutes.includes('/services/imports'));
+  for(const route of publicRoutes){
+    assert.doesNotMatch(renderSite(route),/\bimports?\b|\binbound\b/i,route);
+    const meta=metadata(route);assert.doesNotMatch(meta.title+meta.description,/\bimports?\b|\binbound\b/i,route);
+  }
+  assert.match(metadata('/services/imports').robots,/noindex/);
+});
 
 test('confirmed domain and regional search wording are reflected in content and metadata', () => {
   const home = metadata('/');
   assert.equal(home.canonical,'https://royaltservices.in/');
   assert.equal(home.indexable,true);
-  assert.match(home.title,/Affordable Courier.*Hyderabad.*Telangana/);
-  assert.match(home.description,/low-cost courier options/);
-  assert.match(renderSite('/'),/Affordable Courier/);
-  assert.match(renderSite('/services/international-courier'),/Sending parcels abroad from Hyderabad and Telangana/);
-  assert.match(metadata('/services/international-courier').title,/International Courier Hyderabad/);
+  assert.match(home.title,/Domestic & International Courier.*Andhra Pradesh.*Telangana/);
+  assert.match(home.description,/Domestic and international courier services/);
+  assert.match(renderSite('/'),/Domestic and International<br>Courier Services in<br>Andhra Pradesh/);
+  assert.doesNotMatch(renderSite('/'),/affordable|low-cost/i);
+  assert.doesNotMatch(home.title+home.description,/affordable|low-cost/i);
+  assert.match(renderSite('/services/international-courier'),/Sending parcels abroad from Andhra Pradesh and Telangana/);
+  assert.match(metadata('/services/international-courier').title,/International Courier.*Andhra Pradesh.*Telangana/);
   assert.match(sitemap(),/<loc>https:\/\/royaltservices\.in\/services\/international-courier<\/loc>/);
   assert.match(robots(),/Sitemap: https:\/\/royaltservices\.in\/sitemap.xml/);
 });
-test('Hyderabad and Telangana are customer markets, not a fabricated office location', () => {
+test('Andhra Pradesh and Telangana are customer markets, not a fabricated office location', () => {
   const org = structuredData(metadata('/'))['@graph'][0];
   assert.equal(org['@type'],'Organization');
-  assert.deepEqual(org.areaServed.map(area => area.name),['Hyderabad','Telangana']);
+  assert.deepEqual(org.areaServed.map(area => area.name),['Andhra Pradesh','Telangana']);
   assert.equal(org.address,undefined);
   assert.equal(org.geo,undefined);
   assert.ok(!renderSite('/').includes('Based in Hyderabad'));
@@ -42,10 +52,15 @@ test('each public page has one meaningful H1 and unique search metadata', () => 
   }
   assert.match(renderSite('/'),/How do I get a courier price estimate/);
 });
-test('sitemap excludes private, tracking and unapproved policy pages, with crawlable JS', () => {
+test('sitemap includes published policies and excludes private/tracking routes, with crawlable JS', () => {
   const xml = sitemap(origin), rules = robots(origin);
   for (const route of ['/','/services/international-courier','/services/domestic-express','/quote','/pickup']) assert.ok(xml.includes(`<loc>${origin+route}</loc>`),route);
-  for (const route of ['/internal','/api/','/tracking','/privacy-policy']) assert.ok(!xml.includes(origin+route),route);
+  for (const route of ['/internal','/api/','/tracking']) assert.ok(!xml.includes(origin+route),route);
+  for(const route of ['/privacy-policy','/terms-and-conditions','/shipping-policy']) {
+    assert.ok(xml.includes(`<loc>${origin+route}</loc>`),route);
+    assert.equal(metadata(route,origin).indexable,true);
+    assert.doesNotMatch(renderSite(route),/Draft for review/);
+  }
   assert.match(rules,/Sitemap: https:\/\/royalt\.example\/sitemap.xml/);
   assert.ok(!rules.includes('Disallow: /assets') && !rules.includes('Disallow: /app.js'));
   assert.match(metadata('/tracking',origin).robots,/noindex/);
@@ -62,7 +77,7 @@ test('service schema is honest about organisation, location and prices', () => {
   assert.ok(schema['@graph'].some(item => item['@type']==='BreadcrumbList'));
   const text = JSON.stringify(schema);
   for (const misleading of ['aggregateRating','reviewCount','priceCurrency','SearchAction','FAQPage']) assert.ok(!text.includes(misleading));
-  assert.match(text,/919000159988/);
+  assert.match(text,/919502295222/);
   const old = {...config.seo};
   try {
     Object.assign(config.seo,{localBusinessVerified:true,city:'Test City',streetAddress:'Test Street',region:'Test Region',postalCode:'500001'});

@@ -9,6 +9,7 @@ preview/
 *.log
 *.xls
 *.xlsx
+!assets/royal-t-price-list-template.xlsx
 __pycache__/
 *.pyc
 dist/
@@ -16,4 +17,6 @@ dist/
 supabase/.temp/
 supabase/.branches/
 supabase/functions/royalt-api/*.mjs
+supabase/functions/royalt-api/*.js
 data/admin-invite.txt
+sign_raghav.jpeg

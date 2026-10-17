@@ -1,6 +1,6 @@
 # Search and local business launch setup
 
-Configured domain: **https://royaltservices.in**. Confirmed priority customer markets: **Hyderabad and Telangana**. Phone/WhatsApp: **+91 90001 59988**. Titles, descriptions, home copy, service-page context and shipping questions target affordable courier options, low-cost shipping enquiries, sending parcels abroad, domestic parcel delivery and efficient shipment preparation. These are relevance improvements, not search-volume research or a guarantee of rankings.
+Configured domain: **https://royaltservices.in**. Confirmed priority customer markets: **Andhra Pradesh and Telangana**. Phone/WhatsApp: **+91 90001 59988**. Titles, descriptions, home copy, service-page context and shipping questions target domestic and international courier services, shipment quotes, sending parcels abroad, domestic parcel delivery and efficient shipment preparation. These are relevance improvements, not search-volume research or a guarantee of rankings.
 
 The domain is configured for production canonicals, sitemap and robots generation. This does not deploy the site or submit it to Google. After publishing the updated server on that domain, submit **https://royaltservices.in/sitemap.xml** through Search Console. The physical office address remains unconfirmed, so the schema identifies an Organization serving the stated markets rather than inventing a LocalBusiness address or map coordinates.
 
@@ -20,7 +20,7 @@ Deploy using the checked-in Vercel configuration, or run the Node server behind 
 
 - Create/verify the business profile under the genuine customer-facing business name. Use an accurate category, address or service-area setup, real number, business hours and website URL. Do not add marketing keywords to the business name or invent branches.
 - Use the same name, address and phone on the profile and website. A service-area business should follow Google's address-visibility guidance instead of publishing a private/non-customer-facing address purely for SEO. Review the schema/address setup for that model before enabling LocalBusiness.
-- Add the six actual service categories, suitable photos and a description of domestic/international courier, documents/parcels, imports, air freight and surface cargo. Dangerous goods acceptance remains subject to assessment.
+- Add the six actual service categories, suitable photos and a description of domestic/international courier, documents/parcels,  air freight and surface cargo. Dangerous goods acceptance remains subject to assessment.
 - Once the profile URL is available, add it to `config.seo.googleBusinessUrl`; real social profiles can be placed in `sameAs`.
 - Verify the domain in Google Search Console. DNS verification works independently of this code; for HTML verification, set `searchConsoleVerification` to the supplied verification token.
 - Submit `https://YOUR-ACTUAL-DOMAIN/sitemap.xml`, then use URL Inspection on Home and the six service pages. Check canonical selection, indexability, rendered HTML and mobile usability. Request indexing for important new pages after verification; a sitemap does not guarantee inclusion.
@@ -51,3 +51,5 @@ These checks verify the implementation. Live Google indexing, search position, l
 - [Google: Local business structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business): supply real business details and applicable required properties.
 - [Google: Improve local ranking](https://support.google.com/business/answer/7091): accurate, complete business information; local relevance, distance and prominence influence results.
 - [Google: Represent your business accurately](https://support.google.com/business/answer/3038177): genuine names, addresses, categories and service-area business rules.
+
+International services are export-only from India. The former inbound service route is removed from public navigation, page content and the sitemap.

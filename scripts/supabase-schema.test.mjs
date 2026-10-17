@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {PGlite} from '@electric-sql/pglite';
+import {invoiceCalculation} from '../invoice-math.js';
+import {seller as billingSeller,input as billingInput} from './fixtures/billing.mjs';
 const migration=await fs.readFile(new URL('../supabase/migrations/20261013194907_royal_t_backend.sql',import.meta.url),'utf8');
 async function database() {
   const db=new PGlite();
@@ -15,8 +17,54 @@ async function database() {
     create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);
     create table storage.objects(id uuid primary key default gen_random_uuid(),bucket_id text,name text);alter table storage.objects enable row level security;
     grant usage on schema storage to authenticated, service_role;grant select on storage.objects to authenticated;grant all on all tables in schema storage to service_role;`);
-  await db.exec(migration);await db.exec(await fs.readFile(new URL('../supabase/migrations/20261013203918_backend_security.sql',import.meta.url),'utf8'));return db;
+  await db.exec(migration);await db.exec(await fs.readFile(new URL('../supabase/migrations/20261013203918_backend_security.sql',import.meta.url),'utf8'));await db.exec(await fs.readFile(new URL('../supabase/migrations/20261016142434_rate_lists.sql',import.meta.url),'utf8'));await db.exec(await fs.readFile(new URL('../supabase/migrations/20261017065608_billing.sql',import.meta.url),'utf8'));return db;
 }
+
+test('invoice issue uses confirmed bookings, immutable snapshots, one number per booking and private tables',async()=>{
+  const db=await database();try{
+    const staff='33333333-3333-4333-8333-333333333333';
+    await db.query('insert into auth.users(id) values($1)',[staff]);
+    await db.query("insert into public.royalt_staff_profiles(id,email,role) values($1,'test@example.com','staff')",[staff]);
+    const customer=(await db.query("insert into public.royalt_customers(name) values('Test Customer') returning id")).rows[0].id;
+    const shipment=(await db.query("insert into public.royalt_shipments(reference,customer_id,booking_status) values('RT-INVOICE-TEST',$1,'new') returning id,updated_at",[customer])).rows[0];
+    const settings=(await db.query('update public.royalt_business_settings set details=$1 returning updated_at',[billingSeller])).rows[0];
+    const snapshot=invoiceCalculation(billingInput,billingSeller);snapshot.booking={reference:'RT-INVOICE-TEST',service:'Courier'};
+    const issue='select public.royalt_issue_invoice($1,$2,$3,$4::jsonb,$5) as invoice',args=[shipment.id,shipment.updated_at,settings.updated_at,snapshot,staff];
+    await db.exec('set role service_role');await assert.rejects(db.query(issue,args),/Confirm booking/);
+    assert.equal((await db.query('select count(*)::int n from public.royalt_invoices')).rows[0].n,0);
+    await db.exec('reset role');await db.query("update public.royalt_shipments set booking_status='confirmed' where id=$1",[shipment.id]);
+    const updated=(await db.query('select updated_at from public.royalt_shipments where id=$1',[shipment.id])).rows[0].updated_at;args[1]=updated;
+    await db.exec('set role service_role');const first=(await db.query(issue,args)).rows[0].invoice;
+    assert.match(first.invoice_number,/^RTC\/\d{2}-\d{2}\/00001$/);assert.ok(first.invoice_number.length<=16);assert.equal(first.total_paise,11800);
+    assert.deepEqual((await db.query(issue,args)).rows[0].invoice,first);
+    assert.equal((await db.query('select count(*)::int n from public.royalt_invoices')).rows[0].n,1);
+    await assert.rejects(db.query("update public.royalt_invoices set buyer_name='Changed'"),/permission denied/);
+    await db.exec('reset role');const second=(await db.query("insert into public.royalt_shipments(reference,customer_id,booking_status) values('RT-INVOICE-SECOND',$1,'confirmed') returning id,updated_at",[customer])).rows[0];
+    await db.exec('set role service_role');await assert.rejects(db.query(issue,[second.id,second.updated_at,'2000-01-01T00:00:00Z',snapshot,staff]),/Billing details changed/);
+    const next=(await db.query(issue,[second.id,second.updated_at,settings.updated_at,snapshot,staff])).rows[0].invoice;assert.match(next.invoice_number,/\/00002$/);
+    await db.exec('reset role');await assert.rejects(db.query("delete from public.royalt_invoices"),/cannot be edited or deleted/);
+    await db.query("update public.royalt_business_settings set details=jsonb_set(details,'{businessName}','\"New name\"')");
+    assert.equal((await db.query('select snapshot from public.royalt_invoices')).rows[0].snapshot.seller.businessName,billingSeller.businessName);
+    await db.exec('set role authenticated');await assert.rejects(db.query('select * from public.royalt_business_settings'),/permission denied/);await assert.rejects(db.query('select * from public.royalt_invoices'),/permission denied/);await assert.rejects(db.query(issue,args),/permission denied/);
+  }finally{await db.close();}
+});
+
+test('price publication is serialized and private bucket/publication controls are service-only',async()=>{
+  const db=await database();try{
+    assert.equal((await db.query("select public from storage.buckets where id='royalt-rate-lists'")).rows[0].public,false);
+    await db.exec('set role service_role');
+    const token='11111111-1111-4111-8111-111111111111',other='22222222-2222-4222-8222-222222222222';
+    assert.equal((await db.query('select public.royalt_claim_rate_upload($1::uuid) as ok',[token])).rows[0].ok,true);
+    assert.equal((await db.query('select public.royalt_claim_rate_upload($1::uuid) as ok',[other])).rows[0].ok,false);
+    await assert.rejects(db.query("select public.royalt_publish_rates($1::uuid,'test.xlsx',null)",[other]));
+    await db.query("select public.royalt_publish_rates($1::uuid,'test.xlsx',null)",[token]);
+    assert.equal((await db.query('select active_path from public.royalt_rate_state')).rows[0].active_path,'test.xlsx');
+    await db.query('select public.royalt_release_rate_upload($1::uuid)',[token]);
+    await db.exec('set role authenticated');
+    await assert.rejects(db.query('select * from public.royalt_rate_state'));
+    await assert.rejects(db.query('select public.royalt_claim_rate_upload($1::uuid)',[other]));
+  }finally{await db.close();}
+});
 test('migration executes in PostgreSQL; public intake is atomic and retries keep one reference',async()=>{
   const db=await database();try {
     await db.exec('set role service_role');

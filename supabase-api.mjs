@@ -4,6 +4,7 @@ import {failure,clean,uuid,reference,validDate,numeric,customer,requestPayload,p
 import {courierAdapters} from './courier-adapters.mjs';
 import {currentRates,rateStorage} from './rate-storage.mjs';
 import {billingApi} from './billing-api.mjs';
+import {notifyRequest} from './request-notification.mjs';
 
 const shipments='royalt_shipments',enquiries='royalt_enquiries',customers='royalt_customers';
 const send=(res,status,data)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'});res.end(JSON.stringify(data));};
@@ -83,7 +84,9 @@ export function supabaseApi({env=process.env,clients=supabaseClients,adapters=co
       if(pathname==='/api/requests'&&req.method==='POST') {
         await limit(service,req,'request',15);const values=submitted;
         const ref=await result(service.rpc('royalt_submit_request',{p_customer:values.customer,p_payload:values.payload,p_reference:reference(),p_key:values.key}));
-        send(res,201,{reference:ref});return true;
+        const notification=await notifyRequest(ref,values,{env});
+        if(notification.status!=='sent')console.error('Request email notification pending:',ref,notification.status);
+        send(res,201,{reference:ref,notification:notification.status});return true;
       }
       if(pathname==='/api/tracking'&&req.method==='GET') {
         await limit(service,req,'tracking',30);const ref=clean(url.searchParams.get('id'),50).toUpperCase();

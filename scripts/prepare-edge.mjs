@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';
 const root=new URL('../',import.meta.url),target=new URL('supabase/functions/royalt-api/',root);
 await fs.mkdir(target,{recursive:true});
-for(const file of ['supabase-api.mjs','supabase-client.mjs','business-validation.mjs','courier-adapters.mjs','rate-storage.mjs','rate-workbook.mjs','rate-seed.mjs','billing-api.mjs','invoice-math.js','site-config.js'])await fs.copyFile(new URL(file,root),new URL(file,target));
+for(const file of ['request-notification.mjs','supabase-api.mjs','supabase-client.mjs','business-validation.mjs','courier-adapters.mjs','rate-storage.mjs','rate-workbook.mjs','rate-seed.mjs','billing-api.mjs','invoice-math.js','site-config.js'])await fs.copyFile(new URL(file,root),new URL(file,target));
 console.log('Prepared Royal T Edge Function dependencies.');

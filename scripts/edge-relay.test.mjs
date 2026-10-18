@@ -25,3 +25,18 @@ test('Vercel lazy body helpers cannot corrupt binary PDF bytes',async()=>{
   let sent;const relay=edgeRelay(env,async(url,options)=>{sent=options.body;return new Response('{"ok":true}');});const res=response();
   await relay(req,res,'/api/internal/records/example/documents');assert.deepEqual(sent,pdf);assert.equal(res.status,200);
 });
+
+test('Vercel sends SMTP notification after the Edge backend saves a form',async()=>{
+  const values={name:'Customer',email:'customer@example.com',type:'enquiry',message:'Please help',consent:true};
+  let notification;
+  const relay=edgeRelay({...env,SMTP_HOST:'mail.example.com'},async()=>Response.json({reference:'RT-SAVED',notification:'unconfigured'},{status:201}),async(reference,values,options)=>{notification={reference,values,options};return {status:'sent'};});
+  const res=response();await relay({url:'/api/requests',method:'POST',headers:{},body:values},res,'/api/requests');
+  assert.equal(res.status,201);assert.equal(res.body.notification,'sent');assert.equal(notification.reference,'RT-SAVED');assert.equal(notification.values.customer.email,values.email);assert.equal(notification.options.env.SMTP_HOST,'mail.example.com');
+});
+test('rejected forms never send email and mail failures preserve stored receipt',async()=>{
+  let sends=0;
+  const failed=edgeRelay(env,async()=>Response.json({error:'Invalid form'},{status:400}),async()=>{sends++;});
+  const res=response();await failed({url:'/api/requests',method:'POST',headers:{},body:{}},res,'/api/requests');assert.equal(sends,0);assert.equal(res.status,400);
+  const saved=edgeRelay(env,async()=>Response.json({reference:'RT-SAVED'},{status:201}),async()=>({status:'failed'}));
+  const receipt=response();await saved({url:'/api/requests',method:'POST',headers:{},body:{name:'Customer',email:'customer@example.com',type:'enquiry',message:'Help',consent:true}},receipt,'/api/requests');assert.equal(receipt.status,201);assert.equal(receipt.body.reference,'RT-SAVED');assert.equal(receipt.body.notification,'failed');
+});

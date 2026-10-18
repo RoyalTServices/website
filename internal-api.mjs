@@ -1,5 +1,6 @@
 import {randomBytes, scryptSync, timingSafeEqual, randomUUID, createHash} from 'node:crypto';
 import {requestStore} from './request-store.mjs';
+import {notifyRequest} from './request-notification.mjs';
 
 const statuses = ['new','pending_pickup','in_progress','completed'];
 const labels = {new:'New request',pending_pickup:'Pending pickup',in_progress:'In progress',completed:'Completed'};
@@ -89,7 +90,7 @@ export function internalApi(root,{storage=requestStore(root),setupKey=process.en
       }
       if(pathname==='/api/requests'&&req.method==='POST') {
         const values=await body(req),entry=record(values);
-        await mutate(store=>{prune(store);const ip=vercel?String(req.headers['x-vercel-forwarded-for']||req.socket.remoteAddress).split(',')[0].trim():req.socket.remoteAddress,key=digest('request:'+ip),previous=store.attempts[key]||{count:0,until:Date.now()+15*60000};if(previous.count>=30)throw failure('Too many requests. Please try again later or call us.',429);store.attempts[key]={...previous,count:previous.count+1};store.records.push(entry);}); send(res,201,{reference:entry.reference}); return true;
+        await mutate(store=>{prune(store);const ip=vercel?String(req.headers['x-vercel-forwarded-for']||req.socket.remoteAddress).split(',')[0].trim():req.socket.remoteAddress,key=digest('request:'+ip),previous=store.attempts[key]||{count:0,until:Date.now()+15*60000};if(previous.count>=30)throw failure('Too many requests. Please try again later or call us.',429);store.attempts[key]={...previous,count:previous.count+1};store.records.push(entry);}); const notification=await notifyRequest(entry.reference,values);if(notification.status!=='sent')console.error('Request email notification pending:',entry.reference,notification.status);send(res,201,{reference:entry.reference,notification:notification.status}); return true;
       }
       const auth=await authenticated(req); if(!auth) {send(res,401,{error:'Please sign in to continue.'});return true;}
       if(pathname==='/api/internal/records'&&req.method==='GET') { const store=await read();send(res,200,{records:store.records});return true; }

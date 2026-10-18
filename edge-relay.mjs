@@ -1,5 +1,7 @@
+import {notifyRequest} from './request-notification.mjs';
+import {requestPayload} from './business-validation.mjs';
 // Keep the website's existing same-origin API and HttpOnly session cookies.
-export function edgeRelay(env,fetcher=fetch) {
+export function edgeRelay(env,fetcher=fetch,notify=notifyRequest) {
   return async(req,res,pathname)=>{
     if(!pathname.startsWith('/api/'))return false;
     try {
@@ -22,7 +24,19 @@ export function edgeRelay(env,fetcher=fetch) {
       const response=await fetcher(target,{method:req.method,headers,body,redirect:'error',signal:AbortSignal.timeout(55000)});
       const cookies=response.headers.getSetCookie();if(cookies.length)res.setHeader('Set-Cookie',cookies);
       res.writeHead(response.status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'});
-      res.end(await response.text());
+      let responseText=await response.text();
+      // Send from Vercel after successful storage, using Vercel's SMTP environment.
+      if(pathname==='/api/requests'&&req.method==='POST'&&response.ok){
+        try {
+          const receipt=JSON.parse(responseText);
+          if(typeof receipt.reference==='string'&&receipt.notification!=='sent'){
+            const values=requestPayload(JSON.parse(String(body)));
+            const notification=await notify(receipt.reference,values,{env});
+            responseText=JSON.stringify({...receipt,notification:notification.status});
+          }
+        }catch { /* Preserve the stored request receipt if notification preparation fails. */ }
+      }
+      res.end(responseText);
     }catch(error){res.writeHead(error.status||503,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify({error:error.status?error.message:'The service is temporarily unavailable. Please try again.'}));}
     return true;
   };

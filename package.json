@@ -20,6 +20,7 @@
     "@supabase/ssr": "0.12.7",
     "@supabase/supabase-js": "2.117.3",
     "exceljs": "^4.4.0",
+    "nodemailer": "^10.1.2",
     "pg": "^8.23.1"
   },
   "devDependencies": {
@@ -27,6 +28,8 @@
     "happy-dom": "21.0.1"
   },
   "overrides": {
-    "exceljs": {"uuid": "11.1.1"}
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
   }
 }

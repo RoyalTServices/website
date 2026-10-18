@@ -26,6 +26,7 @@ export function requestPayload(values,internal=false) {
   if(payload.date&&!validDate(payload.date))throw failure('Enter a valid pickup date.');
   if(!internal&&type==='pickup'&&payload.date<businessDate())throw failure('Choose today or a future pickup date.');
   payload.contents=clean(values.contents);payload.intent=clean(values.intent,30);
+  payload.city=clean(values.city,120);payload.destinationDetails=clean(values.destinationDetails,120);
   payload.referenceEstimate=numeric(values.referenceEstimate,'reference estimate');
   payload.chargedWeight=numeric(values.chargedWeight,'charged weight',{min:.001,max:99999});
   payload.quoteValidUntil=validDate(values.quoteValidUntil)?values.quoteValidUntil:null;

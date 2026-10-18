@@ -19,3 +19,19 @@ Return to application selection and choose the **standalone root app**. Set Fram
 Python dependencies live in `scripts/python-requirements.txt`, avoiding the application detection hint `requirements.txt`. These offline maintenance tools are excluded from Vercel uploads. Install them locally only when needed with `python -m pip install -r scripts/python-requirements.txt`.
 
 References: [Vercel configuration](https://vercel.com/docs/project-configuration/vercel-json), [Node functions](https://vercel.com/docs/functions/runtimes/node-js), [Hobby terms](https://vercel.com/docs/plans/hobby).
+
+## Website form email using your mailbox
+
+Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` and optionally `SMTP_FROM` in the existing Vercel project's environment variables, then redeploy. Use the SMTP settings supplied by your current email host. Port 465 uses TLS; ports 587 and 2525 require STARTTLS. `SMTP_FROM` defaults to `SMTP_USER`; the sender must be permitted by your mail host.
+
+Vercel sends form notifications to `info@royaltservices.in` only after the backend confirms the request was saved. Replies go to the customer's submitted email. The Vercel relay handles email even when request storage runs in Supabase, so SMTP credentials need not be added to Supabase. Failed email delivery leaves the saved request intact and the form displays a direct email fallback. SMTP Message-ID stays consistent for the same request reference, but SMTP does not guarantee deduplication if a submission is retried.
+
+The chat displays `support@royaltservices.com` for unresolved queries. All submitted forms, including chat issue forms, notify `info@royaltservices.in`.
+
+## Daily rate availability check
+
+`vercel.json` schedules `GET /api/rates` daily at 03:00 UTC (08:30 IST). Vercel Hobby may invoke it within that hour rather than precisely at the scheduled minute. The public endpoint already reads `royalt_rate_state` from the database on every call and returns an error when the backend is unavailable; it does not just serve a static file. No extra secret or customer submission is needed. This schedule activates with the next production deployment; adding the configuration locally does not activate a live job.
+
+The check provides regular database activity and verifies the published quote data can be loaded. Supabase Free may still pause a project for insufficient activity; a daily request is not an uptime guarantee and cannot resume an already paused project. Supabase Pro removes inactivity pausing. Check Supabase pause-warning emails and Vercel cron execution logs. This job does not run carrier tracking synchronization; that protected POST schedule is documented in TRACKING-SETUP.md.
+
+References: [Supabase project pausing](https://supabase.com/docs/guides/platform/free-project-pausing), [Vercel cron limits](https://vercel.com/docs/cron-jobs/usage-and-pricing).

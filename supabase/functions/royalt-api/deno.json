@@ -1,1 +1,1 @@
-{"imports":{"@supabase/supabase-js":"npm:@supabase/supabase-js@2.117.3","@supabase/ssr":"npm:@supabase/ssr@0.12.7","exceljs":"npm:exceljs@4.4.0"}}
+{"imports":{"@supabase/supabase-js":"npm:@supabase/supabase-js@2.117.3","@supabase/ssr":"npm:@supabase/ssr@0.12.7","exceljs":"npm:exceljs@4.4.0","nodemailer":"npm:nodemailer@10.1.2"}}

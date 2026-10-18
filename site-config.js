@@ -1,6 +1,6 @@
 export const config = {
   name: 'Royal T Courier Services',
-  phone: '+919502295222', whatsapp: '919502295222', email: '', address: '', hours: '',
+  phone: '+919502295222', whatsapp: '919502295222', email: 'info@royaltservices.in', supportEmail: 'support@royaltservices.com', address: '', hours: '',
   seo: {
     // Set the final HTTPS domain before public launch; previews remain noindex without it.
     siteUrl: 'https://royaltservices.in', indexingEnabled: true,

@@ -158,7 +158,27 @@ body{background:var(--paper)}
 footer{background:var(--ink);color:#e2e9ef;border-top:6px solid var(--teal)}
 .footer-top p,.footer-business p,.footer-bottom{color:#c5d2dd}.footer-brand{background:#fff;padding:6px 12px}
 .footer-policies,.footer-business,.footer-bottom{border-color:#ffffff26}.footer-policies a:hover,.footer-business a:hover{color:var(--gold)}
-#country-search{margin-bottom:8px}#country-search-status{min-height:1.6em;margin-bottom:12px}
+
 @media(max-width:1100px){.hero-copy{padding:35px 28px}.hero-copy h1{font-size:37px}.hero-actions{flex-direction:column;align-items:flex-start;gap:18px}.service-grid{gap:14px}.service-grid .service-card-body{padding:18px}.service-grid .service-card h2,.service-grid .service-card h3{font-size:21px}.regional-shipping-grid article:first-child h3{font-size:32px}}
 @media(max-width:800px){.hero{grid-template-columns:1fr;gap:0}.hero-copy{padding:35px}.hero-copy h1{font-size:38px}.hero-actions{flex-direction:row;align-items:center}.hero-dispatch{padding:18px 30px}.orbital{max-width:390px;width:100%;margin:0 auto}.dispatch-caption{font-size:9px}.service-grid{grid-template-columns:1fr 1fr}.service-grid .service-card:first-child{grid-column:span 2;grid-row:auto;display:grid;grid-template-columns:1fr 1fr}.service-grid .service-card:first-child .service-photo{aspect-ratio:auto}.service-grid .service-card:first-child .service-photo img{height:100%;min-height:300px}.regional-shipping-grid{grid-template-columns:1fr;gap:18px}.regional-shipping-grid article:first-child{grid-row:auto}.regional-shipping-grid article:first-child:after{max-width:220px;margin-top:24px}.journey{grid-template-columns:1fr}.journey>div{padding:32px}.journey h2 br{display:none}.journey-steps{padding:14px 32px}.site-header nav{border-radius:0}}
 @media(max-width:600px){.hero-copy{padding:30px 24px}.hero-copy h1{font-size:32px}.hero-kicker{font-size:9px;margin-bottom:20px}.hero-copy>p{font-size:14px}.hero-actions{flex-direction:column;align-items:flex-start}.hero-actions .text-link{max-width:none}.hero-dispatch{padding:18px 24px}.dispatch-caption{font-size:8px}.orbital{max-width:320px}.service-grid{grid-template-columns:1fr;gap:20px}.service-grid .service-card:first-child{grid-column:auto;display:flex}.service-grid .service-card:first-child .service-photo,.service-grid .service-photo{aspect-ratio:2/1}.service-grid .service-card:first-child .service-photo img{min-height:0}.service-grid .service-card-body{padding:24px}.service-grid .service-card:first-child h2,.service-grid .service-card:first-child h3{font-size:29px}.service-grid .service-card h2,.service-grid .service-card h3{font-size:25px}.regional-shipping-grid article,.regional-shipping-grid article:first-child{padding:26px}.regional-shipping-grid article:first-child h3{font-size:30px}.regional-shipping-grid h3{font-size:25px}.route-label{font-size:8px}.page-intro{padding:26px 22px;border-left-width:5px}.about-audience,.principles{grid-template-columns:1fr}.quote-side,.contact-aside,.form-aside{padding:24px}.rate-option{padding:20px}.closing{padding:32px 24px}.help-strip{padding:24px}.hero,.orbital,.closing{border-radius:0}}
+
+/* A parcel van keeps the quote area active while current rates are fetched. */
+.quote-loading { padding: 3rem 0; text-align: center; }
+.courier-road { position: relative; height: 110px; overflow: hidden; margin: 1rem 0 2rem; border-bottom: 2px solid currentColor; }
+.courier-van { position: absolute; bottom: 5px; left: 50%; width: 120px; fill: var(--accent, #e77b36); stroke: currentColor; stroke-width: 2; animation: courier-drive 2.8s ease-in-out infinite; }
+.courier-van .van-window { fill: #fff; }
+.courier-van .van-parcel { fill: #d8ab77; }
+.courier-road span { position: absolute; bottom: 0; left: -100%; width: 300%; height: 3px; background: repeating-linear-gradient(90deg,currentColor 0 20px,transparent 20px 45px); animation: courier-road 1s linear infinite; }
+@keyframes courier-drive { 0%,100% { transform: translateX(-65%) translateY(0); } 50% { transform: translateX(-35%) translateY(-3px); } }
+@keyframes courier-road { to { transform: translateX(-45px); } }
+@media (prefers-reduced-motion: reduce) { .courier-van,.courier-road span { animation: none; } }
+
+.country-combobox { position: relative; }
+.country-combobox input { padding-right: 38px; }
+.country-chevron { position: absolute; right: 15px; top: 10px; pointer-events: none; color: var(--muted); }
+.country-options { position: absolute; top: calc(100% - 1px); left: 0; right: 0; max-height: 250px; overflow-y: auto; overscroll-behavior: contain; background: #fff; border: 1px solid #ccd3ce; box-shadow: 0 12px 24px #182c3d1a; border-radius: 0 0 6px 6px; z-index: 20; }
+.country-options[hidden] { display: none; }
+.country-option { padding: 12px 14px; min-height: 44px; font-size: 14px; cursor: pointer; color: var(--ink); }
+.country-option:hover, .country-option[aria-selected="true"] { background: #edf3f8; color: var(--ink); }
+#country-status { margin-top: 6px; }

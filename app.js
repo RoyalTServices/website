@@ -1,10 +1,19 @@
 import { config } from './site-config.js';
+import {bindCountryCombobox} from './country-combobox.js';
+import {destinationChoices,selfOptions} from './quote-options.js';
 import { calculateRate } from './pricing.js';
 import { services, dockPanel, button, esc, renderSite } from './pages.js';
 import { updateSeo } from './seo.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 let releaseHeaderScroll=()=>{};
-const getRates = async () => {
+let rateRequest;
+const getRates = () => {
+  // Share concurrent requests, then fetch fresh published prices for the next quote.
+  if(rateRequest)return rateRequest;
+  rateRequest=fetchRates().finally(()=>{rateRequest=null;});
+  return rateRequest;
+};
+const fetchRates = async () => {
   // Refresh published prices for each quote; a failed backend must not silently serve old prices.
   const response=await fetch('/api/rates',{cache:'no-store',signal:AbortSignal.timeout(20000)});
   if(response.ok)return response.json();
@@ -67,6 +76,22 @@ const money = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR
 async function initQuote() {
   const form=$('#quote-form'),select=$('#country'),result=$('#quote-result'),error=$('#quote-error'),submit=$('#quote-submit');
   const initialResult=result.innerHTML;
+  const loading=()=>{result.setAttribute('aria-busy','true');result.innerHTML='<div class="quote-loading" role="status"><div class="courier-road" aria-hidden="true"><svg class="courier-van" viewBox="0 0 120 70"><path d="M5 12h66v37H5zM71 27h22l19 18v12H71z"/><path d="M78 32h12l13 13H78z" class="van-window"/><circle cx="27" cy="57" r="10"/><circle cx="91" cy="57" r="10"/><path d="M24 22h24v18H24z" class="van-parcel"/></svg><span></span></div><h2>Finding your delivery options</h2><p>Checking the latest courier rates for your shipment…</p></div>';};
+  loading();
+  let destinationData;
+  const city=$('#destination-city'),details=$('#destination-details');
+  const updateDestination=()=>{
+    const country=destinationData?.countries.find(c=>c.name.toLowerCase()===select.value.trim().toLowerCase());
+    select.setCustomValidity(country?'':'Choose a country from the suggestions.');
+    const choices=country?destinationChoices(destinationData,country.name):[];
+    $('#destination-city-field').hidden=!choices.length;city.disabled=!choices.length;city.required=!!choices.length;
+    city.innerHTML='<option value="">Choose a city / region</option>'+choices.map(c=>'<option>'+esc(c)+'</option>').join('');
+    const needsDetails=country&&['Australia','Malaysia','New Zealand'].includes(country.name);
+    $('#destination-details-field').hidden=!needsDetails;details.disabled=!needsDetails;details.required=!!needsDetails;details.value='';
+    revision++;result.innerHTML=initialResult;result.setAttribute('aria-busy','false');
+  };
+  city.addEventListener('change',()=>{revision++;result.innerHTML=initialResult;});
+  details.addEventListener('input',()=>{revision++;result.innerHTML=initialResult;});
   let mode='international',rateError='',revision=0;
   const tabs=[...form.querySelectorAll('[data-quote-mode]')];
   const activate=tab=>{
@@ -95,31 +120,27 @@ async function initQuote() {
       result.innerHTML=`<span class="tiny">DOMESTIC SHIPPING</span><h2>Request a Route Quote</h2><dl class="domestic-summary"><div><dt>From PIN code</dt><dd>${esc(fromPin)}</dd></div><div><dt>To PIN code</dt><dd>${esc(toPin)}</dd></div><div><dt>Shipment</dt><dd>${weight} kg · ${kind==='documents'?'Documents':'Parcel'}</dd></div></dl><p>Domestic rates and route availability need confirmation from our team.</p>${button('/contact?'+query.toString(),'Continue with enquiry','outline')}`;
       return;
     }
-    submit.disabled=true;
+    submit.disabled=true;loading();
+    const destination=select.value.trim(),selectedCity=city.disabled?'':city.value,destinationDetails=details.disabled?'':details.value.trim();
     try{
       const data=await getRates();
       if(!form.isConnected||requestRevision!==revision)return;
-      const country=data.countries.find(c=>c.name===select.value);
+      const country=data.countries.find(c=>c.name.toLowerCase()===destination.toLowerCase());
       if(!country)throw Error('Choose a destination country.');
     const expired=Boolean(data.validUntil&&new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'})>data.validUntil);
-    $('#quote-result').innerHTML=`<span class="tiny">SHIPPING OPTIONS</span><h2 class="result-destination">India <span>→</span><br>${esc(country.name)}</h2><p class="result-meta">${weight} kg · ${kind==='documents'?'Documents':'Parcel'}</p>${[...['DHL','UPS'].map(carrier=>({carrier})),...(data.SELF?.routes||[]).filter(route=>route.country===country.name).map(route=>({carrier:'SELF',route}))].map(({carrier,route})=>{const result=calculateRate(data,carrier,route||country,kind,weight);const until=carrier==='SELF'?data.SELF.validUntil:data.validUntil;const from=carrier==='SELF'?data.SELF.validFrom:data.validFrom;const today=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});const outsidePeriod=Boolean(until&&today>until||from&&today<from);return `<article class="rate-option"><div class="rate-carrier"><strong>${carrier==='SELF'?'Self':carrier}</strong><span>${carrier==='SELF'?'Self managed · '+esc(route.name):carrier==='DHL'?'Express Worldwide':'Express Saver'}</span></div>${result.manual?`<h3>Rate enquiry required</h3><p>${result.reason}</p>${button('/contact?'+new URLSearchParams({service:'Spot-rate enquiry',intent:'quotation',carrier,selfService:route?.name||'',destination:country.name,weight:String(weight),kind}).toString(),'Request a rate','outline')}`:`<span class="tiny">${outsidePeriod?'OUTSIDE VALIDITY PERIOD':'REFERENCE ESTIMATE'}</span><div class="rate-price">${money(result.amount)}</div><p>Rate slab: ${result.chargedWeight} kg</p>${button('/contact?'+new URLSearchParams({service:'International courier',intent:'booking',carrier,destination:country.name,weight:String(weight),kind,referenceEstimate:String(result.amount),quoteValidUntil:until||'',selfService:route?.name||'',chargedWeight:String(result.chargedWeight)}).toString(),'Confirm this shipment','outline')}`}${carrier==='SELF'?`<p class="input-hint">${esc(route.group)}${route.maxWeight<99999?` · Maximum ${route.maxWeight} kg.`:""} ${esc(route.notes)}</p>`:''}${outsidePeriod?'<p class="input-hint">Request a current quote before shipping.</p>':''}</article>`;}).join('')}${expired?'<p class="input-hint">The supplied rates have expired. Request a current quote before shipping.</p>':''}`;
+    $('#quote-result').innerHTML=`<span class="tiny">SHIPPING OPTIONS</span><h2 class="result-destination">India <span>→</span><br>${esc(country.name)}</h2><p class="result-meta">${esc([selectedCity,destinationDetails].filter(Boolean).join(' · '))} · ${weight} kg · ${kind==='documents'?'Documents':'Parcel'}</p>${[...['DHL','UPS'].map(carrier=>({carrier})),...selfOptions(data,country.name,selectedCity)].map(({carrier,route,label,manualReason})=>{const result=manualReason?{manual:true,reason:manualReason}:calculateRate(data,carrier,route||country,kind,weight);const until=carrier==='SELF'?data.SELF.validUntil:data.validUntil;const from=carrier==='SELF'?data.SELF.validFrom:data.validFrom;const today=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});const outsidePeriod=Boolean(until&&today>until||from&&today<from);return `<article class="rate-option"><div class="rate-carrier"><strong>${carrier==='SELF'?'Royal T':carrier}</strong><span>${carrier==='SELF'?esc(label):carrier==='DHL'?'Express Worldwide':'Express Saver'}</span></div>${result.manual?`<h3>Rate enquiry required</h3><p>${result.reason}</p>${button('/contact?'+new URLSearchParams({service:'Spot-rate enquiry',intent:'quotation',carrier,selfService:route?.name||'',destination:country.name,city:selectedCity,destinationDetails,weight:String(weight),kind}).toString(),'Request a rate','outline')}`:`<span class="tiny">${outsidePeriod?'OUTSIDE VALIDITY PERIOD':'REFERENCE ESTIMATE'}</span><div class="rate-price">${money(result.amount)}</div><p>Rate slab: ${result.chargedWeight} kg</p>${button('/contact?'+new URLSearchParams({service:'International courier',intent:'booking',carrier,destination:country.name,city:selectedCity,destinationDetails,weight:String(weight),kind,referenceEstimate:String(result.amount),quoteValidUntil:until||'',selfService:route?.name||'',chargedWeight:String(result.chargedWeight)}).toString(),'Confirm this shipment','outline')}`}${carrier==='SELF'?`<p class="input-hint">${esc(route?.group||'')}${route?.maxWeight<99999?` · Maximum ${route.maxWeight} kg.`:""} ${esc(route?.notes||'')}</p>`:''}${outsidePeriod?'<p class="input-hint">Request a current quote before shipping.</p>':''}</article>`;}).join('')}${expired?'<p class="input-hint">The supplied rates have expired. Request a current quote before shipping.</p>':''}`;
       error.textContent='';
-    }catch(failure){if(form.isConnected&&requestRevision===revision)error.textContent=failure.message;}
-    finally{submit.disabled=false;}
+    }catch(failure){if(form.isConnected&&requestRevision===revision){error.textContent=failure.message;result.innerHTML=initialResult;}}
+    finally{submit.disabled=false;result.setAttribute('aria-busy','false');}
   });
   try{
     const data=await getRates();if(!form.isConnected)return;
-    select.innerHTML='<option value="">Choose a destination</option>'+data.countries.map((country,index)=>`<option value="${esc(country.name)}">${esc(country.name)}</option>`).join('');select.disabled=false;
-    const search=$('#country-search'),status=$('#country-search-status');
-    search.disabled=false;
-    search.addEventListener('input',()=>{
-      const term=search.value.trim().toLocaleLowerCase(),previous=select.value;
-      const matches=data.countries.map((country,index)=>({country,index})).filter(({country})=>country.name.toLocaleLowerCase().includes(term)||country.code.toLocaleLowerCase()===term);
-      select.innerHTML='<option value="">'+(matches.length?'Choose a destination':'No matching countries')+'</option>'+matches.map(({country,index})=>`<option value="${esc(country.name)}">${esc(country.name)}</option>`).join('');
-      if(matches.some(m=>m.country.name===previous))select.value=previous;
-      status.textContent=matches.length+' destinations found';
-    });
+    destinationData=data;
+    bindCountryCombobox(select,$('#country-options'),$('#country-status'),data.countries,updateDestination);
+    select.disabled=false;
+    if(mode==='international'){result.innerHTML=initialResult;result.setAttribute('aria-busy','false');}
   }catch{
+    result.setAttribute('aria-busy','false');if(mode==='international')result.innerHTML=initialResult;
     rateError='International rates could not be loaded. Refresh or prepare an enquiry.';
     if(form.isConnected&&mode==='international')error.textContent=rateError;
   }
@@ -155,7 +176,7 @@ function initRequest(path) {
   if(path==='/contact'){
     const route=new URLSearchParams(location.search),fromPin=route.get('fromPin')||'',toPin=route.get('toPin')||'',weight=Number(route.get('weight'));
     const destination=(route.get('destination')||'').trim().slice(0,120),carrier=route.get('carrier');
-    for(const key of ['intent','destination','weight','kind','carrier','fromPin','toPin','referenceEstimate','quoteValidUntil','chargedWeight','selfService']){
+    for(const key of ['intent','destination','weight','kind','carrier','fromPin','toPin','referenceEstimate','quoteValidUntil','chargedWeight','selfService','city','destinationDetails']){
       if(route.get(key)){const hidden=document.createElement('input');hidden.type='hidden';hidden.name=key;hidden.value=route.get(key).slice(0,120);form.append(hidden);}
     }
     if(route.get('intent')==='booking'&&destination&&['DHL','UPS','SELF'].includes(carrier)&&Number.isFinite(weight)&&weight>0&&weight<=99999){
@@ -165,18 +186,19 @@ function initRequest(path) {
         `Please help me arrange a shipment ${shipment}. Kindly reach out to discuss the booking and pickup options.`,
         `I would like to send a shipment ${shipment}. Please get in touch to confirm the booking and schedule a pickup.`
       ];
-      form.message.value=drafts[Math.floor(Math.random()*drafts.length)];
+      form.message.value=drafts[Math.floor(Math.random()*drafts.length)]+[route.get('city'),route.get('destinationDetails')].filter(Boolean).map(value=>'\nDestination details: '+value).join('');
     }
     if(/^[1-9][0-9]{5}$/.test(fromPin)&&/^[1-9][0-9]{5}$/.test(toPin)&&Number.isFinite(weight)&&weight>0){
       form.message.value=`Please provide a domestic shipping quote.\nFrom PIN code: ${fromPin}\nTo PIN code: ${toPin}\nShipment type: ${route.get('kind')==='documents'?'Documents':'Parcel'}\nWeight: ${weight} kg`;
     }
   }
+  if(path==='/contact'&&!form.message.value&&new URLSearchParams(location.search).get('destination')){const route=new URLSearchParams(location.search);form.message.value='Please confirm a shipping quote.\n'+['destination','city','destinationDetails','weight','kind','carrier'].filter(key=>route.get(key)).map(key=>key+': '+route.get(key)).join('\n');}
   if(path==='/pickup'){const now=new Date(),date=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;form.date.min=date;}
   const trap=document.createElement('input');trap.name='website';trap.tabIndex=-1;trap.autocomplete='off';trap.setAttribute('aria-hidden','true');trap.className='form-trap';form.append(trap);
   let requestKey=crypto.randomUUID();
   form.addEventListener('submit',async e=>{e.preventDefault();const values=Object.fromEntries(new FormData(form));const result=$('#request-result');if(path==='/pickup'&&values.date<form.date.min){result.innerHTML='<p class="form-error" role="alert">Choose today or a future pickup date.</p>';return;}
     const submit=$('button[type="submit"]',form);submit.disabled=true;
-    try{if(config.requestEndpoint){const response=await fetch(config.requestEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...values,type:path==='/pickup'?'pickup':values.intent==='booking'?'booking':values.fromPin||values.weight||values.service==='Spot-rate enquiry'?'quotation':'enquiry',requestKey}),signal:AbortSignal.timeout(15000)});let receipt;try{receipt=await response.json();}catch{throw Error('The service returned an unreadable response. Your details are still here; please try again.');}if(!response.ok)throw Error(receipt?.error||'The request could not be sent. Your details are still in the form. Please try again.');if(!receipt||typeof receipt.reference!=='string')throw Error('Your request could not be confirmed. Please contact us before submitting again.');result.innerHTML=`<div class="request-success"><strong>Request received.</strong>${receipt.reference?`<p>Your reference: ${esc(receipt.reference)}</p>`:''}<p>Our team will review it. Collection and shipment acceptance still require confirmation.</p></div>`;form.reset();requestKey=crypto.randomUUID();}
+    try{if(config.requestEndpoint){const response=await fetch(config.requestEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...values,type:path==='/pickup'?'pickup':values.intent==='booking'?'booking':values.fromPin||values.weight||values.service==='Spot-rate enquiry'?'quotation':'enquiry',requestKey}),signal:AbortSignal.timeout(15000)});let receipt;try{receipt=await response.json();}catch{throw Error('The service returned an unreadable response. Your details are still here; please try again.');}if(!response.ok)throw Error(receipt?.error||'The request could not be sent. Your details are still in the form. Please try again.');if(!receipt||typeof receipt.reference!=='string')throw Error('Your request could not be confirmed. Please contact us before submitting again.');result.innerHTML=`<div class="request-success"><strong>Request received.</strong>${receipt.notification&&receipt.notification!=='sent'?'<p>Your request is saved, but the email notification could not be sent. Please email <a href="mailto:info@royaltservices.in">info@royaltservices.in</a> with your reference.</p>':''}${receipt.reference?`<p>Your reference: ${esc(receipt.reference)}</p>`:''}<p>Our team will review it. Collection and shipment acceptance still require confirmation.</p></div>`;form.reset();requestKey=crypto.randomUUID();}
       else{result.innerHTML='<div class="request-success"><strong>Your request is prepared.</strong><p>It has not been sent. Download a copy to share once contact details are available.</p><button type="button" class="text-link" id="download-request">Download your request ↓</button></div>';$('#download-request').addEventListener('click',()=>{const text=['ROYAL T COURIER — '+(path==='/pickup'?'PICKUP REQUEST':'ENQUIRY'),'Prepared locally; not submitted.','',...Object.entries(values).filter(([k])=>k!=='consent').map(([k,v])=>`${k.toUpperCase()}: ${v}`)].join('\n');const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='royal-t-request.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});}
     }catch(error){result.innerHTML=`<p class="form-error" role="alert">${esc(error.name==='TimeoutError'?'The request timed out. Your details are still here. Please contact us before submitting again.':error instanceof TypeError?'Unable to connect. Check your connection and try again.':error.message)}</p>`;}finally{submit.disabled=false;}
   });

@@ -8,6 +8,7 @@
   "trailingSlash": false,
   "regions": ["bom1"],
   "functions": {"api/handler.mjs": {"maxDuration": 60}},
+  "crons": [{"path": "/api/rates", "schedule": "0 3 * * *"}],
   "rewrites": [{"source": "/api/:route*", "destination": "/api/handler?route=:route*"}],
   "headers": [
     {"source": "/(.*)", "headers": [

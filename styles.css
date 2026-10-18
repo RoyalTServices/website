@@ -182,3 +182,5 @@ footer{background:var(--ink);color:#e2e9ef;border-top:6px solid var(--teal)}
 .country-option { padding: 12px 14px; min-height: 44px; font-size: 14px; cursor: pointer; color: var(--ink); }
 .country-option:hover, .country-option[aria-selected="true"] { background: #edf3f8; color: var(--ink); }
 #country-status { margin-top: 6px; }
+
+.field[hidden] { display: none; }

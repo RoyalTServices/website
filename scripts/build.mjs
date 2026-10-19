@@ -18,7 +18,7 @@ export async function buildSite(output=path.join(root,'dist'),{environment=proce
     const html=template.replace('<!--SEO_HEAD-->',seoHead(meta)).replace('<html lang="en-IN">',`<html lang="en-IN" data-site-origin="${esc(origin)}">`).replace('<div id="app"></div>',`<div id="app" data-path="${esc(route)}">${renderSite(route)}</div>`);
     await fs.mkdir(path.dirname(path.join(output,file)),{recursive:true});await fs.writeFile(path.join(output,file),html);
   }
-  const modules=['app.js','pages.js','pricing.js','quote-options.js','country-combobox.js','site-config.js','service-content.js','seo.js','seo-content.js','legal-content.js','legal-pages.js','assistant.js','assistant-knowledge.js','assistant-nlu.js','assistant-model.js','internal.js','billing-ui.js','invoice-math.js','invoice-print.js'];
+  const modules=['app.js','pages.js','pricing.js','quote-options.js','country-combobox.js','site-config.js','service-content.js','seo.js','seo-content.js','legal-content.js','legal-pages.js','assistant.js','assistant-knowledge.js','assistant-nlu.js','assistant-model.js','internal.js','enquiry-view.js','whatsapp.js','billing-ui.js','invoice-math.js','invoice-print.js'];
   for(const file of [...modules,'styles.css','internal.css','internal.html'])await fs.copyFile(path.join(root,file),path.join(output,file));
   // Client-side navigation must preserve preview noindex and the build's domain.
   const clientConfig={...config,seo:{...config.seo,siteUrl:origin}};

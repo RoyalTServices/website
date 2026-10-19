@@ -65,3 +65,18 @@ dialog{border:0;padding:0;width:660px;max-width:calc(100vw - 32px);max-height:90
   .invoice-dialog input,.invoice-dialog select,.invoice-dialog textarea{font-size:16px}
   .invoice-dialog{max-width:calc(100vw - 24px)}
 }
+
+.password-field { display: block; position: relative; }
+.password-field input { padding-right: 52px; }
+.password-field .password-toggle { position: absolute; right: 3px; top: 3px; bottom: 3px; margin: 0; width: 44px; min-height: 38px; padding: 10px; border: 0; background: transparent; color: #526a7c; border-radius: 4px; display: grid; place-items: center; }
+.password-toggle svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.password-toggle .password-slash { display: none; }
+.password-toggle[aria-pressed="true"] .password-slash { display: block; }
+.password-toggle:hover { background: #edf2f6; }
+.enquiry-section { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.enquiry-section:first-child { padding-top: 0; }
+.enquiry-section h3 { font-size: 15px; margin: 0 0 18px; }
+.enquiry-section .record-fields { margin: 0; }
+.enquiry-message, .enquiry-transcript p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; }
+.enquiry-transcript { padding-left: 20px; display: grid; gap: 16px; }
+.enquiry-transcript strong { font-size: 12px; color: var(--muted); }

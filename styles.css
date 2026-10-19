@@ -184,3 +184,10 @@ footer{background:var(--ink);color:#e2e9ef;border-top:6px solid var(--teal)}
 #country-status { margin-top: 6px; }
 
 .field[hidden] { display: none; }
+
+/* Separate the homepage tools and keep footer links above floating support controls. */
+.dispatch-dock { margin-top: 24px; }
+@media (max-width: 600px) {
+  footer { padding-bottom: calc(112px + env(safe-area-inset-bottom)); }
+  .footer-bottom a[href="/internal"] { display: inline-flex; align-items: center; min-height: 44px; }
+}

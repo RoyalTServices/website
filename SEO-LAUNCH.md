@@ -40,19 +40,32 @@ The staff login email is separate from customer contact details.
 
 ## Launch verification — 19 October 2026
 
-The royaltservices.in Domain property is verified in Search Console. The public
-sitemap was submitted and Google confirmed receipt. Its first processing result
-was “Sitemap could not be read”; submission receipt is not successful ingestion.
-The historical homepage inspection reported a Googlebot smartphone 403 on
-13 October 2026. Current public checks return HTTP 200 for all twenty pages,
-robots.txt and sitemap.xml, including checks with a Googlebot user-agent.
-Those checks do not prove that Google's real crawler can fetch the site.
-The owner confirmed the current Search Console Live Test result: “URL is available
-to Google.” The current homepage fetch therefore succeeds; the historical 403
-must not be presented as an ongoing verified block. An indexing request and the
-sitemap processing result still need confirmation. Browser controls stopped
-returning the inspection page, so these final console checks were handed to the
-owner. No firewall/security protections were weakened.
+- The royaltservices.in Domain property is verified in Search Console.
+- Google's Live Test fetched https://royaltservices.in/sitemap.xml successfully
+  using Google Inspection Tool smartphone at 14:17 IST. Crawl allowed: Yes;
+  page fetch: Successful; indexing allowed: Yes.
+- After resubmission, the Sitemaps report changed from Couldn't fetch to Success,
+  identified the file as Sitemap and discovered 19 public URLs. The twentieth
+  public route is tracking, deliberately excluded from the sitemap and indexing.
+- Manual actions: No issues detected. Security issues: No issues detected.
+- Vercel production deployment 13bd471 is Ready. Its firewall is active, has no
+  custom rules and shows Bot Protection Inactive. System mitigation remains
+  enabled. No firewall or security settings were weakened.
+- Google's homepage Live Test at 14:21 IST also passed: page fetch Successful,
+  crawl allowed Yes, indexing allowed Yes, user-declared canonical
+  https://royaltservices.in/. The stored homepage report still describes the
+  older Googlebot smartphone 403 from 13 October until Google refreshes it.
+  Search Console now associates the homepage with the successful sitemap.
+- Manual homepage indexing requests failed twice, including after reloading,
+  with Google's “We had a problem submitting your indexing request” error.
+  A reCAPTCHA connection warning also appeared. The owner independently tried
+  and reported the same submission error. No successful manual request is
+  claimed; discovery through the processed sitemap is confirmed.
+- Settings confirms “You are a verified owner.” The property was added on
+  19 October. Crawl stats and performance reports are still awaiting data.
+
+These are crawler access and submission checks, not evidence that the pages are
+already indexed or that any particular ranking has been achieved.
 
 ## Google Business Profile: owner setup
 

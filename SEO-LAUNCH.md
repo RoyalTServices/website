@@ -38,6 +38,22 @@ The staff login email is separate from customer contact details.
   canonical/indexing mistakes, invalid schema references, missing images, broken
   internal links/anchors and sitemap inconsistencies. A failed audit stops release.
 
+## Launch verification — 19 October 2026
+
+The royaltservices.in Domain property is verified in Search Console. The public
+sitemap was submitted and Google confirmed receipt. Its first processing result
+was “Sitemap could not be read”; submission receipt is not successful ingestion.
+The historical homepage inspection reported a Googlebot smartphone 403 on
+13 October 2026. Current public checks return HTTP 200 for all twenty pages,
+robots.txt and sitemap.xml, including checks with a Googlebot user-agent.
+Those checks do not prove that Google's real crawler can fetch the site.
+The owner confirmed the current Search Console Live Test result: “URL is available
+to Google.” The current homepage fetch therefore succeeds; the historical 403
+must not be presented as an ongoing verified block. An indexing request and the
+sitemap processing result still need confirmation. Browser controls stopped
+returning the inspection page, so these final console checks were handed to the
+owner. No firewall/security protections were weakened.
+
 ## Google Business Profile: owner setup
 
 1. Create and verify the profile with the genuine business name. Choose the most

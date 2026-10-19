@@ -7,7 +7,9 @@ export const config = {
     // Confirmed customer markets; these do not imply a verified street/office address.
     targetCity: '', targetRegion: '', targetRegions: ['Andhra Pradesh','Telangana'],
     city: '', locality: '', region: '', postalCode: '', streetAddress: '',
-    // Enable LocalBusiness markup only after the customer-facing location is confirmed.
+    // Confirmed service-area business: there is no public walk-in office.
+    serviceAreaOnly: true,
+    // Enable address-based LocalBusiness markup only for a verified public office.
     localBusinessVerified: false,
     googleBusinessUrl: '', sameAs: [], openingHoursSpecification: [],
     searchConsoleVerification: '', socialImage: '/assets/royal-t-logo.jpeg',

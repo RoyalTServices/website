@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {config} from '../site-config.js';
 import {renderSite,publicRoutes,esc} from '../pages.js';
 import {metadata,seoHead,sitemap,robots,siteOrigin} from '../seo.js';
+import {auditBuiltSite} from './audit-seo.mjs';
 
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 export async function buildSite(output=path.join(root,'dist'),{environment=process.env.VERCEL_ENV,siteUrl=process.env.SITE_URL || config.seo.siteUrl}={}) {
@@ -27,6 +28,7 @@ export async function buildSite(output=path.join(root,'dist'),{environment=proce
   await fs.mkdir(path.join(output,'data'),{recursive:true});await fs.copyFile(path.join(root,'data','rates.json'),path.join(output,'data','rates.json'));
   await fs.writeFile(path.join(output,'robots.txt'),robots(origin));
   await fs.writeFile(path.join(output,'sitemap.xml'),sitemap(origin) || '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
+  await auditBuiltSite(output,{origin});
   return {pages:publicRoutes.length,origin};
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {

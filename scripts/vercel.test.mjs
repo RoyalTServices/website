@@ -5,6 +5,7 @@ import path from 'node:path';
 import http from 'node:http';
 import {fileURLToPath} from 'node:url';
 import {buildSite} from './build.mjs';
+import {auditBuiltSite} from './audit-seo.mjs';
 import {publicRoutes} from '../pages.js';
 import {requestStore,postgresStore} from '../request-store.mjs';
 import {internalApi} from '../internal-api.mjs';
@@ -41,6 +42,16 @@ test('preview output remains noindex in initial HTML and browser configuration',
     const js=await fs.readFile(path.join(output,'site-config.js'),'utf8');assert.match(js,/"siteUrl": ""/);
     assert.ok(!((await fs.readFile(path.join(output,'sitemap.xml'),'utf8')).includes('<loc>')));
     await assert.rejects(buildSite(output,{environment:'production',siteUrl:'http://localhost'}),/public HTTPS/);
+  } finally {await fs.rm(output,{recursive:true,force:true});}
+});
+
+test('generated SEO audit rejects broken page links, missing assets and indexing regressions',async()=>{
+  const output=await temporary();
+  try {
+    await buildSite(output,{environment:'production',siteUrl:'https://royaltservices.in'});
+    const file=path.join(output,'index.html'),html=await fs.readFile(file,'utf8');
+    await fs.writeFile(file,html.replace('index,follow,max-image-preview:large','noindex,follow').replace('</main>','<a href="/missing-service">Broken service</a><img src="/assets/missing.jpeg" alt="Missing" width="100" height="100"></main>'));
+    await assert.rejects(auditBuiltSite(output),error=>error.message.includes('wrong indexing rules') && error.message.includes('/missing-service') && error.message.includes('/assets/missing.jpeg'));
   } finally {await fs.rm(output,{recursive:true,force:true});}
 });
 

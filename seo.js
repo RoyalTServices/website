@@ -21,16 +21,16 @@ const pageMeta = {
   '/shipping-notes':['Courier Shipping Guide | Packing, Weight & Customs','Prepare your parcel with Royal T shipping guidance on chargeable weight, packaging, customs documents, restricted items, cargo enquiries and shipment acceptance.'],
 };
 const regionalMeta = {
-  '/':['Domestic & International Courier | Andhra Pradesh & Telangana','Domestic and international courier services for Andhra Pradesh and Telangana. Compare domestic and international parcel services, shipping quotes and pickup enquiries with Royal T.'],
-  '/services':['Courier Services for Andhra Pradesh & Telangana','Explore domestic parcels, international courier, air freight and surface cargo for customers in Andhra Pradesh and Telangana. Plan your shipment with Royal T.'],
-  '/quote':['Courier Quotes in Andhra Pradesh & Telangana','Compare international courier charges by destination and weight. Request domestic parcel prices using pickup and delivery PIN codes in Andhra Pradesh, Telangana and other Indian destinations.'],
-  '/pickup':['Courier Pickup Requests in Andhra Pradesh & Telangana','Request courier collection in Andhra Pradesh or Telangana. Share your address, destination, contents and weight so Royal T can check route availability and confirm pickup.'],
-  '/contact':['Contact Royal T | Andhra Pradesh & Telangana Courier Enquiries','Call Royal T on +91 90001 59988 for courier enquiries from Andhra Pradesh and Telangana, international parcel quotes, pickup requests and shipment support.'],
-  '/services/international-courier':['International Courier | Andhra Pradesh & Telangana','Send documents and parcels abroad from Andhra Pradesh and Telangana. Compare DHL and UPS options, request a quote and check packing and customs requirements with Royal T.'],
-  '/services/domestic-express':['Domestic Courier Andhra Pradesh & Telangana | Parcel Delivery','Enquire about domestic document and parcel courier services from Andhra Pradesh and Telangana. Share Indian pickup and delivery PIN codes for route and price assessment.'],
-  '/services/air-cargo':['Air Cargo Enquiries from Andhra Pradesh & Telangana','Plan international air freight for customers in Andhra Pradesh and Telangana. Share commercial cargo dimensions, weight, destination and paperwork for a Royal T quote.'],
-  '/services/surface-cargo':['Surface Cargo for Andhra Pradesh & Telangana | Road Freight','Request road freight and surface cargo quotes for Andhra Pradesh and Telangana business consignments. Share the route, box count, weight and dimensions with Royal T.'],
-  '/services/dangerous-goods':['DG Cargo Enquiries | Andhra Pradesh & Telangana Exporters','Discuss dangerous goods export requirements for Andhra Pradesh and Telangana customers. Product classification, paperwork, packing and carrier acceptance need review.'],
+  '/':['Courier in Andhra Pradesh & Telangana','Domestic and international courier services for Andhra Pradesh and Telangana. Send documents and parcels, compare shipping quotes and request a pickup with Royal T.'],
+  '/services':['Courier & Cargo Services','Explore domestic parcels, international courier, air freight and surface cargo for customers in Andhra Pradesh and Telangana. Plan your shipment with Royal T.'],
+  '/quote':['Courier Charges & Shipping Quotes','Compare international courier charges by country and weight. Request domestic parcel prices with pickup and delivery PIN codes. Final charges need confirmation.'],
+  '/pickup':['Request a Courier Pickup','Request courier collection in Andhra Pradesh or Telangana. Share your address, destination, contents and weight so Royal T can check coverage and confirm pickup.'],
+  '/contact':['Contact & Courier Support',`Contact Royal T at ${config.phone} or ${config.email} for courier quotes, pickup requests and shipment support in Andhra Pradesh and Telangana.`],
+  '/services/international-courier':['International Courier from India','Send documents and parcels abroad from Andhra Pradesh and Telangana. Compare DHL and UPS options, request a quote and check packing and customs requirements.'],
+  '/services/domestic-express':['Domestic Courier & Parcel Delivery','Enquire about domestic document and parcel courier services from Andhra Pradesh and Telangana. Share pickup and delivery PIN codes for route and price assessment.'],
+  '/services/air-cargo':['International Air Cargo & Freight','Plan international air freight from Andhra Pradesh and Telangana. Share commercial cargo dimensions, weight, destination and documents for a shipment-specific quote.'],
+  '/services/surface-cargo':['Surface Cargo & Road Freight','Request road freight and surface cargo quotes for Andhra Pradesh and Telangana business consignments. Share the route, box count, weight and dimensions with Royal T.'],
+  '/services/dangerous-goods':['Dangerous Goods Export Enquiries','Discuss dangerous goods export requirements from Andhra Pradesh and Telangana. Product classification, documents, packing and carrier acceptance need review.'],
 };
 export function siteOrigin(value = config.seo?.siteUrl) {
   if (!value) return '';
@@ -47,42 +47,52 @@ export function metadata(path, originValue = config.seo?.siteUrl) {
   if (config.seo?.targetRegions?.length && regionalMeta[path]) [title,description] = regionalMeta[path];
   if (path === '/' && config.seo?.city && !config.seo?.targetRegions?.length) title = `Courier Services in ${config.seo.city} | Domestic & International`;
   const indexable = Boolean(origin && config.seo?.indexingEnabled !== false && known && path !== '/tracking' && !(legalRoutes.includes(path) && config.legal?.status === 'draft'));
-  return {path,title:`${title} | Royal T Courier`,description,origin,canonical:origin && known ? origin+path : '',indexable,robots:indexable ? 'index,follow,max-image-preview:large' : 'noindex,follow',known,service};
+  // Keep one concise brand suffix; some fallback titles already name the business.
+  title = /Royal T/.test(title) ? title : `${title} | Royal T`;
+  const imagePath = service ? `/assets/services/${service.slug}.jpeg` : config.seo?.socialImage || '/assets/royal-t-logo.jpeg';
+  return {path,title,description,origin,canonical:origin && known ? origin+path : '',image:origin ? new URL(imagePath,origin).href : '',imageAlt:service ? `${service.name} — Royal T Courier Services` : config.name,indexable,robots:indexable ? 'index,follow,max-image-preview:large' : 'noindex,follow',known,service};
 }
 const safeHttps = value => {try {const url = new URL(value); return url.protocol === 'https:' ? url.href : '';} catch {return '';}};
 export function structuredData(meta) {
   if (!meta.origin || !meta.known) return null;
   const origin = meta.origin, seo = config.seo || {}, orgId = origin+'/#organization';
-  const localReady = seo.localBusinessVerified && seo.streetAddress && seo.city && seo.region && seo.postalCode;
+  const localReady = !seo.serviceAreaOnly && seo.localBusinessVerified && seo.streetAddress && seo.city && seo.region && seo.postalCode;
   const org = {'@type':localReady ? 'LocalBusiness' : 'Organization','@id':orgId,name:config.name,legalName:config.legal?.legalName || config.name,url:origin+'/',logo:origin+'/assets/royal-t-logo.jpeg',telephone:config.phone,description:'Domestic and international courier and cargo shipment enquiries.'};
   if (seo.targetRegions?.length) org.areaServed = seo.targetRegions.map(name => ({'@type':'State',name}));
   else if (seo.targetCity || seo.targetRegion) org.areaServed = [...(seo.targetCity ? [{'@type':'City',name:seo.targetCity}] : []),...(seo.targetRegion ? [{'@type':'State',name:seo.targetRegion}] : [])];
   if (config.email) org.email = config.email;
+  org.contactPoint = {'@type':'ContactPoint',contactType:'customer service',telephone:config.phone,email:config.email,url:origin+'/contact'};
+  org.hasOfferCatalog = {'@type':'OfferCatalog',name:'Courier and cargo services',itemListElement:services.map(service => ({'@type':'Offer',itemOffered:{'@type':'Service','@id':origin+'/services/'+service.slug+'#service',name:service.name,url:origin+'/services/'+service.slug,provider:{'@id':orgId}}}))};
   const sameAs = [...new Set([...(seo.sameAs || []),seo.googleBusinessUrl].filter(Boolean).map(safeHttps).filter(Boolean))];
   if (sameAs.length) org.sameAs = sameAs;
   if (localReady) {
     org.address = {'@type':'PostalAddress',streetAddress:seo.streetAddress,addressLocality:seo.city,addressRegion:seo.region,postalCode:seo.postalCode,addressCountry:'IN'};
     if (config.hours && seo.openingHoursSpecification?.length) org.openingHoursSpecification = seo.openingHoursSpecification;
   }
-  const graph = [org,{'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:config.name,inLanguage:'en-IN',publisher:{'@id':orgId}}, {'@type':'WebPage','@id':meta.canonical+'#page',url:meta.canonical,name:meta.title,description:meta.description,inLanguage:'en-IN',isPartOf:{'@id':origin+'/#website'}}];
+  const page = {'@type':meta.path === '/about' ? 'AboutPage' : meta.path === '/contact' ? 'ContactPage' : meta.path === '/services' ? 'CollectionPage' : 'WebPage','@id':meta.canonical+'#page',url:meta.canonical,name:meta.title,description:meta.description,inLanguage:'en-IN',isPartOf:{'@id':origin+'/#website'},about:{'@id':orgId}};
+  if (meta.image) page.primaryImageOfPage = {'@type':'ImageObject',url:meta.image,caption:meta.imageAlt};
+  const graph = [org,{'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:config.name,alternateName:'Royal T',inLanguage:'en-IN',publisher:{'@id':orgId}},page];
   if (meta.path !== '/') {
     const items = [{name:'Home',url:origin+'/'}];
     if (meta.service) items.push({name:'Courier & Cargo Services',url:origin+'/services'});
-    items.push({name:meta.service?.name || meta.title.replace(' | Royal T Courier',''),url:meta.canonical});
+    items.push({name:meta.service?.name || meta.title.replace(/ \| Royal T(?: Courier)?$/,''),url:meta.canonical});
+    page.breadcrumb = {'@id':meta.canonical+'#breadcrumbs'};
     graph.push({'@type':'BreadcrumbList','@id':meta.canonical+'#breadcrumbs',itemListElement:items.map((item,i) => ({'@type':'ListItem',position:i+1,name:item.name,item:item.url}))});
   }
   if (meta.service) {
     const item = {'@type':'Service','@id':meta.canonical+'#service',name:meta.service.name,serviceType:meta.service.type,description:meta.description,url:meta.canonical,provider:{'@id':orgId}};
     if (['domestic-express','surface-cargo'].includes(meta.service.slug)) item.areaServed = {'@type':'Country',name:'India'};
     graph.push(item);
+    page.mainEntity = {'@id':item['@id']};
   }
+  if (meta.path === '/services') page.mainEntity = {'@type':'ItemList',itemListElement:services.map((service,index) => ({'@type':'ListItem',position:index+1,name:service.name,url:origin+'/services/'+service.slug}))};
   return {'@context':'https://schema.org','@graph':graph};
 }
 export const schemaJson = value => JSON.stringify(value).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
 export function seoHead(meta) {
-  const image = meta.origin ? new URL(config.seo?.socialImage || '/assets/royal-t-logo.jpeg',meta.origin).href : '';
+  const image = meta.image;
   const schema = structuredData(meta);
-  return `<title>${escape(meta.title)}</title><meta name="description" content="${escape(meta.description)}"><meta name="robots" content="${meta.robots}">${meta.canonical ? `<link rel="canonical" href="${escape(meta.canonical)}">` : ''}<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="${escape(config.name)}"><meta property="og:title" content="${escape(meta.title)}"><meta property="og:description" content="${escape(meta.description)}">${meta.canonical ? `<meta property="og:url" content="${escape(meta.canonical)}">` : ''}${image ? `<meta property="og:image" content="${escape(image)}"><meta property="og:image:alt" content="Royal T Courier Services logo">` : ''}<meta name="twitter:card" content="summary"><meta name="twitter:title" content="${escape(meta.title)}"><meta name="twitter:description" content="${escape(meta.description)}">${image ? `<meta name="twitter:image" content="${escape(image)}">` : ''}${config.seo?.searchConsoleVerification ? `<meta name="google-site-verification" content="${escape(config.seo.searchConsoleVerification)}">` : ''}${schema ? `<script id="seo-schema" type="application/ld+json">${schemaJson(schema)}</script>` : ''}`;
+  return `<title>${escape(meta.title)}</title><meta name="description" content="${escape(meta.description)}"><meta name="robots" content="${meta.robots}">${meta.canonical ? `<link rel="canonical" href="${escape(meta.canonical)}">` : ''}<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="${escape(config.name)}"><meta property="og:title" content="${escape(meta.title)}"><meta property="og:description" content="${escape(meta.description)}">${meta.canonical ? `<meta property="og:url" content="${escape(meta.canonical)}">` : ''}${image ? `<meta property="og:image" content="${escape(image)}"><meta property="og:image:alt" content="${escape(meta.imageAlt)}">` : ''}<meta name="twitter:card" content="${meta.service ? 'summary_large_image' : 'summary'}"><meta name="twitter:title" content="${escape(meta.title)}"><meta name="twitter:description" content="${escape(meta.description)}">${image ? `<meta name="twitter:image" content="${escape(image)}"><meta name="twitter:image:alt" content="${escape(meta.imageAlt)}">` : ''}${config.seo?.searchConsoleVerification ? `<meta name="google-site-verification" content="${escape(config.seo.searchConsoleVerification)}">` : ''}${schema ? `<script id="seo-schema" type="application/ld+json">${schemaJson(schema)}</script>` : ''}`;
 }
 export function updateSeo(path) {
   const meta = metadata(path,config.seo?.siteUrl || document.documentElement.dataset.siteOrigin);
@@ -96,6 +106,8 @@ export function updateSeo(path) {
   set('meta[name="robots"]',{name:'robots',content:meta.robots});
   ['title','description','url'].forEach(key => set(`meta[property="og:${key}"]`,{property:`og:${key}`,content:key === 'url' ? meta.canonical : meta[key]}));
   ['title','description'].forEach(key => set(`meta[name="twitter:${key}"]`,{name:`twitter:${key}`,content:meta[key]}));
+  for (const [property,content] of [['og:image',meta.image],['og:image:alt',meta.imageAlt]]) set(`meta[property="${property}"]`,{property,content});
+  for (const [name,content] of [['twitter:image',meta.image],['twitter:image:alt',meta.imageAlt],['twitter:card',meta.service ? 'summary_large_image' : 'summary']]) set(`meta[name="${name}"]`,{name,content});
   if (meta.canonical) set('link[rel="canonical"]',{rel:'canonical',href:meta.canonical});
   else document.head.querySelector('link[rel="canonical"]')?.remove();
   document.getElementById('seo-schema')?.remove();

@@ -1,55 +1,95 @@
-# Search and local business launch setup
+# Google Search and local search setup
 
-Configured domain: **https://royaltservices.in**. Confirmed priority customer markets: **Andhra Pradesh and Telangana**. Phone/WhatsApp: **+91 90001 59988**. Titles, descriptions, home copy, service-page context and shipping questions target domestic and international courier services, shipment quotes, sending parcels abroad, domestic parcel delivery and efficient shipment preparation. These are relevance improvements, not search-volume research or a guarantee of rankings.
+Production website: https://royaltservices.in
+Sitemap: https://royaltservices.in/sitemap.xml
+Business name: Royal T Courier Services
+Legal name: Royal T Services Private Limited
+Phone / WhatsApp: +91 95022 95222
+Customer email: info@royaltservices.in
+Priority customer markets: Andhra Pradesh and Telangana.
 
-The domain is configured for production canonicals, sitemap and robots generation. This does not deploy the site or submit it to Google. After publishing the updated server on that domain, submit **https://royaltservices.in/sitemap.xml** through Search Console. The physical office address remains unconfirmed, so the schema identifies an Organization serving the stated markets rather than inventing a LocalBusiness address or map coordinates.
+Royal T operates without a public walk-in office, as confirmed by the owner.
+Keep the Google Business Profile address hidden and use the actual service areas.
+Do not publish a private address or invent branches. Collection availability is
+confirmed for each location; the website does not promise universal coverage.
+The staff login email is separate from customer contact details.
 
-The website delivers real page text, links, headings and metadata in its initial HTML. The Vercel build pre-renders each public route; the local Node preview renders the same pages on request. Browser JavaScript adds interactive quotes, tracking, forms and chat to that content. Both use `pages.js`, with no separate hidden SEO copy. See [VERCEL.md](VERCEL.md) for deployment settings. Vercel Preview builds automatically remain unindexed.
+## Implemented
 
-## Required before indexing the public site
+- Twenty public pages have initial HTML with visible text, headings, service links,
+  unique titles and descriptions. Search crawlers can read the content without
+  running the quote, form or tracking JavaScript.
+- Canonicals use the production HTTPS domain and exclude query parameters.
+  The production www host redirects to the canonical host. Vercel normalizes
+  trailing slashes and .html URLs. Unknown routes return 404.
+- Organization, WebSite, page, service, service catalog and breadcrumb structured
+  data connect the actual business and five services. There are no invented
+  addresses, ratings, reviews, fixed prices or guaranteed delivery promises.
+- Service pages link directly to related services. The shipping guide covers
+  service selection, actual/volumetric weight, packing, quote details, documents,
+  restricted items, extra charges, pickup and tracking.
+- Open Graph and Twitter metadata use relevant service images and update on
+  browser navigation. Images have dimensions and descriptive alt text. Public
+  pages use the small PNG favicon instead of downloading the 1.7 MB SVG icon.
+- The sitemap includes eligible canonical pages. Tracking, private staff/API URLs
+  and missing pages remain unindexed. Preview builds stay noindex and have an
+  empty sitemap and disallow-all robots rules. Public scripts remain crawlable.
+- Every build audits generated HTML for missing/duplicate metadata, H1s,
+  canonical/indexing mistakes, invalid schema references, missing images, broken
+  internal links/anchors and sitemap inconsistencies. A failed audit stops release.
 
-1. Set `config.seo.siteUrl` in `site-config.js` to the final public **HTTPS origin**, for example your actual domain without a path. Alternatively set the server's `SITE_URL` environment variable. No domain has been guessed. Without an origin, previews deliberately return `noindex` and an all-disallow robots file, and `/sitemap.xml` reports that configuration is required. These are launch safeguards, not live indexing settings.
-2. Keep `indexingEnabled: true` for the public production site. Keep staging protected and unindexed; use a separate preview configuration with indexing disabled. An origin alone is not proof that a deployment is publicly reachable.
-3. Supply the confirmed city/locality, public street address, region and PIN code. Add the support email and business hours. The phone and WhatsApp values now use the supplied **+91 90001 59988**.
-4. Set `localBusinessVerified: true` only after the location details are confirmed. The website will then show the city in home copy/title, show the address on Contact, and produce LocalBusiness structured data. Until then it emits honest Organization data rather than invented coordinates or an incomplete local address. Populate `openingHoursSpecification` with actual days/times, and keep the visible `config.hours` consistent.
-5. Complete and approve the policy details separately. Draft policies are accessible through the footer but remain `noindex,follow` and absent from the sitemap until `legal.status` changes from `draft` to `published`.
+## Google Business Profile: owner setup
 
-Deploy using the checked-in Vercel configuration, or run the Node server behind another production HTTPS host. The Vercel build generates individual complete HTML pages rather than a static index.html fallback. Test a direct request to a service URL after deployment; its HTML must contain the service H1 and content before JavaScript runs.
+1. Create and verify the profile with the genuine business name. Choose the most
+   accurate available courier category and list the areas actually served.
+2. Choose the service-area model and hide the non-customer-facing address.
+   Use the website, phone and business name above consistently.
+3. Add actual hours, original business/shipment photos and the five offered
+   services: international courier, domestic express, international air cargo,
+   surface cargo and export dangerous-goods enquiries. DG acceptance needs review.
+4. Use https://royaltservices.in/ as the website and
+   https://royaltservices.in/pickup for collection requests where an appropriate
+   booking/service link is supported.
+5. Share the verified profile link and confirmed hours. Add the profile URL to
+   config.seo.googleBusinessUrl and actual public social URLs to sameAs in
+   site-config.js. Add visible config.hours when supplied. Leave serviceAreaOnly
+   true and localBusinessVerified false while there is no public office.
+6. Request honest reviews from real customers without incentives, and respond to
+   customer questions. Keep service areas, contact information and hours current.
 
-## Google Business Profile and Search Console
+## Google Search Console: owner setup
 
-- Create/verify the business profile under the genuine customer-facing business name. Use an accurate category, address or service-area setup, real number, business hours and website URL. Do not add marketing keywords to the business name or invent branches.
-- Use the same name, address and phone on the profile and website. A service-area business should follow Google's address-visibility guidance instead of publishing a private/non-customer-facing address purely for SEO. Review the schema/address setup for that model before enabling LocalBusiness.
-- Add the six actual service categories, suitable photos and a description of domestic/international courier, documents/parcels,  air freight and surface cargo. Dangerous goods acceptance remains subject to assessment.
-- Once the profile URL is available, add it to `config.seo.googleBusinessUrl`; real social profiles can be placed in `sameAs`.
-- Verify the domain in Google Search Console. DNS verification works independently of this code; for HTML verification, set `searchConsoleVerification` to the supplied verification token.
-- Submit `https://YOUR-ACTUAL-DOMAIN/sitemap.xml`, then use URL Inspection on Home and the six service pages. Check canonical selection, indexability, rendered HTML and mobile usability. Request indexing for important new pages after verification; a sitemap does not guarantee inclusion.
-- Use Rich Results Test to review applicable structured data, and PageSpeed Insights to check the deployed site's performance. Organisation, service and breadcrumb markup describe actual content; there are no fabricated reviews or ratings, numeric price offers, or courier FAQ-rich-result promises.
-- Monitor indexed pages and search queries. Add useful content from genuine customer questions and actual service areas. Do not generate cloned city pages, hidden keywords or thin destination pages merely to target search terms.
+1. Add the royaltservices.in Domain property and verify through the DNS TXT record
+   Google provides. This covers HTTPS and subdomains. Do not remove existing
+   email or Vercel DNS records. Alternatively use an HTTPS URL-prefix property;
+   its HTML verification token can be added to config.seo.searchConsoleVerification.
+2. Submit https://royaltservices.in/sitemap.xml in Sitemaps.
+3. Inspect Home, /services/international-courier, /services/domestic-express,
+   /quote and /pickup. Run Live Test and request indexing for key pages.
+4. Review Pages indexing and Google's selected canonicals. Check Core Web Vitals
+   and PageSpeed Insights after deployment. Field performance needs real usage;
+   an automated HTML audit does not measure it.
+5. Monitor impressions, clicks, queries, country/device and landing pages. Compare
+   enquiries from organic traffic with these results. Improve content using real
+   customer questions and actual service coverage rather than copied city pages.
 
-## Implemented search foundations
+Submission, verification and a public website do not guarantee indexing or rankings.
+Google controls crawling, indexing and search presentation. No Search Console
+verification, sitemap submission or Business Profile creation is claimed by code.
 
-- Unique intent-based titles and descriptions on all 21 public routes; service text available without running JavaScript.
-- Canonical URLs, Open Graph/social metadata and JSON-LD from the configured origin, not the request Host header. Query parameters do not become separate canonical shipment pages.
-- Search phrases used naturally: international courier from India, domestic document and parcel delivery, DHL/UPS courier options, courier pickup, air freight, imports express, surface cargo and dangerous goods export enquiries.
-- A real service index with crawlable links to six detailed service pages; visible shipping questions on Home and service breadcrumbs.
-- Correct 404 responses, trailing-slash redirects and a single canonical URL format. Unknown service URLs do not return an indexable success page.
-- Automatic sitemap with only eligible public pages. Tracking pages, draft policies and staff/API records are excluded. Staff pages/API responses carry explicit noindex headers; staff access is separately controlled by authentication, not robots rules.
-- Server and browser share page rendering; client navigation updates titles, descriptions, canonicals and structured data.
-- Gzip compression for eligible HTML/CSS/JavaScript/JSON/SVG, lazy service photos, explicit image dimensions and priority loading for the home illustration. Fonts retain their existing swap behaviour.
+## Verification commands
 
-## Verification
-
-`node --test scripts/seo.test.mjs` checks metadata uniqueness, H1s, sitemap filtering, preview protection, honest schema, injection escaping and HTTP rendering/status/headers/compression. `npm test` includes these plus pricing, assistant and staff API regressions. `npm run check` covers new and existing JavaScript modules.
-
-These checks verify the implementation. Live Google indexing, search position, local results and real-user performance require the actual domain, confirmed location, public deployment and subsequent monitoring.
+- npm run build: generate pages and run the SEO release audit.
+- npm run audit:seo: repeat the audit on the production dist folder.
+- npm test: run SEO, preview protection, navigation, staff and quote regressions.
+- npm run check: check JavaScript syntax.
 
 ## Official guidance
 
-- [Google: JavaScript SEO basics](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics): serving renderable content, canonical signals and avoiding soft 404s.
-- [Google: Build and submit a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap): supply canonical URLs and submit through Search Console; sitemap submission is a discovery signal.
-- [Google: Local business structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business): supply real business details and applicable required properties.
-- [Google: Improve local ranking](https://support.google.com/business/answer/7091): accurate, complete business information; local relevance, distance and prominence influence results.
-- [Google: Represent your business accurately](https://support.google.com/business/answer/3038177): genuine names, addresses, categories and service-area business rules.
-
-International services are export-only from India. The former inbound service route is removed from public navigation, page content and the sitemap.
+- [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
+- [Google title links](https://developers.google.com/search/docs/appearance/title-link)
+- [Organization structured data](https://developers.google.com/search/docs/appearance/structured-data/organization)
+- [Build and submit a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+- [Service-area business setup](https://support.google.com/business/answer/9157481?hl=en)
+- [Business representation guidelines](https://support.google.com/business/answer/3038177)
+- [Improve local ranking](https://support.google.com/business/answer/7091)

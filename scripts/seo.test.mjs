@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {config} from '../site-config.js';
-import {metadata,structuredData,sitemap,robots,seoHead,schemaJson,siteOrigin} from '../seo.js';
+import {metadata,structuredData,sitemap,robots,seoHead,schemaJson,siteOrigin,updateSeo} from '../seo.js';
+import {Window} from 'happy-dom';
 import {publicRoutes,renderSite} from '../pages.js';
 import {createSiteServer} from '../site-server.mjs';
 const origin = 'https://royalt.example'; // Test-only origin; never inserted into site configuration.
@@ -21,13 +22,14 @@ test('confirmed domain and regional search wording are reflected in content and 
   const home = metadata('/');
   assert.equal(home.canonical,'https://royaltservices.in/');
   assert.equal(home.indexable,true);
-  assert.match(home.title,/Domestic & International Courier.*Andhra Pradesh.*Telangana/);
+  assert.match(home.title,/Courier.*Andhra Pradesh.*Telangana/);
   assert.match(home.description,/Domestic and international courier services/);
   assert.match(renderSite('/'),/Domestic and International<br>Courier Services in<br>Andhra Pradesh/);
   assert.doesNotMatch(renderSite('/'),/affordable|low-cost/i);
   assert.doesNotMatch(home.title+home.description,/affordable|low-cost/i);
   assert.match(renderSite('/services/international-courier'),/Sending parcels abroad from Andhra Pradesh and Telangana/);
-  assert.match(metadata('/services/international-courier').title,/International Courier.*Andhra Pradesh.*Telangana/);
+  assert.match(metadata('/services/international-courier').title,/International Courier from India/);
+  assert.match(metadata('/services/international-courier').description,/Andhra Pradesh.*Telangana/);
   assert.match(sitemap(),/<loc>https:\/\/royaltservices\.in\/services\/international-courier<\/loc>/);
   assert.match(robots(),/Sitemap: https:\/\/royaltservices\.in\/sitemap.xml/);
 });
@@ -80,10 +82,49 @@ test('service schema is honest about organisation, location and prices', () => {
   assert.match(text,/919502295222/);
   const old = {...config.seo};
   try {
-    Object.assign(config.seo,{localBusinessVerified:true,city:'Test City',streetAddress:'Test Street',region:'Test Region',postalCode:'500001'});
+    Object.assign(config.seo,{serviceAreaOnly:false,localBusinessVerified:true,city:'Test City',streetAddress:'Test Street',region:'Test Region',postalCode:'500001'});
     assert.equal(structuredData(metadata('/',origin))['@graph'][0]['@type'],'LocalBusiness');
     assert.match(renderSite('/contact'),/Test Street/);
   } finally {config.seo = old;}
+});
+
+test('service-area mode never exposes a stored private address as an office',()=>{
+  const old={...config.seo};
+  try {
+    Object.assign(config.seo,{serviceAreaOnly:true,localBusinessVerified:true,city:'Private City',streetAddress:'Private Street',region:'Private Region',postalCode:'500001'});
+    const org=structuredData(metadata('/'))['@graph'][0];
+    assert.equal(org['@type'],'Organization');assert.equal(org.address,undefined);
+    assert.doesNotMatch(renderSite('/contact'),/Private Street|Visit us/);
+    assert.match(renderSite('/contact'),/without a public walk-in office/);
+    assert.doesNotMatch(renderSite('/'),/Based in Private City/);
+  } finally {config.seo=old;}
+});
+
+test('contact metadata uses the live phone and service schema connects to its page',()=>{
+  const contact=metadata('/contact');
+  assert.ok(contact.description.includes(config.phone));
+  assert.ok(contact.description.includes(config.email));
+  assert.doesNotMatch(contact.description,/90001/);
+  const graph=structuredData(metadata('/services/air-cargo'))['@graph'];
+  const page=graph.find(item=>item['@type']==='WebPage'),service=graph.find(item=>item['@type']==='Service');
+  assert.equal(page.mainEntity['@id'],service['@id']);
+  assert.ok(graph.some(item=>item['@id']===page.breadcrumb['@id']));
+});
+
+test('browser navigation updates social images as well as canonical and structured data',async()=>{
+  const window=new Window({url:'https://royaltservices.in'}),previous=globalThis.document;
+  globalThis.document=window.document;
+  try {
+    for(const route of ['/services/air-cargo','/contact','/services/domestic-express']) {
+      const meta=metadata(route);updateSeo(route);
+      assert.equal(document.querySelector('meta[property="og:image"]').content,meta.image);
+      assert.equal(document.querySelector('meta[name="twitter:image:alt"]').content,meta.imageAlt);
+      assert.equal(document.querySelector('meta[name="twitter:card"]').content,meta.service?'summary_large_image':'summary');
+      assert.equal(document.querySelectorAll('link[rel="canonical"]').length,1);
+      assert.equal(document.querySelector('link[rel="canonical"]').href,meta.canonical);
+      assert.deepEqual(JSON.parse(document.getElementById('seo-schema').textContent),structuredData(meta));
+    }
+  } finally {globalThis.document=previous;await window.happyDOM.close();}
 });
 test('metadata and JSON-LD cannot inject a closing script or HTML attributes', () => {
   const meta = metadata('/',origin);meta.title='</title><script>alert(1)</script>';meta.description='" onload="unsafe';

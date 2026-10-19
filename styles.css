@@ -187,7 +187,18 @@ footer{background:var(--ink);color:#e2e9ef;border-top:6px solid var(--teal)}
 
 /* Separate the homepage tools and keep footer links above floating support controls. */
 .dispatch-dock { margin-top: 24px; }
+.related-services { padding-left: 0; padding-right: 0; }
+.related-services h2 { font-size: clamp(26px, 3vw, 38px); margin-bottom: 24px; }
+.related-service-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; }
+.related-service-links a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #d8d9d5; }
+.notes-layout aside nav { display: grid; gap: 14px; margin: 20px 0 28px; }
+.notes-layout aside nav a { font-size: 14px; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; }
+.notes-layout article { scroll-margin-top: 120px; }
+.notes-layout article p + p { margin-top: 14px; }
+.notes-layout article ul { padding-left: 22px; line-height: 1.8; margin-top: 16px; }
+.guide-links a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 600px) {
+  .related-service-links { grid-template-columns: 1fr; }
   footer { padding-bottom: calc(112px + env(safe-area-inset-bottom)); }
   .footer-bottom a[href="/internal"] { display: inline-flex; align-items: center; min-height: 44px; }
 }
